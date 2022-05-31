@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A64289F-5871-4A40-AA40-82F9C2F61759}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OB.Reservation.BL.Contracts</RootNamespace>
+    <AssemblyName>OB.Reservation.BL.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile47</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\OB.Reservation.BL.Contracts.xml</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\OB.Reservation.BL.Contracts.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>1591,1587</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|AnyCPU'">
+    <OutputPath>bin\QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\OB.BL.Contracts.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <OutputPath>bin\Staging\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\Release\OB.BL.Contracts.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.5\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\OB.BL.Operations\Helper\Constants.shared.cs">
+      <Link>Constants.shared.cs</Link>
+    </Compile>
+    <Compile Include="Attributes\ApplyMaskAttribute.cs" />
+    <Compile Include="Attributes\MaskFilterAttribute.cs" />
+    <Compile Include="Attributes\ContainsCCAttribute.cs" />
+    <Compile Include="ContractBase.cs" />
+    <Compile Include="DataContractBase.cs" />
+    <Compile Include="Data\BaseLogDetails\BaseGridLineDetail.cs" />
+    <Compile Include="Data\BaseLogDetails\BaseLogDetail.cs" />
+    <Compile Include="Data\BaseLogDetails\Change.cs" />
+    <Compile Include="Data\BaseLogDetails\ChangeGroup.cs" />
+    <Compile Include="Data\BaseLogDetails\RateGridLineDetail.cs" />
+    <Compile Include="Data\BaseLogDetails\ReservationGridLineDetail.cs" />
+    <Compile Include="Data\BaseLogDetails\Entity.cs" />
+    <Compile Include="Data\BaseLogDetails\EntityGroup.cs" />
+    <Compile Include="Data\BaseLogDetails\Identifier.cs" />
+    <Compile Include="Data\Channels\Channel.cs" />
+    <Compile Include="Data\Channels\ChannelOperator.cs" />
+    <Compile Include="Data\CRM\Guest.cs" />
+    <Compile Include="Data\CRM\GuestActivity.cs" />
+    <Compile Include="Data\CRM\GuestFavoriteExtra.cs" />
+    <Compile Include="Data\CRM\GuestFavoriteSpecialRequest.cs" />
+    <Compile Include="Data\CRM\GuestSocialProvider.cs" />
+    <Compile Include="Data\CRM\LoyaltyLevel.cs" />
+    <Compile Include="Data\CRM\LoyaltyLevelLimitsPeriodicity.cs" />
+    <Compile Include="Data\CRM\LoyaltyLevelLimitsPeriodicityLanguage.cs" />
+    <Compile Include="Data\CRM\LoyaltyLevelsCurrency.cs" />
+    <Compile Include="Data\CRM\LoyaltyLevelsGeneratedLinksForBERegister.cs" />
+    <Compile Include="Data\CRM\LoyaltyLevelsLanguage.cs" />
+    <Compile Include="Data\CRM\LoyaltyProgram.cs" />
+    <Compile Include="Data\CRM\LoyaltyProgramsLanguage.cs" />
+    <Compile Include="Data\CRM\RateLoyaltyLevel.cs" />
+    <Compile Include="Data\CRM\TPICommission.cs" />
+    <Compile Include="Data\General\BillingType.cs" />
+    <Compile Include="Data\General\BillingTypesLanguage.cs" />
+    <Compile Include="Data\General\Currency.cs" />
+    <Compile Include="Data\General\Language.cs" />
+    <Compile Include="Data\General\ServiceName.cs" />
+    <Compile Include="Data\General\User.cs" />
+    <Compile Include="Data\Logging\MessageLoggingObject.shared.cs" />
+    <Compile Include="Data\DatesRange.cs" />
+    <Compile Include="Data\Payments\PaymentGatewayConfiguration.cs" />
+    <Compile Include="Data\Payments\PaymentGatewayTransactionsDetail.cs" />
+    <Compile Include="Data\Payments\PaymentGatewayTransaction.cs" />
+    <Compile Include="Data\Payments\PaymentMethodType.cs" />
+    <Compile Include="Data\Payments\PaypalError.cs" />
+    <Compile Include="Data\Payments\SetExpressCheckoutResponse.cs" />
+    <Compile Include="Data\PMS\PMSHistoryRoomData.cs" />
+    <Compile Include="Data\PMS\ReservationExternalIdentifier.cs" />
+    <Compile Include="Data\PMS\ReservationRoomExternalIdentifier.cs" />
+    <Compile Include="Data\PortalOperadoras\ExternalApplianceType.cs" />
+    <Compile Include="Data\PortalOperadoras\ExternalRatesTypeTarget.cs" />
+    <Compile Include="Data\PortalOperadoras\SellRule.cs" />
+    <Compile Include="Data\ProactiveActions\PEOccupancyAlertCustom.cs" />
+    <Compile Include="Data\ProactiveActions\PropertyEvent.cs" />
+    <Compile Include="Data\ProactiveActions\SystemAction.cs" />
+    <Compile Include="Data\ProactiveActions\SystemEvent.cs" />
+    <Compile Include="Data\ProactiveActions\PropertyQueue.cs" />
+    <Compile Include="Data\Properties\ChildTerm.cs" />
+    <Compile Include="Data\Properties\ChildTermLanguage.cs" />
+    <Compile Include="Data\Properties\ChildTermsCurrency.cs" />
+    <Compile Include="Data\Properties\Incentive.cs" />
+    <Compile Include="Data\Properties\RoomType.cs" />
+    <Compile Include="Data\Rates\CancellationPolicy.cs" />
+    <Compile Include="Data\Rates\Extra.cs" />
+    <Compile Include="Data\Rates\ExtrasBillingType.cs" />
+    <Compile Include="Data\Rates\GroupCode.cs" />
+    <Compile Include="Data\Rates\OtherPolicy.cs" />
+    <Compile Include="Data\Rates\PromotionalCode.cs" />
+    <Compile Include="Data\Rates\Rate.cs" />
+    <Compile Include="Data\Rates\RateBuyerGroup.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomDepositCost.cs" />
+    <Compile Include="Data\Reservations\TemplateCancelRequest.cs" />
+    <Compile Include="Data\Reservations\ValidateReservationRestricions.cs" />
+    <Compile Include="Data\Rates\RateRoomDetailReservation.cs" />
+    <Compile Include="Data\Rates\RateRoomPriceByOccupancyCustom.cs" />
+    <Compile Include="Data\Rates\TaxPolicy.cs" />
+    <Compile Include="Data\Reservations\BillingInfo.cs" />
+    <Compile Include="Data\Reservations\CancelReservationReason.cs" />
+    <Compile Include="Data\Reservations\PaymentGatewayCommitOrCancelReservationOnRequestResult.cs" />
+    <Compile Include="Data\Reservations\PropertyWithReservationsForChannelOrTPI.cs" />
+    <Compile Include="Data\Reservations\LostReservation.cs" />
+    <Compile Include="Data\Reservations\LostReservationDetail.cs" />
+    <Compile Include="Data\Reservations\LostReservationGuest.cs" />
+    <Compile Include="Data\Reservations\LostReservationRoom.cs" />
+    <Compile Include="Data\Reservations\LostReservationTableLine.cs" />
+    <Compile Include="Data\Reservations\ReservationBEOverview.cs" />
+    <Compile Include="Data\Reservations\ReservationFilter.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomIncentive.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomCancelationCost.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomDetailsAppliedPromotionalCode.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomFilter.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomLight.cs" />
+    <Compile Include="Data\Reservations\ReservationLight.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomExtrasAvailableDate.cs" />
+    <Compile Include="Data\Reservations\ExportReservation.cs" />
+    <Compile Include="Data\Reservations\ReservationExternalSource.cs" />
+    <Compile Include="Data\Reservations\ReservationAdditionalData.cs" />
+    <Compile Include="Data\Reservations\ReservationGuest.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomStayPeriod.cs" />
+    <Compile Include="Data\Reservations\TokenizedCreditCardsReadsPerMonth.cs" />
+    <Compile Include="Data\Reservations\UpdateRoom.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomAdditionalData.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomTaxPolicy.cs" />
+    <Compile Include="Data\Reservations\ReservationHistory.cs" />
+    <Compile Include="Data\Reservations\DashboardReservationCustom.cs" />
+    <Compile Include="Data\Reservations\PromotionalCode.cs" />
+    <Compile Include="Data\PaymentResultMessage.cs" />
+    <Compile Include="Data\PaymentResultReportMessage.cs" />
+    <Compile Include="Data\Reservations\PromotionalCodesCurrency.cs" />
+    <Compile Include="Data\Reservations\ReservationPartialPaymentDetail.cs" />
+    <Compile Include="Data\Reservations\ReservationPaymentDetail.cs" />
+    <Compile Include="Data\Reservations\ReservationRoom.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomChild.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomDetail.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomExtra.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomDetailsAppliedIncentive.cs" />
+    <Compile Include="Data\Reservations\ReservationRoomExtrasSchedule.cs" />
+    <Compile Include="Data\Reservations\Reservation.cs" />
+    <Compile Include="Data\ValidPromocodeParameters.cs" />
+    <Compile Include="Data\Version.cs" />
+    <Compile Include="Data\VisualStates\ReservationReadStatus.cs" />
+    <Compile Include="IContract.cs" />
+    <Compile Include="Requests\ApproveOrRefuseOnRequestReservationRequest.cs" />
+    <Compile Include="Requests\Base\ApplicationEnum.cs" />
+    <Compile Include="Requests\Base\BusinessRulesOverrider.cs" />
+    <Compile Include="Requests\Base\ReservationBaseRequest.cs" />
+    <Compile Include="Requests\CalculateGuestPastReservationsValuesRequest.cs" />
+    <Compile Include="Requests\CalculateReservationRoomPricesRequest.cs" />
+    <Compile Include="Requests\CancelAndRefundRecurringBillingRequest.cs" />
+    <Compile Include="Requests\CapturePaymentRequest.cs" />
+    <Compile Include="Requests\CreateRecurringBillingRequest.cs" />
+    <Compile Include="Requests\FindTokenizedCreditCardsReadsPerMonthByCriteriaRequest.cs" />
+    <Compile Include="Requests\GetAggregatedPastReservationsValuesRequest.cs" />
+    <Compile Include="Requests\GetDepositCostsRequest.cs" />
+    <Compile Include="Requests\GetCancelationCostsRequest.cs" />
+    <Compile Include="Requests\GetExchangeRatesBetweenCurrenciesRequest.cs" />
+    <Compile Include="Requests\GetPayPalPaymentURLRequest.cs" />
+    <Compile Include="Requests\GetReservationReadStatusRequest.cs" />
+    <Compile Include="Requests\HaveGuestExceededLoyaltyDiscountRequest.cs" />
+    <Compile Include="Requests\IncrementTokenizedCreditCardsReadsPerMonthByCriteriaRequest.cs" />
+    <Compile Include="Requests\InsertInReservationInternalNotesRequest.cs" />
+    <Compile Include="Requests\InsertPaymentGatewayTransationDetailsRequest.cs" />
+    <Compile Include="Requests\InsertPaymentGatewayTransationRequest.cs" />
+    <Compile Include="Requests\ListCancelReservationReasonRequest.cs" />
+    <Compile Include="Requests\ListMarkReservationsAsViewedRequest.cs" />
+    <Compile Include="Requests\ListMyAccountReservationsOverviewRequest.cs" />
+    <Compile Include="Requests\ListPaymentGatewayTransactionsRequest.cs" />
+    <Compile Include="Requests\ListPropertiesWithReservationsForChannelOrTPIRequest.cs" />
+    <Compile Include="Requests\ListPropertiesWithReservationsForChannelsRequest.cs" />
+    <Compile Include="Requests\ListPropertyEventRequest.cs" />
+    <Compile Include="Requests\ListPropertyQueueForTodayProcessingRequest.cs" />
+    <Compile Include="Requests\ListPropertyQueueRequest.cs" />
+    <Compile Include="Requests\ListReservationsFilterRequest.cs" />
+    <Compile Include="Requests\ListReservationStatusesRequest.cs" />
+    <Compile Include="Requests\ListSystemActionRequest.cs" />
+    <Compile Include="Requests\ListSystemEventRequest.cs" />
+    <Compile Include="Requests\ListUpdateRatesGridLogsRequest.cs" />
+    <Compile Include="Requests\LogTransactionRequest.cs" />
+    <Compile Include="Requests\NestedFilterRequestBase.cs" />
+    <Compile Include="Requests\OperatorAuthenticationRequest.cs" />
+    <Compile Include="Requests\ListLogsRequest.cs" />
+    <Compile Include="Requests\InsertLostReservationRequest.cs" />
+    <Compile Include="Requests\ListLostReservationsRequest.cs" />
+    <Compile Include="Requests\PaymentGatewayInfoAndModifyReservationOnRequestForTransactionIDRequest.cs" />
+    <Compile Include="Requests\PaypalVerifyInstallmentsAuthorizationRequest.cs" />
+    <Compile Include="Requests\SaveReservationExternalIdentifierRequest.cs" />
+    <Compile Include="Requests\UpdateReservationVCNRequest.cs" />
+    <Compile Include="Requests\ValidateReservationRestricionsRequest.cs" />
+    <Compile Include="Requests\RefundPaymentRequest.cs" />
+    <Compile Include="Requests\UpdatePaymentGatewayConfigurationRequest.cs" />
+    <Compile Include="Requests\UpdatePaymentGatewayTransationDetailsRequest.cs" />
+    <Compile Include="Requests\UpdatePaymentGatewayTransationRequest.cs" />
+    <Compile Include="Requests\UpdatePMSReservationNumberRequest.cs" />
+    <Compile Include="Requests\UpdateReservationCancelReasonRequest.cs" />
+    <Compile Include="Requests\UpdateReservationIsPaidBulkRequest.cs" />
+    <Compile Include="Requests\UpdateReservationIsPaidRequest.cs" />
+    <Compile Include="Requests\UpdateReservationTransactionStatusRequest.cs" />
+    <Compile Include="Requests\ListReservationsLightRequest.cs" />
+    <Compile Include="Requests\ValidatePromocodeForReservationRequest.cs" />
+    <Compile Include="Data\Reservations\ReservationStatus.cs" />
+    <Compile Include="Responses\InsertInReservationInternalNotesResponse.cs" />
+    <Compile Include="Responses\ApproveOrRefuseOnRequestReservationResponse.cs" />
+    <Compile Include="Responses\Base\ReservationBaseResponse.cs" />
+    <Compile Include="Responses\CalculateGuestPastReservationsValuesResponse.cs" />
+    <Compile Include="Responses\CalculateReservationRoomPricesResponse.cs" />
+    <Compile Include="Responses\CancelAndRefundRecurringBillingResponse.cs" />
+    <Compile Include="Responses\CapturePaymentResponse.cs" />
+    <Compile Include="Responses\CreateRecurringBillingResponse.cs" />
+    <Compile Include="Responses\FindTokenizedCreditCardsReadsPerMonthByCriteriaResponse.cs" />
+    <Compile Include="Responses\GetAggregatedPastReservationsValuesResponse.cs" />
+    <Compile Include="Responses\GetDepositCostsResponse.cs" />
+    <Compile Include="Responses\GetCancelationCostsResponse.cs" />
+    <Compile Include="Responses\GetExchangeRatesBetweenCurrenciesResponse.cs" />
+    <Compile Include="Responses\GetPayPalPaymentURLResponse.cs" />
+    <Compile Include="Responses\GetReservationReadStatusResponse.cs" />
+    <Compile Include="Responses\HaveGuestExceededLoyaltyDiscountResponse.cs" />
+    <Compile Include="Responses\IncrementTokenizedCreditCardsReadsPerMonthByCriteriaResponse.cs" />
+    <Compile Include="Responses\InsertPaymentGatewayTransationDetailsResponse.cs" />
+    <Compile Include="Responses\InsertPaymentGatewayTransationResponse.cs" />
+    <Compile Include="Responses\ListCancelReservationReasonResponse.cs" />
+    <Compile Include="Responses\ListMarkReservationsAsViewedResponse.cs" />
+    <Compile Include="Responses\ListMyAccountReservationsOverviewResponse.cs" />
+    <Compile Include="Responses\ListPaymentGatewayTransactionsResponse.cs" />
+    <Compile Include="Responses\ListPropertiesWithReservationsForChannelOrTPIResponse.cs" />
+    <Compile Include="Responses\ListPropertyEventResponse.cs" />
+    <Compile Include="Responses\ListPropertyQueueResponse.cs" />
+    <Compile Include="Responses\ListReservationsFilterResponse.cs" />
+    <Compile Include="Responses\ListReservationStatusesResponse.cs" />
+    <Compile Include="Responses\ListSystemActionResponse.cs" />
+    <Compile Include="Responses\ListSystemEventResponse.cs" />
+    <Compile Include="Responses\LogTransactionResponse.cs" />
+    <Compile Include="Responses\PaymentGatewayInfoForTransactionIDResponse.cs" />
+    <Compile Include="Responses\ListReservationGridLogsResponse.cs" />
+    <Compile Include="Responses\ListLogsResponse.cs" />
+    <Compile Include="Responses\InsertLostReservationResponse.cs" />
+    <Compile Include="Responses\ListLostReservationsResponse.cs" />
+    <Compile Include="Responses\ListReservationsLightResponse.cs" />
+    <Compile Include="Logs\DatesLogging.cs" />
+    <Compile Include="Logs\LoggingObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\Base\ListForPropertyPagedRequest.cs" />
+    <Compile Include="Requests\Base\GridPagedRequest.cs" />
+    <Compile Include="Requests\ListReservationUIDsByRateRoomsAndDateOfModifOrStayRequest.cs" />
+    <Compile Include="Requests\Base\ListPagedRequest.cs" />
+    <Compile Include="Requests\Base\RequestFilterBase.cs" />
+    <Compile Include="Requests\ListReservationExternalSourceRequest.cs" />
+    <Compile Include="Requests\InsertOrUpdateReservationExternalSourceRequest.cs" />
+    <Compile Include="Requests\ExportReservationsToFtpRequest.cs" />
+    <Compile Include="Requests\ModifyReservationRequest.cs" />
+    <Compile Include="Requests\MarkReservationsAsViewedRequest.cs" />
+    <Compile Include="Responses\ListReservationsUIDsResponse.cs" />
+    <Compile Include="Responses\ListReservationExternalSourceResponse.cs" />
+    <Compile Include="Responses\ModifyReservationResponse.cs" />
+    <Compile Include="Requests\ListReservationNumbersRequest.cs" />
+    <Compile Include="Requests\ListPagedRequestBase.cs" />
+    <Compile Include="Requests\ListReservationHistoryRequest.cs" />
+    <Compile Include="Requests\GenericListPagedRequest.cs" />
+    <Compile Include="Requests\ListReservationRequest.cs" />
+    <Compile Include="Requests\Base\RequestOrderBase.cs" />
+    <Compile Include="Requests\UpdateCacheRequest.cs" />
+    <Compile Include="Requests\CancelReservationRequest.cs" />
+    <Compile Include="Requests\Base\PagedRequestBase.cs" />
+    <Compile Include="Requests\UpdateReservationRequest.cs" />
+    <Compile Include="Requests\InsertReservationRequest.cs" />
+    <Compile Include="Requests\Base\RequestBase.cs" />
+    <Compile Include="Responses\Base\ListGenericPagedResponse.cs" />
+    <Compile Include="Responses\MarkReservationsAsViewedResponse.cs" />
+    <Compile Include="Responses\ListReservationNumbersResponse.cs" />
+    <Compile Include="Responses\PaypalVerifyInstallmentsAuthorizationResponse.cs" />
+    <Compile Include="Responses\SaveReservationExternalIdentifierResponse.cs" />
+    <Compile Include="Responses\UpdateReservationVCNResponse.cs" />
+    <Compile Include="Responses\ValidateReservationRestricionsResponse.cs" />
+    <Compile Include="Responses\RefundPaymentResponse.cs" />
+    <Compile Include="Responses\Status.cs" />
+    <Compile Include="Responses\TokenizedCreditCardsReadsPerMonthResponse.cs" />
+    <Compile Include="Responses\UpdateCacheResponse.cs" />
+    <Compile Include="Responses\ListReservationHistoryResponse.cs" />
+    <Compile Include="Responses\Error.cs" />
+    <Compile Include="Responses\ErrorType.cs" />
+    <Compile Include="Responses\Base\ListPagedResponse.cs" />
+    <Compile Include="Responses\ListReservationResponse.cs" />
+    <Compile Include="Responses\Base\PagedResponseBase.cs" />
+    <Compile Include="Responses\CancelReservationResponse.cs" />
+    <Compile Include="Responses\UpdatePaymentGatewayTransationDetailsResponse.cs" />
+    <Compile Include="Responses\UpdatePaymentGatewayTransationResponse.cs" />
+    <Compile Include="Responses\UpdatePMSReservationNumberResponse.cs" />
+    <Compile Include="Responses\UpdateReservationCancelReasonResponse.cs" />
+    <Compile Include="Responses\UpdateReservationIsPaidBulkResponse.cs" />
+    <Compile Include="Responses\UpdateReservationIsPaidResponse.cs" />
+    <Compile Include="Responses\UpdateReservationResponse.cs" />
+    <Compile Include="Responses\InsertReservationResponse.cs" />
+    <Compile Include="Responses\Base\ResponseBase.cs" />
+    <Compile Include="Responses\ValidatePromocodeForReservationResponse.cs" />
+    <Compile Include="Responses\Warning.cs" />
+    <Compile Include="TreeHelper.shared.cs" />
+    <Compile Include="Validation\CustomValidator.shared.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="OB.Reservations.BL.Contracts.nuspec" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /R /y "$(TargetDir)$(TargetName).xml" "$(SolutionDir)\SL\OB.REST.Services\App_Data\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

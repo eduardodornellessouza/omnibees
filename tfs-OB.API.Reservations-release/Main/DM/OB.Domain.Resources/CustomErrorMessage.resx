@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblValidateEmail" xml:space="preserve">
+    <value>{0} needs to be a valid Email.</value>
+  </data>
+  <data name="lblRequired" xml:space="preserve">
+    <value>{0} is Required.</value>
+  </data>
+  <data name="lblRoomPriceGreterthenzero" xml:space="preserve">
+    <value>Room Price must be greater than zero!</value>
+  </data>
+  <data name="lblRateLevelValueGreaterthanzero" xml:space="preserve">
+    <value>Value must be greater than zero!</value>
+  </data>
+  <data name="lblRateLevelOccupancyToGreaterthanzero" xml:space="preserve">
+    <value>The value Maximum Occupancy must be greater than zero!</value>
+  </data>
+  <data name="lblRateLevelOccupancyFromGreaterthanzero" xml:space="preserve">
+    <value>The Minimum Occupation value must be greater than zero!</value>
+  </data>
+  <data name="lblRoomQuantiy" xml:space="preserve">
+    <value>Room Quantiy should be greater than or equal to zero.</value>
+  </data>
+  <data name="lblReservationRoomQuantityGreaterthanzero" xml:space="preserve">
+    <value>Room Quantity must be greater than zero!</value>
+  </data>
+  <data name="lblRatesIncentiveDateFrom" xml:space="preserve">
+    <value>Please select a Start Date!</value>
+  </data>
+  <data name="lblRatesIncentiveDateTo" xml:space="preserve">
+    <value>Please select an End Date!</value>
+  </data>
+  <data name="lblInvoiceSettingVatLassthan100" xml:space="preserve">
+    <value>VAT must be less than 100%!</value>
+  </data>
+  <data name="lblRecordUpdatedFailed" xml:space="preserve">
+    <value>Record update failed.</value>
+  </data>
+  <data name="lblAdult" xml:space="preserve">
+    <value>Adult</value>
+  </data>
+  <data name="lblContentNotTranslated" xml:space="preserve">
+    <value>This information does not exist in your language. Please contact the hotel for more information.</value>
+  </data>
+  <data name="lblUnsubscribe" xml:space="preserve">
+    <value>to Unsubscribe from this notification.</value>
+  </data>
+  <data name="lblValidateOldPassword" xml:space="preserve">
+    <value>Invalid password.</value>
+  </data>
+  <data name="lblChildTermPriceRequired" xml:space="preserve">
+    <value>Child group price is Required.</value>
+  </data>
+  <data name="lblCampaignPerDiscount" xml:space="preserve">
+    <value>Discount must be less than 100%.</value>
+  </data>
+  <data name="lblValidateDiscountLessthan100" xml:space="preserve">
+    <value>Discount must be less than 100%.</value>
+  </data>
+  <data name="lblCampaignValueDiscount" xml:space="preserve">
+    <value>Discount must be greater than Zero.</value>
+  </data>
+  <data name="lblValidateDiscountGreaterthanZero" xml:space="preserve">
+    <value>Discount must be greater than zero.</value>
+  </data>
+  <data name="lblValidateEmailaddress" xml:space="preserve">
+    <value>Email address is required.</value>
+  </data>
+  <data name="lblReservationChildAge" xml:space="preserve">
+    <value>Age must be greater than zero.</value>
+  </data>
+  <data name="lblRoomAllomentGreterthenzero" xml:space="preserve">
+    <value>Room Allotment must be greater than zero!</value>
+  </data>
+  <data name="lblValidatePropertyBuildYear" xml:space="preserve">
+    <value>Build Year can not be greater than current year.</value>
+  </data>
+  <data name="lblValidatePropertyRenYear" xml:space="preserve">
+    <value>The Year Renewal must be less than or equal to the Current Year.</value>
+  </data>
+  <data name="lblValidateBreakFeastHours" xml:space="preserve">
+    <value>The End of Time Breakfast must be greater than Start.</value>
+  </data>
+  <data name="lblResCardNumberLength" xml:space="preserve">
+    <value>Card number length does not match to card type.</value>
+  </data>
+  <data name="lblValidateExtraPrice" xml:space="preserve">
+    <value>Price must be greater than zero.</value>
+  </data>
+  <data name="lblChildTermsAgeToGreterthenAgeFrom" xml:space="preserve">
+    <value>The value of the Minimum Age should be less than the Maximum Age.</value>
+  </data>
+  <data name="lblRoomvalueLessthan100" xml:space="preserve">
+    <value>Room Value must be less than or equal to 100%.</value>
+  </data>
+  <data name="lblRoomTypeValidateMaxValue" xml:space="preserve">
+    <value>The value Maximum must be greater than Minimum.</value>
+  </data>
+  <data name="lblValidateRateRestriction" xml:space="preserve">
+    <value>The value Maximum Days must be greater than Minimum Days.</value>
+  </data>
+  <data name="lblInvoiceSettingDetailValueLessthan100" xml:space="preserve">
+    <value>Value must be less than 100%.</value>
+  </data>
+  <data name="lblRateLevelValueLessthan100" xml:space="preserve">
+    <value>Value must be less than 100%.</value>
+  </data>
+  <data name="lblChannelServiceValueLassthan100" xml:space="preserve">
+    <value>Value must be less than 100.</value>
+  </data>
+  <data name="lblValueGreaterZero" xml:space="preserve">
+    <value>Value must be greater than zero.</value>
+  </data>
+  <data name="lblChannelvalueGreaterthanzero" xml:space="preserve">
+    <value>Channel value must be greater than zero.</value>
+  </data>
+  <data name="lblChannelvalueLessthan100" xml:space="preserve">
+    <value>Channel value must be less than or equal to 100%.</value>
+  </data>
+  <data name="lblPackageDays" xml:space="preserve">
+    <value>The value Maximum Days must be less than Days.</value>
+  </data>
+  <data name="lblRoomTypeValidateMaxOccupancy" xml:space="preserve">
+    <value>The value Maximum Occupancy must be greater than Minimum Occupancy.</value>
+  </data>
+  <data name="lblRateLevelOccupancyToLessthan100" xml:space="preserve">
+    <value>The value Maximum Occupancy must be less than 100%!</value>
+  </data>
+  <data name="lblRateLevelOccupancyFromLessthan100" xml:space="preserve">
+    <value>The Minimum Occupation must be less than 100%</value>
+  </data>
+  <data name="lblValueExceed" xml:space="preserve">
+    <value>Value should not exceed Sales Document Value.</value>
+  </data>
+  <data name="lblSalesDocDetailValue" xml:space="preserve">
+    <value>Value should not succeed from Invoice Value.</value>
+  </data>
+  <data name="lblGroupCodeValidateEndSell" xml:space="preserve">
+    <value>End Date must be greater than Start Date</value>
+  </data>
+  <data name="lblReplicatePropertyFail" xml:space="preserve">
+    <value>Operation failed for below entities because of the Reference : </value>
+  </data>
+  <data name="lblPackageMaxDays" xml:space="preserve">
+    <value>You must select Max Days when Package is extentible.</value>
+  </data>
+  <data name="lblPackageExtendedRate" xml:space="preserve">
+    <value>You must select Rate for extended Package.</value>
+  </data>
+  <data name="lblBeginEndSaleDate" xml:space="preserve">
+    <value>End Sale date must be greater than Begin Sale date.</value>
+  </data>
+  <data name="lblFree" xml:space="preserve">
+    <value>Free</value>
+  </data>
+  <data name="lblClickHere" xml:space="preserve">
+    <value>Click here</value>
+  </data>
+  <data name="lblCanecellationPolicyValidDay" xml:space="preserve">
+    <value>Enter Valid Day.</value>
+  </data>
+  <data name="lblInvoiceSettingValidateVat" xml:space="preserve">
+    <value>Enter valid VAT.</value>
+  </data>
+  <data name="lblChildTermsValueLessthan100" xml:space="preserve">
+    <value>Enter value is less then 100.</value>
+  </data>
+  <data name="lblTaxPolicyValueLessthan100" xml:space="preserve">
+    <value>Enter value is less then 100.</value>
+  </data>
+  <data name="lblTaxPolicyValidValue" xml:space="preserve">
+    <value>Enter valid Value.</value>
+  </data>
+  <data name="lblInvoiceSettingDetailValidateValue" xml:space="preserve">
+    <value>Enter valid value.</value>
+  </data>
+  <data name="lblInvoiceValidateValue" xml:space="preserve">
+    <value>Enter Valid Value.</value>
+  </data>
+  <data name="lblChannelServiceValidateValue" xml:space="preserve">
+    <value>Enter valid Value</value>
+  </data>
+  <data name="lblChildTermsValidValue" xml:space="preserve">
+    <value>Enter valid Value.</value>
+  </data>
+  <data name="lblInvoiceValidateQuantity" xml:space="preserve">
+    <value>Enter Valid Quantity.</value>
+  </data>
+  <data name="lblValidateRoomTypeQty" xml:space="preserve">
+    <value>Quantity value must be greater than zero.</value>
+  </data>
+  <data name="lblValidateNewPasswordandConfirmPassword" xml:space="preserve">
+    <value>Password and Confirm Password don't match.</value>
+  </data>
+  <data name="lblPswdNotMatch" xml:space="preserve">
+    <value>Password and Confirm Password don't match.</value>
+  </data>
+  <data name="lblValidatePasswordandRepeatPassword" xml:space="preserve">
+    <value>Password and Confirm Password don't match.</value>
+  </data>
+  <data name="lblValidTo" xml:space="preserve">
+    <value>Valid To field is required</value>
+  </data>
+  <data name="lblValidateSubject" xml:space="preserve">
+    <value>Subject is required</value>
+  </data>
+  <data name="lblValidFrom" xml:space="preserve">
+    <value>Valid From field is required</value>
+  </data>
+  <data name="lblValidateMessages" xml:space="preserve">
+    <value>Message is required</value>
+  </data>
+  <data name="lblValidateURl" xml:space="preserve">
+    <value>URL field is required</value>
+  </data>
+  <data name="lblValidateValue" xml:space="preserve">
+    <value>Value filed is required</value>
+  </data>
+  <data name="lblPackageValidateStartEndDate" xml:space="preserve">
+    <value>To Date must be greater than From Date</value>
+  </data>
+  <data name="lblRateTiersDateRange" xml:space="preserve">
+    <value>End Date must be greater than Start Date.</value>
+  </data>
+  <data name="lblValidateCloseDate" xml:space="preserve">
+    <value>End Date must be greater than Start Date.</value>
+  </data>
+  <data name="lblGroupCodeValidateDateTo" xml:space="preserve">
+    <value>End Date must be greater than Start Date</value>
+  </data>
+  <data name="lblSalesDocumentSeriesValidateStartEndDate" xml:space="preserve">
+    <value>End Date must be greater than Start Date</value>
+  </data>
+  <data name="lblCampaignValidateEndDate" xml:space="preserve">
+    <value>End Date must be greater than Start Date.</value>
+  </data>
+  <data name="lblVatValidateDate" xml:space="preserve">
+    <value>Date can not be of past.</value>
+  </data>
+  <data name="lblPackagServiceValidateDate" xml:space="preserve">
+    <value>Date can not be of past.</value>
+  </data>
+  <data name="lblInvoiceSettingValidateRecurrence" xml:space="preserve">
+    <value>Recurrence must be greater than zero!</value>
+  </data>
+  <data name="lblValidateReceptionHours" xml:space="preserve">
+    <value>Reception Close Hours must be greater than Reception Open Hours.</value>
+  </data>
+  <data name="lblValidateCheckInHours" xml:space="preserve">
+    <value>Check-Out must be greater than Check-In.</value>
+  </data>
+  <data name="lblChild" xml:space="preserve">
+    <value>Child</value>
+  </data>
+  <data name="lblNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="lblStayThroughMsg" xml:space="preserve">
+    <value>Stay Through and Minimum or Maximum of Stay cannot be set at the same time.</value>
+  </data>
+  <data name="lblValidateIncentiveFreeDays" xml:space="preserve">
+    <value>Number of Free Days must be less than or equal to number of days.</value>
+  </data>
+  <data name="lblPromotionCodesValidateDateValidFrom" xml:space="preserve">
+    <value>Both dates Valid From and Valid To are required for making Promotional Code valid between those dates</value>
+  </data>
+  <data name="lblUserPasswordExpirydate" xml:space="preserve">
+    <value>Password Expiry Date must be greater than current date.</value>
+  </data>
+  <data name="lblCancellationPolicyValidateLanguageName" xml:space="preserve">
+    <value>Please Enter Language Name.</value>
+  </data>
+  <data name="lblguestSelectLanguages" xml:space="preserve">
+    <value>Please select a Language.</value>
+  </data>
+  <data name="lblGuestSelectCountry" xml:space="preserve">
+    <value>Please select a Country.</value>
+  </data>
+  <data name="lblValidateGroupCodeRate" xml:space="preserve">
+    <value>You must have to add Rate related to this Group Code.</value>
+  </data>
+  <data name="lblRateValidateLangName" xml:space="preserve">
+    <value>Please Enter Language Name.</value>
+  </data>
+  <data name="lblRoomTypeValidateLanguageName" xml:space="preserve">
+    <value>Please Enter Language Name.</value>
+  </data>
+  <data name="lblOtherPolicyValidateLanguageName" xml:space="preserve">
+    <value>Please Enter Language Name.</value>
+  </data>
+  <data name="lblExtraServiceValidateLanguageName" xml:space="preserve">
+    <value>Please Enter Language Name.</value>
+  </data>
+  <data name="lblDepositPolicyValidateLanguageName" xml:space="preserve">
+    <value>Please Enter Language Name.</value>
+  </data>
+  <data name="lblTaxPolicyValidateLanguageName" xml:space="preserve">
+    <value>Please Enter Language Name.</value>
+  </data>
+  <data name="lblAttractionValidateLanguageName" xml:space="preserve">
+    <value>Please Enter Language Name.</value>
+  </data>
+  <data name="lblValidateUserName" xml:space="preserve">
+    <value>Please Enter User Name.</value>
+  </data>
+  <data name="lblValidateUserPassword" xml:space="preserve">
+    <value>Please Enter User Password</value>
+  </data>
+  <data name="lblActivityCategory" xml:space="preserve">
+    <value>Please Select a Category.</value>
+  </data>
+  <data name="lblSelectOneDay" xml:space="preserve">
+    <value>Please select at least one day for Update.</value>
+  </data>
+  <data name="lblValidateVAT" xml:space="preserve">
+    <value>Please select VAT</value>
+  </data>
+  <data name="lblSalesDocumentSeriesValidateDocumentType" xml:space="preserve">
+    <value>Please Select a Sales DocumentType.</value>
+  </data>
+  <data name="lblSystemTemplateValidateCategory" xml:space="preserve">
+    <value>Please Select a Templates Category.</value>
+  </data>
+  <data name="lblSalesDocDetailValidate" xml:space="preserve">
+    <value>Please select Sales Document Detail.</value>
+  </data>
+  <data name="lblStatus" xml:space="preserve">
+    <value>Please select a Status.</value>
+  </data>
+  <data name="lblAccountManagerValidateProperty" xml:space="preserve">
+    <value>Please Select Property Account Manager</value>
+  </data>
+  <data name="lblReservationGuest" xml:space="preserve">
+    <value>Please select guest.</value>
+  </data>
+  <data name="lblSurveyPropertyTemplate" xml:space="preserve">
+    <value>Please select a Property Template.</value>
+  </data>
+  <data name="lblValidateRoomType" xml:space="preserve">
+    <value>Please select Room Type</value>
+  </data>
+  <data name="lblAttractionCategory" xml:space="preserve">
+    <value>Please select an Attraction Category.</value>
+  </data>
+  <data name="lblPropertyCategory" xml:space="preserve">
+    <value>Please Select Property Category</value>
+  </data>
+  <data name="lblGuestSelectCategory" xml:space="preserve">
+    <value>Please select a Guest Category.</value>
+  </data>
+  <data name="lblCurrencySelect" xml:space="preserve">
+    <value>Please Select a Currency.</value>
+  </data>
+  <data name="lblGuestSelectCurrency" xml:space="preserve">
+    <value>Please Select a Currency.</value>
+  </data>
+  <data name="lblPropertyValidateClient" xml:space="preserve">
+    <value>Please Select Property Client</value>
+  </data>
+  <data name="lblInvoiceSettingValidateProperty" xml:space="preserve">
+    <value>Please Select a Property.</value>
+  </data>
+  <data name="lblSalesDocPropertyValue" xml:space="preserve">
+    <value>Please select a Property</value>
+  </data>
+  <data name="lblPackageRateValidate" xml:space="preserve">
+    <value>Please select Rate.</value>
+  </data>
+  <data name="lblValidateDropDown" xml:space="preserve">
+    <value>Please select.</value>
+  </data>
+  <data name="lblRecordUpdated" xml:space="preserve">
+    <value>Record updated successfully.</value>
+  </data>
+  <data name="lblAmenityCategorySelect" xml:space="preserve">
+    <value>Select a Category.</value>
+  </data>
+  <data name="lblYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="lblViewCampaign" xml:space="preserve">
+    <value>if you can't view the email correctly.</value>
+  </data>
+  <data name="lblValidateAmount" xml:space="preserve">
+    <value>Only Numeric Value is allowed.</value>
+  </data>
+  <data name="lblValidateLon" xml:space="preserve">
+    <value>Invalid value for Longitude.</value>
+  </data>
+  <data name="lblChildTermsAgeFrom" xml:space="preserve">
+    <value>Value of the Maximum Age invalid.</value>
+  </data>
+  <data name="lblChildTermsAgeTo" xml:space="preserve">
+    <value>Value of the Minimum Age invalid.</value>
+  </data>
+  <data name="lblValidateLat" xml:space="preserve">
+    <value>Invalid value for Latitude.</value>
+  </data>
+  <data name="lblSystemDefultEventValidateValue" xml:space="preserve">
+    <value>Invalid Value</value>
+  </data>
+  <data name="lblDuplicate" xml:space="preserve">
+    <value>Record with the same name already exists.</value>
+  </data>
+  <data name="lblTimeZone" xml:space="preserve">
+    <value>Time Zone</value>
+  </data>
+</root>

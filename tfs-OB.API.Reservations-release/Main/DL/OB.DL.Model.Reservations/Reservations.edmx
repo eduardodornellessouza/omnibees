@@ -1,0 +1,2084 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Omnibees_dev2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CancelReservationReason">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CancelReservationReasonLanguage">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CancelReservationReason_UID" Type="int" Nullable="false" />
+          <Property Name="Language_UID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LostReservations">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CheckIn" Type="datetime" />
+          <Property Name="CheckOut" Type="datetime" />
+          <Property Name="GuestName" Type="nvarchar" MaxLength="100" />
+          <Property Name="GuestEmail" Type="nvarchar" MaxLength="100" />
+          <Property Name="NumberOfRooms" Type="int" />
+          <Property Name="ReservationTotal" Type="nvarchar" MaxLength="100" />
+          <Property Name="CouchBaseId" Type="nvarchar" MaxLength="256" />
+          <Property Name="Property_UID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="TotalReservation" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="ReservationFilter">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="PropertyUid" Type="bigint" Nullable="false" />
+          <Property Name="PropertyName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsOnRequest" Type="bit" Nullable="false" />
+          <Property Name="IsReaded" Type="bit" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="GuestName" Type="nvarchar" MaxLength="400" />
+          <Property Name="NumberOfNights" Type="int" />
+          <Property Name="NumberOfAdults" Type="int" />
+          <Property Name="NumberOfChildren" Type="int" />
+          <Property Name="NumberOfRooms" Type="int" />
+          <Property Name="TPI_UID" Type="bigint" />
+          <Property Name="PaymentTypeUid" Type="bigint" />
+          <Property Name="Status" Type="bigint" />
+          <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="ExternalTotalAmount" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="ExternalCommissionValue" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ExternalIsPaid" Type="bit" />
+          <Property Name="ChannelUid" Type="bigint" />
+          <Property Name="ChannelName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TPI_Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsPaid" Type="bit" />
+          <Property Name="ReservationDate" Type="datetime" />
+          <Property Name="ReservationBaseCurrencyExchangeRate" Type="decimal" Precision="18" Scale="10" />
+          <Property Name="ReservationBaseCurrencySymbol" Type="nvarchar" MaxLength="5" />
+          <Property Name="PropertyBaseCurrencyExchangeRate" Type="decimal" Precision="18" Scale="10" />
+          <Property Name="PropertyBaseCurrencySymbol" Type="nvarchar" MaxLength="5" />
+          <Property Name="RepresentativeCurrencyExchangeRate" Type="decimal" Precision="18" Scale="10" />
+          <Property Name="RepresentativeCurrencySymbol" Type="nvarchar" MaxLength="5" />
+          <Property Name="PartnerUid" Type="bigint" />
+          <Property Name="PartnerReservationNumber" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreatedBy" Type="bigint" />
+          <Property Name="ModifiedBy" Type="bigint" />
+          <Property Name="Guest_UID" Type="bigint" />
+          <Property Name="ExternalChannelUid" Type="bigint" />
+          <Property Name="ExternalTPIUid" Type="bigint" />
+          <Property Name="ExternalName" Type="nvarchar" MaxLength="400" />
+          <Property Name="IsMobile" Type="bit" />
+          <Property Name="LoyaltyCardNumber" Type="varchar" MaxLength="100" />
+          <Property Name="Employee_UID" Type="bigint" />
+          <Property Name="BigPullAuthRequestor_UID" Type="bigint" />
+          <Property Name="BigPullAuthOwner_UID" Type="bigint" />
+        </EntityType>
+        <EntityType Name="ReservationPartialPaymentDetails">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Reservation_UID" Type="bigint" Nullable="false" />
+          <Property Name="InstallmentNo" Type="int" Nullable="false" />
+          <Property Name="InterestRate" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+          <Property Name="IsPaid" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ReservationPaymentDetails">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PaymentMethod_UID" Type="bigint" />
+          <Property Name="Reservation_UID" Type="bigint" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Currency_UID" Type="bigint" />
+          <Property Name="CVV" Type="nvarchar" MaxLength="600" />
+          <Property Name="CardName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CardNumber" Type="nvarchar" MaxLength="600" />
+          <Property Name="ExpirationDate" Type="datetime" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="PaymentGatewayTokenizationIsActive" Type="bit" Nullable="false" />
+          <Property Name="CreditCardToken" Type="varchar" MaxLength="50" />
+          <Property Name="OBTokenizationIsActive" Type="bit" Nullable="false" />
+          <Property Name="HashCode" Type="binary" MaxLength="32" />
+          <Property Name="VCNReservationId" Type="nvarchar" MaxLength="100" />
+          <Property Name="VCNToken" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ActivationDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ReservationRoomChild">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReservationRoom_UID" Type="bigint" />
+          <Property Name="ChildNo" Type="int" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Revision" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ReservationRoomDetails">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RateRoomDetails_UID" Type="bigint" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+          <Property Name="ReservationRoom_UID" Type="bigint" Nullable="false" />
+          <Property Name="AdultPrice" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="ChildPrice" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Revision" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="Rate_UID" Type="bigint" />
+        </EntityType>
+        <EntityType Name="ReservationRoomDetailsAppliedIncentive">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReservationRoomDetails_UID" Type="bigint" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Days" Type="int" />
+          <Property Name="FreeDays" Type="int" />
+          <Property Name="DiscountPercentage" Type="int" />
+          <Property Name="IsFreeDaysAtBegin" Type="bit" />
+          <Property Name="Incentive_UID" Type="bigint" Nullable="false" />
+          <Property Name="DiscountValue" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Revision" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ReservationRoomDetailsAppliedPromotionalCode">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Revision" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="ReservationRoomDetail_UID" Type="bigint" Nullable="false" />
+          <Property Name="PromotionalCode_UID" Type="bigint" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="DiscountValue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="DiscountPercentage" Type="decimal" Precision="5" Scale="2" />
+        </EntityType>
+        <EntityType Name="ReservationRoomExtras">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Extra_UID" Type="bigint" Nullable="false" />
+          <Property Name="ReservationRoom_UID" Type="bigint" Nullable="false" />
+          <Property Name="Qty" Type="smallint" Nullable="false" />
+          <Property Name="Total_Price" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+          <Property Name="Total_VAT" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ExtraIncluded" Type="bit" Nullable="false" />
+          <Property Name="Revision" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ReservationRoomExtrasAvailableDates">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReservationRoomExtra_UID" Type="bigint" Nullable="false" />
+          <Property Name="DateFrom" Type="datetime" Nullable="false" />
+          <Property Name="DateTo" Type="datetime" Nullable="false" />
+          <Property Name="Revision" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ReservationRoomExtrasSchedule">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReservationRoomExtra_UID" Type="bigint" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="Revision" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ReservationRoomFilter">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" Nullable="false" />
+          <Property Name="ReservationId" Type="bigint" Nullable="false" />
+          <Property Name="ReservationRoomNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="CheckIn" Type="datetime" />
+          <Property Name="CheckOut" Type="datetime" />
+          <Property Name="ApplyDepositPolicy" Type="bit" />
+          <Property Name="DepositCost" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DepositNumberOfNight" Type="int" />
+          <Property Name="Status" Type="bigint" />
+          <Property Name="GuestName" Type="nvarchar" MaxLength="250" />
+          <Property Name="CancellationCost" Type="decimal" Precision="18" Scale="4" />
+        </EntityType>
+        <EntityType Name="ReservationRooms">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Reservation_UID" Type="bigint" Nullable="false" />
+          <Property Name="RoomType_UID" Type="bigint" />
+          <Property Name="GuestName" Type="nvarchar" MaxLength="250" />
+          <Property Name="SmokingPreferences" Type="bit" />
+          <Property Name="DateFrom" Type="datetime" />
+          <Property Name="DateTo" Type="datetime" />
+          <Property Name="AdultCount" Type="int" />
+          <Property Name="ChildCount" Type="int" />
+          <Property Name="TotalTax" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Package_UID" Type="bigint" />
+          <Property Name="CancellationPolicy" Type="nvarchar(max)" />
+          <Property Name="DepositPolicy" Type="nvarchar(max)" />
+          <Property Name="OtherPolicy" Type="nvarchar" MaxLength="4000" />
+          <Property Name="CancellationPolicyDays" Type="int" />
+          <Property Name="ReservationRoomNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="RoomName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Rate_UID" Type="bigint" />
+          <Property Name="IsCanceledByChannels" Type="bit" />
+          <Property Name="ReservationRoomsPriceSum" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="ReservationRoomsExtrasSum" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="ReservationRoomsTotalAmount" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="ArrivalTime" Type="time" Precision="7" />
+          <Property Name="PmsRservationNumber" Type="varchar" MaxLength="50" />
+          <Property Name="TPIDiscountIsPercentage" Type="bit" />
+          <Property Name="TPIDiscountIsValueDecrease" Type="bit" />
+          <Property Name="TPIDiscountValue" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="IsCancellationAllowed" Type="bit" />
+          <Property Name="CancellationCosts" Type="bit" Nullable="false" />
+          <Property Name="CancellationValue" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="CancellationPaymentModel" Type="int" />
+          <Property Name="CancellationNrNights" Type="int" />
+          <Property Name="CommissionType" Type="bigint" />
+          <Property Name="CommissionValue" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="CancellationDate" Type="datetime" />
+          <Property Name="Revision" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="LoyaltyLevel_UID" Type="bigint" />
+          <Property Name="LoyaltyLevelName" Type="nvarchar" MaxLength="300" />
+          <Property Name="GuestEmail" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="ReservationRoomTaxPolicies">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReservationRoom_UID" Type="bigint" Nullable="false" />
+          <Property Name="BillingType" Type="nvarchar" MaxLength="100" />
+          <Property Name="TaxId" Type="bigint" />
+          <Property Name="TaxName" Type="varchar" MaxLength="100" />
+          <Property Name="TaxDescription" Type="varchar(max)" />
+          <Property Name="TaxDefaultValue" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="TaxIsPercentage" Type="bit" />
+          <Property Name="TaxCalculatedValue" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Revision" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Reservations">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Guest_UID" Type="bigint" Nullable="false" />
+          <Property Name="Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Channel_UID" Type="bigint" />
+          <Property Name="GDSSource" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Adults" Type="int" Nullable="false" />
+          <Property Name="Children" Type="int" />
+          <Property Name="Status" Type="bigint" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="InternalNotes" Type="nvarchar(max)" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="TPI_UID" Type="bigint" />
+          <Property Name="PromotionalCode_UID" Type="bigint" />
+          <Property Name="ChannelProperties_RateModel_UID" Type="bigint" />
+          <Property Name="ChannelProperties_Value" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="ChannelProperties_IsPercentage" Type="bit" />
+          <Property Name="InvoicesDetail_UID" Type="bigint" />
+          <Property Name="Property_UID" Type="bigint" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CreateBy" Type="bigint" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="ModifyBy" Type="bigint" />
+          <Property Name="BESpecialRequests1_UID" Type="bigint" />
+          <Property Name="BESpecialRequests2_UID" Type="bigint" />
+          <Property Name="BESpecialRequests3_UID" Type="bigint" />
+          <Property Name="BESpecialRequests4_UID" Type="bigint" />
+          <Property Name="TransferLocation_UID" Type="bigint" />
+          <Property Name="TransferTime" Type="time" Precision="7" />
+          <Property Name="TransferOther" Type="nvarchar" MaxLength="2000" />
+          <Property Name="CancellationPolicyDays" Type="int" />
+          <Property Name="OtherPolicy" Type="nvarchar" MaxLength="4000" />
+          <Property Name="DepositPolicy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CancellationPolicy" Type="nvarchar" MaxLength="1000" />
+          <Property Name="BillingAddress1" Type="nvarchar" MaxLength="250" />
+          <Property Name="BillingAddress2" Type="nvarchar" MaxLength="250" />
+          <Property Name="BillingContactName" Type="nvarchar" MaxLength="250" />
+          <Property Name="BillingPostalCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="BillingCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="BillingCountry_UID" Type="bigint" />
+          <Property Name="BillingPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tax" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="ChannelAffiliateName" Type="nvarchar" MaxLength="100" />
+          <Property Name="PaymentMethodType_UID" Type="bigint" />
+          <Property Name="CancelReservationReason_UID" Type="int" />
+          <Property Name="CancelReservationComments" Type="nvarchar" MaxLength="1000" />
+          <Property Name="OtherLoyaltyCardType_UID" Type="bigint" />
+          <Property Name="OtherLoyaltyCardNumber" Type="varchar" MaxLength="100" />
+          <Property Name="LoyaltyCardNumber" Type="varchar" MaxLength="100" />
+          <Property Name="ReservationCurrency_UID" Type="bigint" />
+          <Property Name="ReservationBaseCurrency_UID" Type="bigint" />
+          <Property Name="ReservationCurrencyExchangeRate" Type="decimal" Precision="18" Scale="10" />
+          <Property Name="ReservationCurrencyExchangeRateDate" Type="datetime" />
+          <Property Name="ReservationLanguageUsed_UID" Type="bigint" />
+          <Property Name="TotalTax" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="NumberOfRooms" Type="int" />
+          <Property Name="RoomsTax" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="RoomsExtras" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="RoomsPriceSum" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="RoomsTotalAmount" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="GroupCode_UID" Type="bigint" />
+          <Property Name="PmsRservationNumber" Type="varchar" MaxLength="50" />
+          <Property Name="IsOnRequest" Type="bit" />
+          <Property Name="OnRequestDecisionUser" Type="bigint" />
+          <Property Name="OnRequestDecisionDate" Type="datetime" />
+          <Property Name="BillingState_UID" Type="bigint" />
+          <Property Name="BillingEmail" Type="varchar" MaxLength="200" />
+          <Property Name="BankDepositDescription" Type="nvarchar" MaxLength="2000" />
+          <Property Name="IsPartialPayment" Type="bit" />
+          <Property Name="InstallmentAmount" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="NoOfInstallment" Type="int" />
+          <Property Name="InterestRate" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="GuestFirstName" Type="varchar" MaxLength="200" />
+          <Property Name="GuestLastName" Type="varchar" MaxLength="200" />
+          <Property Name="GuestEmail" Type="varchar" MaxLength="200" />
+          <Property Name="GuestPhone" Type="varchar" MaxLength="100" />
+          <Property Name="GuestIDCardNumber" Type="varchar" MaxLength="200" />
+          <Property Name="GuestCountry_UID" Type="bigint" />
+          <Property Name="GuestState_UID" Type="bigint" />
+          <Property Name="GuestCity" Type="varchar" MaxLength="100" />
+          <Property Name="GuestAddress1" Type="varchar" MaxLength="500" />
+          <Property Name="GuestAddress2" Type="varchar" MaxLength="500" />
+          <Property Name="GuestPostalCode" Type="varchar" MaxLength="100" />
+          <Property Name="UseDifferentBillingInfo" Type="bit" />
+          <Property Name="BillingTaxCardNumber" Type="varchar" MaxLength="100" />
+          <Property Name="PaymentGatewayTransactionStatusCode" Type="nchar" MaxLength="10" />
+          <Property Name="PaymentGatewayName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PaymentGatewayProcessorName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PaymentGatewayTransactionID" Type="nvarchar" MaxLength="50" />
+          <Property Name="PaymentAmountCaptured" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="PaymentGatewayOrderID" Type="nvarchar" MaxLength="100" />
+          <Property Name="PaymentGatewayTransactionDateTime" Type="datetime" />
+          <Property Name="PaymentGatewayAutoGeneratedUID" Type="nvarchar" MaxLength="50" />
+          <Property Name="PaymentGatewayTransactionMessage" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IsMobile" Type="bit" />
+          <Property Name="IsPaid" Type="bit" />
+          <Property Name="IsPaidDecisionUser" Type="bigint" />
+          <Property Name="IsPaidDecisionDate" Type="datetime" />
+          <Property Name="Salesman_UID" Type="bigint" />
+          <Property Name="SalesmanCommission" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="SalesmanIsCommissionPercentage" Type="bit" />
+          <Property Name="InternalNotesHistory" Type="nvarchar(max)" />
+          <Property Name="Company_UID" Type="bigint" />
+          <Property Name="Employee_UID" Type="bigint" />
+          <Property Name="TPICompany_UID" Type="bigint" />
+          <Property Name="PropertyBaseCurrencyExchangeRate" Type="decimal" Precision="18" Scale="10" />
+          <Property Name="ReferralSourceId" Type="bigint" />
+          <Property Name="ReferralSourceURL" Type="nvarchar(max)" />
+          <Property Name="CampaignName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Campaign_UID" Type="bigint" />
+          <Property Name="PaymentGatewayTransactionUID" Type="bigint" />
+          <Property Name="ExternalSource_UID" Type="bigint" />
+          <Property Name="Revision" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ReservationsAdditionalData">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Reservation_UID" Type="bigint" Nullable="false" />
+          <Property Name="ReservationAdditionalDataJSON" Type="nvarchar(max)" />
+          <Property Name="IsFromNewInsert" Type="bit" />
+          <Property Name="ChannelPartnerID" Type="int" />
+          <Property Name="PartnerReservationNumber" Type="nvarchar" MaxLength="200" />
+          <Property Name="Revision" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="ReservationDomain" Type="nvarchar" MaxLength="250" />
+          <Property Name="BookingEngineTemplate" Type="nvarchar" MaxLength="50" />
+          <Property Name="isDirectReservation" Type="bit" />
+          <Property Name="BookerIsGenius" Type="bit" />
+          <Property Name="BigPullAuthRequestor_UID" Type="bigint" />
+          <Property Name="BigPullAuthOwner_UID" Type="bigint" />
+        </EntityType>
+        <EntityType Name="ReservationsHistory">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReservationUID" Type="bigint" />
+          <Property Name="ReservationNumber" Type="varchar" MaxLength="50" />
+          <Property Name="UserUID" Type="bigint" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="250" />
+          <Property Name="Channel" Type="varchar" MaxLength="50" />
+          <Property Name="ChangedDate" Type="datetime" />
+          <Property Name="StatusUID" Type="bigint" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="TransactionUID" Type="nvarchar" MaxLength="36" />
+          <Property Name="TransactionState" Type="int" />
+          <Property Name="ChannelUID" Type="bigint" />
+          <Property Name="HangfireId" Type="bigint" />
+          <Property Name="Retries" Type="int" />
+          <Property Name="Message" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ReservationStatuses">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ReservationStatusLanguage">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ReservationStatus_UID" Type="bigint" />
+          <Property Name="Language_UID" Type="bigint" />
+        </EntityType>
+        <EntityType Name="ReservationTransactionStatus">
+          <Key>
+            <PropertyRef Name="TransactionUID" />
+          </Key>
+          <Property Name="TransactionUID" Type="nvarchar" MaxLength="36" Nullable="false" />
+          <Property Name="ReservationUID" Type="bigint" Nullable="false" />
+          <Property Name="ReservationNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TransactionState" Type="int" Nullable="false" />
+          <Property Name="ChannelUID" Type="bigint" Nullable="false" />
+          <Property Name="HangfireId" Type="bigint" Nullable="false" />
+          <Property Name="Retries" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TokenizedCreditCardsReadsPerMonth">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Property_UID" Type="bigint" Nullable="false" />
+          <Property Name="YearNr" Type="int" Nullable="false" />
+          <Property Name="MonthNr" Type="smallint" Nullable="false" />
+          <Property Name="NrOfCreditCardReads" Type="bigint" Nullable="false" />
+          <Property Name="LastModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="VisualStates">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StateType" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="JSONData" Type="nvarchar(max)" />
+          <Property Name="LookupKey_1" Type="varchar" MaxLength="50" />
+          <Property Name="LookupKey_2" Type="varchar" MaxLength="50" />
+          <Property Name="LookupKey_3" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__CancelRes__Cance__05C49D7C">
+          <End Role="CancelReservationReason" Type="Self.CancelReservationReason" Multiplicity="1" />
+          <End Role="CancelReservationReasonLanguage" Type="Self.CancelReservationReasonLanguage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CancelReservationReason">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="CancelReservationReasonLanguage">
+              <PropertyRef Name="CancelReservationReason_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservati__Reser__49E4BD9F">
+          <End Role="ReservationRoomDetails" Type="Self.ReservationRoomDetails" Multiplicity="1" />
+          <End Role="ReservationRoomDetailsAppliedPromotionalCode" Type="Self.ReservationRoomDetailsAppliedPromotionalCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRoomDetails">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomDetailsAppliedPromotionalCode">
+              <PropertyRef Name="ReservationRoomDetail_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CancelReservationReason_UID">
+          <End Role="CancelReservationReason" Type="Self.CancelReservationReason" Multiplicity="0..1" />
+          <End Role="Reservations" Type="Self.Reservations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CancelReservationReason">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="Reservations">
+              <PropertyRef Name="CancelReservationReason_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reservation_UID">
+          <End Role="Reservations" Type="Self.Reservations" Multiplicity="1" />
+          <End Role="ReservationPaymentDetails" Type="Self.ReservationPaymentDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservations">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationPaymentDetails">
+              <PropertyRef Name="Reservation_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationPartialPaymentDetails_Reservations">
+          <End Role="Reservations" Type="Self.Reservations" Multiplicity="1" />
+          <End Role="ReservationPartialPaymentDetails" Type="Self.ReservationPartialPaymentDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservations">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationPartialPaymentDetails">
+              <PropertyRef Name="Reservation_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomChild_ReservationRooms">
+          <End Role="ReservationRooms" Type="Self.ReservationRooms" Multiplicity="0..1" />
+          <End Role="ReservationRoomChild" Type="Self.ReservationRoomChild" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRooms">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomChild">
+              <PropertyRef Name="ReservationRoom_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomDetails_ReservationRooms">
+          <End Role="ReservationRooms" Type="Self.ReservationRooms" Multiplicity="1" />
+          <End Role="ReservationRoomDetails" Type="Self.ReservationRoomDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRooms">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomDetails">
+              <PropertyRef Name="ReservationRoom_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomDetailsAppliedIncentive_ReservationRoomDetails">
+          <End Role="ReservationRoomDetails" Type="Self.ReservationRoomDetails" Multiplicity="1" />
+          <End Role="ReservationRoomDetailsAppliedIncentive" Type="Self.ReservationRoomDetailsAppliedIncentive" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRoomDetails">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomDetailsAppliedIncentive">
+              <PropertyRef Name="ReservationRoomDetails_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomExtras_ReservationRooms">
+          <End Role="ReservationRooms" Type="Self.ReservationRooms" Multiplicity="1" />
+          <End Role="ReservationRoomExtras" Type="Self.ReservationRoomExtras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRooms">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomExtras">
+              <PropertyRef Name="ReservationRoom_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomExtrasAvailableDates_ReservationRoomExtras">
+          <End Role="ReservationRoomExtras" Type="Self.ReservationRoomExtras" Multiplicity="1" />
+          <End Role="ReservationRoomExtrasAvailableDates" Type="Self.ReservationRoomExtrasAvailableDates" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRoomExtras">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomExtrasAvailableDates">
+              <PropertyRef Name="ReservationRoomExtra_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomExtrasSchedule_ReservationRoomExtras">
+          <End Role="ReservationRoomExtras" Type="Self.ReservationRoomExtras" Multiplicity="1" />
+          <End Role="ReservationRoomExtrasSchedule" Type="Self.ReservationRoomExtrasSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRoomExtras">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomExtrasSchedule">
+              <PropertyRef Name="ReservationRoomExtra_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomFilter_ReservationFilter">
+          <End Role="ReservationFilter" Type="Self.ReservationFilter" Multiplicity="1" />
+          <End Role="ReservationRoomFilter" Type="Self.ReservationRoomFilter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationFilter">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomFilter">
+              <PropertyRef Name="ReservationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRooms">
+          <End Role="ReservationRooms" Type="Self.ReservationRooms" Multiplicity="1" />
+          <End Role="ReservationRoomTaxPolicies" Type="Self.ReservationRoomTaxPolicies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRooms">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomTaxPolicies">
+              <PropertyRef Name="ReservationRoom_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationStatusLanguage_ReservationStatuses">
+          <End Role="ReservationStatuses" Type="Self.ReservationStatuses" Multiplicity="0..1" />
+          <End Role="ReservationStatusLanguage" Type="Self.ReservationStatusLanguage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationStatuses">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationStatusLanguage">
+              <PropertyRef Name="ReservationStatus_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Omnibees_dev2ModelStoreContainer">
+          <EntitySet Name="CancelReservationReason" EntityType="Self.CancelReservationReason" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CancelReservationReasonLanguage" EntityType="Self.CancelReservationReasonLanguage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LostReservations" EntityType="Self.LostReservations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationFilter" EntityType="Self.ReservationFilter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationPartialPaymentDetails" EntityType="Self.ReservationPartialPaymentDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationPaymentDetails" EntityType="Self.ReservationPaymentDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationRoomChild" EntityType="Self.ReservationRoomChild" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationRoomDetails" EntityType="Self.ReservationRoomDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationRoomDetailsAppliedIncentive" EntityType="Self.ReservationRoomDetailsAppliedIncentive" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationRoomDetailsAppliedPromotionalCode" EntityType="Self.ReservationRoomDetailsAppliedPromotionalCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationRoomExtras" EntityType="Self.ReservationRoomExtras" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationRoomExtrasAvailableDates" EntityType="Self.ReservationRoomExtrasAvailableDates" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationRoomExtrasSchedule" EntityType="Self.ReservationRoomExtrasSchedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationRoomFilter" EntityType="Self.ReservationRoomFilter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationRooms" EntityType="Self.ReservationRooms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationRoomTaxPolicies" EntityType="Self.ReservationRoomTaxPolicies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reservations" EntityType="Self.Reservations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationsAdditionalData" EntityType="Self.ReservationsAdditionalData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationsHistory" EntityType="Self.ReservationsHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationStatuses" EntityType="Self.ReservationStatuses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationStatusLanguage" EntityType="Self.ReservationStatusLanguage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReservationTransactionStatus" EntityType="Self.ReservationTransactionStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TokenizedCreditCardsReadsPerMonth" EntityType="Self.TokenizedCreditCardsReadsPerMonth" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VisualStates" EntityType="Self.VisualStates" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CancelRes__Cance__05C49D7C" Association="Self.FK__CancelRes__Cance__05C49D7C">
+            <End Role="CancelReservationReason" EntitySet="CancelReservationReason" />
+            <End Role="CancelReservationReasonLanguage" EntitySet="CancelReservationReasonLanguage" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservati__Reser__49E4BD9F" Association="Self.FK__Reservati__Reser__49E4BD9F">
+            <End Role="ReservationRoomDetails" EntitySet="ReservationRoomDetails" />
+            <End Role="ReservationRoomDetailsAppliedPromotionalCode" EntitySet="ReservationRoomDetailsAppliedPromotionalCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CancelReservationReason_UID" Association="Self.FK_CancelReservationReason_UID">
+            <End Role="CancelReservationReason" EntitySet="CancelReservationReason" />
+            <End Role="Reservations" EntitySet="Reservations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reservation_UID" Association="Self.FK_Reservation_UID">
+            <End Role="Reservations" EntitySet="Reservations" />
+            <End Role="ReservationPaymentDetails" EntitySet="ReservationPaymentDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationPartialPaymentDetails_Reservations" Association="Self.FK_ReservationPartialPaymentDetails_Reservations">
+            <End Role="Reservations" EntitySet="Reservations" />
+            <End Role="ReservationPartialPaymentDetails" EntitySet="ReservationPartialPaymentDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomChild_ReservationRooms" Association="Self.FK_ReservationRoomChild_ReservationRooms">
+            <End Role="ReservationRooms" EntitySet="ReservationRooms" />
+            <End Role="ReservationRoomChild" EntitySet="ReservationRoomChild" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomDetails_ReservationRooms" Association="Self.FK_ReservationRoomDetails_ReservationRooms">
+            <End Role="ReservationRooms" EntitySet="ReservationRooms" />
+            <End Role="ReservationRoomDetails" EntitySet="ReservationRoomDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomDetailsAppliedIncentive_ReservationRoomDetails" Association="Self.FK_ReservationRoomDetailsAppliedIncentive_ReservationRoomDetails">
+            <End Role="ReservationRoomDetails" EntitySet="ReservationRoomDetails" />
+            <End Role="ReservationRoomDetailsAppliedIncentive" EntitySet="ReservationRoomDetailsAppliedIncentive" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomExtras_ReservationRooms" Association="Self.FK_ReservationRoomExtras_ReservationRooms">
+            <End Role="ReservationRooms" EntitySet="ReservationRooms" />
+            <End Role="ReservationRoomExtras" EntitySet="ReservationRoomExtras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomExtrasAvailableDates_ReservationRoomExtras" Association="Self.FK_ReservationRoomExtrasAvailableDates_ReservationRoomExtras">
+            <End Role="ReservationRoomExtras" EntitySet="ReservationRoomExtras" />
+            <End Role="ReservationRoomExtrasAvailableDates" EntitySet="ReservationRoomExtrasAvailableDates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomExtrasSchedule_ReservationRoomExtras" Association="Self.FK_ReservationRoomExtrasSchedule_ReservationRoomExtras">
+            <End Role="ReservationRoomExtras" EntitySet="ReservationRoomExtras" />
+            <End Role="ReservationRoomExtrasSchedule" EntitySet="ReservationRoomExtrasSchedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomFilter_ReservationFilter" Association="Self.FK_ReservationRoomFilter_ReservationFilter">
+            <End Role="ReservationFilter" EntitySet="ReservationFilter" />
+            <End Role="ReservationRoomFilter" EntitySet="ReservationRoomFilter" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRooms" Association="Self.FK_ReservationRooms">
+            <End Role="ReservationRooms" EntitySet="ReservationRooms" />
+            <End Role="ReservationRoomTaxPolicies" EntitySet="ReservationRoomTaxPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationStatusLanguage_ReservationStatuses" Association="Self.FK_ReservationStatusLanguage_ReservationStatuses">
+            <End Role="ReservationStatuses" EntitySet="ReservationStatuses" />
+            <End Role="ReservationStatusLanguage" EntitySet="ReservationStatusLanguage" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OB.DL.Model.Reservations" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ReservationsContext" annotation:LazyLoadingEnabled="true" a:TypeAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <EntitySet Name="CancelReservationReasons" EntityType="OB.DL.Model.Reservations.CancelReservationReason" />
+          <EntitySet Name="LostReservations" EntityType="OB.DL.Model.Reservations.LostReservation" />
+          <EntitySet Name="ReservationPartialPaymentDetails" EntityType="OB.DL.Model.Reservations.ReservationPartialPaymentDetail" />
+          <EntitySet Name="ReservationPaymentDetails" EntityType="OB.DL.Model.Reservations.ReservationPaymentDetail" />
+          <EntitySet Name="ReservationRoomChilds" EntityType="OB.DL.Model.Reservations.ReservationRoomChild" />
+          <EntitySet Name="ReservationRoomDetails" EntityType="OB.DL.Model.Reservations.ReservationRoomDetail" />
+          <EntitySet Name="ReservationRoomDetailsAppliedIncentives" EntityType="OB.DL.Model.Reservations.ReservationRoomDetailsAppliedIncentive" />
+          <EntitySet Name="ReservationRoomDetailsAppliedPromotionalCodes" EntityType="OB.DL.Model.Reservations.ReservationRoomDetailsAppliedPromotionalCode" />
+          <EntitySet Name="ReservationRoomExtras" EntityType="OB.DL.Model.Reservations.ReservationRoomExtra" />
+          <EntitySet Name="ReservationRoomExtrasAvailableDates" EntityType="OB.DL.Model.Reservations.ReservationRoomExtrasAvailableDate" />
+          <EntitySet Name="ReservationRoomExtrasSchedules" EntityType="OB.DL.Model.Reservations.ReservationRoomExtrasSchedule" />
+          <EntitySet Name="ReservationRooms" EntityType="OB.DL.Model.Reservations.ReservationRoom" />
+          <EntitySet Name="ReservationRoomTaxPolicies" EntityType="OB.DL.Model.Reservations.ReservationRoomTaxPolicy" />
+          <EntitySet Name="Reservations" EntityType="OB.DL.Model.Reservations.Reservation" />
+          <EntitySet Name="ReservationsHistories" EntityType="OB.DL.Model.Reservations.ReservationsHistory" />
+          <EntitySet Name="ReservationStatuses" EntityType="OB.DL.Model.Reservations.ReservationStatus" />
+          <EntitySet Name="ReservationStatusLanguages" EntityType="OB.DL.Model.Reservations.ReservationStatusLanguage" />
+          <EntitySet Name="ReservationTransactionStatus" EntityType="OB.DL.Model.Reservations.ReservationTransactionStatu" />
+          <EntitySet Name="TokenizedCreditCardsReadsPerMonths" EntityType="OB.DL.Model.Reservations.TokenizedCreditCardsReadsPerMonth" />
+          <EntitySet Name="VisualStates" EntityType="OB.DL.Model.Reservations.VisualState" />
+          <AssociationSet Name="FK_CancelReservationReason_UID" Association="OB.DL.Model.Reservations.FK_CancelReservationReason_UID">
+            <End Role="CancelReservationReason" EntitySet="CancelReservationReasons" />
+            <End Role="Reservation" EntitySet="Reservations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationPartialPaymentDetails_Reservations" Association="OB.DL.Model.Reservations.FK_ReservationPartialPaymentDetails_Reservations">
+            <End Role="Reservation" EntitySet="Reservations" />
+            <End Role="ReservationPartialPaymentDetail" EntitySet="ReservationPartialPaymentDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reservation_UID" Association="OB.DL.Model.Reservations.FK_Reservation_UID">
+            <End Role="Reservation" EntitySet="Reservations" />
+            <End Role="ReservationPaymentDetail" EntitySet="ReservationPaymentDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomChild_ReservationRooms" Association="OB.DL.Model.Reservations.FK_ReservationRoomChild_ReservationRooms">
+            <End Role="ReservationRoom" EntitySet="ReservationRooms" />
+            <End Role="ReservationRoomChild" EntitySet="ReservationRoomChilds" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservati__Reser__49E4BD9F" Association="OB.DL.Model.Reservations.FK__Reservati__Reser__49E4BD9F">
+            <End Role="ReservationRoomDetail" EntitySet="ReservationRoomDetails" />
+            <End Role="ReservationRoomDetailsAppliedPromotionalCode" EntitySet="ReservationRoomDetailsAppliedPromotionalCodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomDetails_ReservationRooms" Association="OB.DL.Model.Reservations.FK_ReservationRoomDetails_ReservationRooms">
+            <End Role="ReservationRoom" EntitySet="ReservationRooms" />
+            <End Role="ReservationRoomDetail" EntitySet="ReservationRoomDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomDetailsAppliedIncentive_ReservationRoomDetails" Association="OB.DL.Model.Reservations.FK_ReservationRoomDetailsAppliedIncentive_ReservationRoomDetails">
+            <End Role="ReservationRoomDetail" EntitySet="ReservationRoomDetails" />
+            <End Role="ReservationRoomDetailsAppliedIncentive" EntitySet="ReservationRoomDetailsAppliedIncentives" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomExtras_ReservationRooms" Association="OB.DL.Model.Reservations.FK_ReservationRoomExtras_ReservationRooms">
+            <End Role="ReservationRoom" EntitySet="ReservationRooms" />
+            <End Role="ReservationRoomExtra" EntitySet="ReservationRoomExtras" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomExtrasAvailableDates_ReservationRoomExtras" Association="OB.DL.Model.Reservations.FK_ReservationRoomExtrasAvailableDates_ReservationRoomExtras">
+            <End Role="ReservationRoomExtra" EntitySet="ReservationRoomExtras" />
+            <End Role="ReservationRoomExtrasAvailableDate" EntitySet="ReservationRoomExtrasAvailableDates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRoomExtrasSchedule_ReservationRoomExtras" Association="OB.DL.Model.Reservations.FK_ReservationRoomExtrasSchedule_ReservationRoomExtras">
+            <End Role="ReservationRoomExtra" EntitySet="ReservationRoomExtras" />
+            <End Role="ReservationRoomExtrasSchedule" EntitySet="ReservationRoomExtrasSchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRooms" Association="OB.DL.Model.Reservations.FK_ReservationRooms">
+            <End Role="ReservationRoom" EntitySet="ReservationRooms" />
+            <End Role="ReservationRoomTaxPolicy" EntitySet="ReservationRoomTaxPolicies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationRooms_Reservations" Association="OB.DL.Model.Reservations.FK_ReservationRooms_Reservations">
+            <End Role="Reservation" EntitySet="Reservations" />
+            <End Role="ReservationRoom" EntitySet="ReservationRooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReservationStatusLanguage_ReservationStatuses" Association="OB.DL.Model.Reservations.FK_ReservationStatusLanguage_ReservationStatuses">
+            <End Role="ReservationStatus" EntitySet="ReservationStatuses" />
+            <End Role="ReservationStatusLanguage" EntitySet="ReservationStatusLanguages" />
+          </AssociationSet>
+          <EntitySet Name="ReservationRoomFilters" EntityType="OB.DL.Model.Reservations.ReservationRoomFilter" />
+          <EntitySet Name="CancelReservationReasonLanguages" EntityType="OB.DL.Model.Reservations.CancelReservationReasonLanguage" />
+          <AssociationSet Name="FK__CancelRes__Cance__05C49D7C" Association="OB.DL.Model.Reservations.FK__CancelRes__Cance__05C49D7C">
+            <End Role="CancelReservationReason" EntitySet="CancelReservationReasons" />
+            <End Role="CancelReservationReasonLanguage" EntitySet="CancelReservationReasonLanguages" />
+          </AssociationSet>
+          <EntitySet Name="ReservationsAdditionalDatas" EntityType="OB.DL.Model.Reservations.ReservationsAdditionalData" />
+          <EntitySet Name="ReservationFilters" EntityType="OB.DL.Model.Reservations.ReservationFilter" />
+          <AssociationSet Name="FK_ReservationRoomFilter_ReservationFilter" Association="OB.DL.Model.Reservations.FK_ReservationRoomFilter_ReservationFilter">
+            <End Role="ReservationFilter" EntitySet="ReservationFilters" />
+            <End Role="ReservationRoomFilter" EntitySet="ReservationRoomFilters" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CancelReservationReason">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Reservations" Relationship="OB.DL.Model.Reservations.FK_CancelReservationReason_UID" FromRole="CancelReservationReason" ToRole="Reservation" />
+          <NavigationProperty Name="CancelReservationReasonLanguages" Relationship="OB.DL.Model.Reservations.FK__CancelRes__Cance__05C49D7C" FromRole="CancelReservationReason" ToRole="CancelReservationReasonLanguage" />
+        </EntityType>
+        <EntityType Name="LostReservation">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CheckIn" Type="DateTime" Precision="3" />
+          <Property Name="CheckOut" Type="DateTime" Precision="3" />
+          <Property Name="GuestName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="GuestEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NumberOfRooms" Type="Int32" />
+          <Property Name="ReservationTotal" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CouchBaseId" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Property_UID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="TotalReservation" Type="Decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="ReservationPartialPaymentDetail">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Reservation_UID" Type="Int64" Nullable="false" />
+          <Property Name="InstallmentNo" Type="Int32" Nullable="false" />
+          <Property Name="InterestRate" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
+          <Property Name="IsPaid" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Reservation" Relationship="OB.DL.Model.Reservations.FK_ReservationPartialPaymentDetails_Reservations" FromRole="ReservationPartialPaymentDetail" ToRole="Reservation" />
+        </EntityType>
+        <EntityType Name="ReservationPaymentDetail">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PaymentMethod_UID" Type="Int64" />
+          <Property Name="Reservation_UID" Type="Int64" Nullable="false" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Currency_UID" Type="Int64" />
+          <Property Name="CVV" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="CardName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CardNumber" Type="String" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="ExpirationDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="PaymentGatewayTokenizationIsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreditCardToken" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OBTokenizationIsActive" Type="Boolean" Nullable="false" />
+          <Property Name="HashCode" Type="Binary" MaxLength="32" FixedLength="true" />
+          <NavigationProperty Name="Reservation" Relationship="OB.DL.Model.Reservations.FK_Reservation_UID" FromRole="ReservationPaymentDetail" ToRole="Reservation" />
+          <Property Name="VCNReservationId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VCNToken" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ActivationDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ReservationRoomChild">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReservationRoom_UID" Type="Int64" />
+          <Property Name="ChildNo" Type="Int32" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Revision" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ReservationRoom" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomChild_ReservationRooms" FromRole="ReservationRoomChild" ToRole="ReservationRoom" />
+        </EntityType>
+        <EntityType Name="ReservationRoomDetail">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RateRoomDetails_UID" Type="Int64" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
+          <Property Name="ReservationRoom_UID" Type="Int64" Nullable="false" />
+          <Property Name="AdultPrice" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ChildPrice" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Revision" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Rate_UID" Type="Int64" />
+          <NavigationProperty Name="ReservationRoomDetailsAppliedPromotionalCodes" Relationship="OB.DL.Model.Reservations.FK__Reservati__Reser__49E4BD9F" FromRole="ReservationRoomDetail" ToRole="ReservationRoomDetailsAppliedPromotionalCode" />
+          <NavigationProperty Name="ReservationRoom" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomDetails_ReservationRooms" FromRole="ReservationRoomDetail" ToRole="ReservationRoom" />
+          <NavigationProperty Name="ReservationRoomDetailsAppliedIncentives" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomDetailsAppliedIncentive_ReservationRoomDetails" FromRole="ReservationRoomDetail" ToRole="ReservationRoomDetailsAppliedIncentive" />
+        </EntityType>
+        <EntityType Name="ReservationRoomDetailsAppliedIncentive">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReservationRoomDetails_UID" Type="Int64" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Days" Type="Int32" />
+          <Property Name="FreeDays" Type="Int32" />
+          <Property Name="DiscountPercentage" Type="Int32" />
+          <Property Name="IsFreeDaysAtBegin" Type="Boolean" />
+          <Property Name="Incentive_UID" Type="Int64" Nullable="false" />
+          <Property Name="DiscountValue" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Revision" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ReservationRoomDetail" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomDetailsAppliedIncentive_ReservationRoomDetails" FromRole="ReservationRoomDetailsAppliedIncentive" ToRole="ReservationRoomDetail" />
+        </EntityType>
+        <EntityType Name="ReservationRoomDetailsAppliedPromotionalCode">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Revision" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="ReservationRoomDetail_UID" Type="Int64" Nullable="false" />
+          <Property Name="PromotionalCode_UID" Type="Int64" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DiscountValue" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="DiscountPercentage" Type="Decimal" Precision="5" Scale="2" />
+          <NavigationProperty Name="ReservationRoomDetail" Relationship="OB.DL.Model.Reservations.FK__Reservati__Reser__49E4BD9F" FromRole="ReservationRoomDetailsAppliedPromotionalCode" ToRole="ReservationRoomDetail" />
+        </EntityType>
+        <EntityType Name="ReservationRoomExtra">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Extra_UID" Type="Int64" Nullable="false" />
+          <Property Name="ReservationRoom_UID" Type="Int64" Nullable="false" />
+          <Property Name="Qty" Type="Int16" Nullable="false" />
+          <Property Name="Total_Price" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
+          <Property Name="Total_VAT" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ExtraIncluded" Type="Boolean" Nullable="false" />
+          <Property Name="Revision" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ReservationRoom" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomExtras_ReservationRooms" FromRole="ReservationRoomExtra" ToRole="ReservationRoom" />
+          <NavigationProperty Name="ReservationRoomExtrasAvailableDates" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomExtrasAvailableDates_ReservationRoomExtras" FromRole="ReservationRoomExtra" ToRole="ReservationRoomExtrasAvailableDate" />
+          <NavigationProperty Name="ReservationRoomExtrasSchedules" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomExtrasSchedule_ReservationRoomExtras" FromRole="ReservationRoomExtra" ToRole="ReservationRoomExtrasSchedule" />
+        </EntityType>
+        <EntityType Name="ReservationRoomExtrasAvailableDate">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReservationRoomExtra_UID" Type="Int64" Nullable="false" />
+          <Property Name="DateFrom" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DateTo" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Revision" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ReservationRoomExtra" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomExtrasAvailableDates_ReservationRoomExtras" FromRole="ReservationRoomExtrasAvailableDate" ToRole="ReservationRoomExtra" />
+        </EntityType>
+        <EntityType Name="ReservationRoomExtrasSchedule">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReservationRoomExtra_UID" Type="Int64" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="Revision" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ReservationRoomExtra" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomExtrasSchedule_ReservationRoomExtras" FromRole="ReservationRoomExtrasSchedule" ToRole="ReservationRoomExtra" />
+        </EntityType>
+        <EntityType Name="ReservationRoom">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Reservation_UID" Type="Int64" Nullable="false" />
+          <Property Name="RoomType_UID" Type="Int64" />
+          <Property Name="GuestName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SmokingPreferences" Type="Boolean" />
+          <Property Name="DateFrom" Type="DateTime" Precision="3" />
+          <Property Name="DateTo" Type="DateTime" Precision="3" />
+          <Property Name="AdultCount" Type="Int32" />
+          <Property Name="ChildCount" Type="Int32" />
+          <Property Name="TotalTax" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Package_UID" Type="Int64" />
+          <Property Name="CancellationPolicy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DepositPolicy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OtherPolicy" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="CancellationPolicyDays" Type="Int32" />
+          <Property Name="ReservationRoomNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="RoomName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Rate_UID" Type="Int64" />
+          <Property Name="IsCanceledByChannels" Type="Boolean" />
+          <Property Name="ReservationRoomsPriceSum" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ReservationRoomsExtrasSum" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ReservationRoomsTotalAmount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ArrivalTime" Type="Time" Precision="7" />
+          <Property Name="PmsRservationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TPIDiscountIsPercentage" Type="Boolean" />
+          <Property Name="TPIDiscountIsValueDecrease" Type="Boolean" />
+          <Property Name="TPIDiscountValue" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="IsCancellationAllowed" Type="Boolean" />
+          <Property Name="CancellationCosts" Type="Boolean" Nullable="false" />
+          <Property Name="CancellationValue" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="CancellationPaymentModel" Type="Int32" />
+          <Property Name="CancellationNrNights" Type="Int32" />
+          <Property Name="CommissionType" Type="Int64" />
+          <Property Name="CommissionValue" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="CancellationDate" Type="DateTime" Precision="3" />
+          <Property Name="Revision" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="LoyaltyLevel_UID" Type="Int64" />
+          <Property Name="LoyaltyLevelName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="GuestEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ReservationRoomChilds" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomChild_ReservationRooms" FromRole="ReservationRoom" ToRole="ReservationRoomChild" />
+          <NavigationProperty Name="ReservationRoomDetails" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomDetails_ReservationRooms" FromRole="ReservationRoom" ToRole="ReservationRoomDetail" />
+          <NavigationProperty Name="ReservationRoomExtras" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomExtras_ReservationRooms" FromRole="ReservationRoom" ToRole="ReservationRoomExtra" />
+          <NavigationProperty Name="ReservationRoomTaxPolicies" Relationship="OB.DL.Model.Reservations.FK_ReservationRooms" FromRole="ReservationRoom" ToRole="ReservationRoomTaxPolicy" />
+          <NavigationProperty Name="Reservation" Relationship="OB.DL.Model.Reservations.FK_ReservationRooms_Reservations" FromRole="ReservationRoom" ToRole="Reservation" />
+        </EntityType>
+        <EntityType Name="ReservationRoomTaxPolicy">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReservationRoom_UID" Type="Int64" Nullable="false" />
+          <Property Name="BillingType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TaxId" Type="Int64" />
+          <Property Name="TaxName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TaxDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TaxDefaultValue" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="TaxIsPercentage" Type="Boolean" />
+          <Property Name="TaxCalculatedValue" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Revision" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ReservationRoom" Relationship="OB.DL.Model.Reservations.FK_ReservationRooms" FromRole="ReservationRoomTaxPolicy" ToRole="ReservationRoom" />
+        </EntityType>
+        <EntityType Name="Reservation">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Guest_UID" Type="Int64" Nullable="false" />
+          <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Channel_UID" Type="Int64" />
+          <Property Name="GDSSource" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Adults" Type="Int32" Nullable="false" />
+          <Property Name="Children" Type="Int32" />
+          <Property Name="Status" Type="Int64" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InternalNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TPI_UID" Type="Int64" />
+          <Property Name="PromotionalCode_UID" Type="Int64" />
+          <Property Name="ChannelProperties_RateModel_UID" Type="Int64" />
+          <Property Name="ChannelProperties_Value" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ChannelProperties_IsPercentage" Type="Boolean" />
+          <Property Name="InvoicesDetail_UID" Type="Int64" />
+          <Property Name="Property_UID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateBy" Type="Int64" />
+          <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifyBy" Type="Int64" />
+          <Property Name="BESpecialRequests1_UID" Type="Int64" />
+          <Property Name="BESpecialRequests2_UID" Type="Int64" />
+          <Property Name="BESpecialRequests3_UID" Type="Int64" />
+          <Property Name="BESpecialRequests4_UID" Type="Int64" />
+          <Property Name="TransferLocation_UID" Type="Int64" />
+          <Property Name="TransferTime" Type="Time" Precision="7" />
+          <Property Name="TransferOther" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="CancellationPolicyDays" Type="Int32" />
+          <Property Name="OtherPolicy" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="DepositPolicy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="CancellationPolicy" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="BillingAddress1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BillingAddress2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BillingContactName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BillingPostalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BillingCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BillingCountry_UID" Type="Int64" />
+          <Property Name="BillingPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tax" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ChannelAffiliateName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentMethodType_UID" Type="Int64" />
+          <Property Name="CancelReservationReason_UID" Type="Int32" />
+          <Property Name="CancelReservationComments" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="OtherLoyaltyCardType_UID" Type="Int64" />
+          <Property Name="OtherLoyaltyCardNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LoyaltyCardNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ReservationCurrency_UID" Type="Int64" />
+          <Property Name="ReservationBaseCurrency_UID" Type="Int64" />
+          <Property Name="ReservationCurrencyExchangeRate" Type="Decimal" Precision="18" Scale="10" />
+          <Property Name="ReservationCurrencyExchangeRateDate" Type="DateTime" Precision="3" />
+          <Property Name="ReservationLanguageUsed_UID" Type="Int64" />
+          <Property Name="TotalTax" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="NumberOfRooms" Type="Int32" />
+          <Property Name="RoomsTax" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="RoomsExtras" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="RoomsPriceSum" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="RoomsTotalAmount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="GroupCode_UID" Type="Int64" />
+          <Property Name="PmsRservationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsOnRequest" Type="Boolean" />
+          <Property Name="OnRequestDecisionUser" Type="Int64" />
+          <Property Name="OnRequestDecisionDate" Type="DateTime" Precision="3" />
+          <Property Name="BillingState_UID" Type="Int64" />
+          <Property Name="BillingEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="BankDepositDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="IsPartialPayment" Type="Boolean" />
+          <Property Name="InstallmentAmount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="NoOfInstallment" Type="Int32" />
+          <Property Name="InterestRate" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="GuestFirstName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="GuestLastName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="GuestEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="GuestPhone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GuestIDCardNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="GuestCountry_UID" Type="Int64" />
+          <Property Name="GuestState_UID" Type="Int64" />
+          <Property Name="GuestCity" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="GuestAddress1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="GuestAddress2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="GuestPostalCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UseDifferentBillingInfo" Type="Boolean" />
+          <Property Name="BillingTaxCardNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PaymentGatewayTransactionStatusCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="PaymentGatewayName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentGatewayProcessorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentGatewayTransactionID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentAmountCaptured" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="PaymentGatewayOrderID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentGatewayTransactionDateTime" Type="DateTime" Precision="3" />
+          <Property Name="PaymentGatewayAutoGeneratedUID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentGatewayTransactionMessage" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="IsMobile" Type="Boolean" />
+          <Property Name="IsPaid" Type="Boolean" />
+          <Property Name="IsPaidDecisionUser" Type="Int64" />
+          <Property Name="IsPaidDecisionDate" Type="DateTime" Precision="3" />
+          <Property Name="Salesman_UID" Type="Int64" />
+          <Property Name="SalesmanCommission" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="SalesmanIsCommissionPercentage" Type="Boolean" />
+          <Property Name="InternalNotesHistory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Company_UID" Type="Int64" />
+          <Property Name="Employee_UID" Type="Int64" />
+          <Property Name="TPICompany_UID" Type="Int64" />
+          <Property Name="PropertyBaseCurrencyExchangeRate" Type="Decimal" Precision="18" Scale="10" />
+          <Property Name="ReferralSourceId" Type="Int64" />
+          <Property Name="ReferralSourceURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CampaignName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Campaign_UID" Type="Int64" />
+          <Property Name="PaymentGatewayTransactionUID" Type="Int64" />
+          <Property Name="ExternalSource_UID" Type="Int64" />
+          <Property Name="Revision" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="CancelReservationReason" Relationship="OB.DL.Model.Reservations.FK_CancelReservationReason_UID" FromRole="Reservation" ToRole="CancelReservationReason" />
+          <NavigationProperty Name="ReservationPartialPaymentDetails" Relationship="OB.DL.Model.Reservations.FK_ReservationPartialPaymentDetails_Reservations" FromRole="Reservation" ToRole="ReservationPartialPaymentDetail" />
+          <NavigationProperty Name="ReservationPaymentDetails" Relationship="OB.DL.Model.Reservations.FK_Reservation_UID" FromRole="Reservation" ToRole="ReservationPaymentDetail" />
+          <NavigationProperty Name="ReservationRooms" Relationship="OB.DL.Model.Reservations.FK_ReservationRooms_Reservations" FromRole="Reservation" ToRole="ReservationRoom" />
+        </EntityType>
+        <EntityType Name="ReservationsHistory">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReservationUID" Type="Int64" />
+          <Property Name="ReservationNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserUID" Type="Int64" />
+          <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Channel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ChangedDate" Type="DateTime" Precision="3" />
+          <Property Name="StatusUID" Type="Int64" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TransactionUID" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="TransactionState" Type="Int32" />
+          <Property Name="ChannelUID" Type="Int64" />
+          <Property Name="HangfireId" Type="Int64" />
+          <Property Name="Retries" Type="Int32" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ReservationStatus">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ReservationStatusLanguages" Relationship="OB.DL.Model.Reservations.FK_ReservationStatusLanguage_ReservationStatuses" FromRole="ReservationStatus" ToRole="ReservationStatusLanguage" />
+        </EntityType>
+        <EntityType Name="ReservationStatusLanguage">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReservationStatus_UID" Type="Int64" />
+          <Property Name="Language_UID" Type="Int64" />
+          <NavigationProperty Name="ReservationStatus" Relationship="OB.DL.Model.Reservations.FK_ReservationStatusLanguage_ReservationStatuses" FromRole="ReservationStatusLanguage" ToRole="ReservationStatus" />
+        </EntityType>
+        <EntityType Name="ReservationTransactionStatu">
+          <Key>
+            <PropertyRef Name="TransactionUID" />
+          </Key>
+          <Property Name="TransactionUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="ReservationUID" Type="Int64" Nullable="false" />
+          <Property Name="ReservationNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TransactionState" Type="Int32" Nullable="false" />
+          <Property Name="ChannelUID" Type="Int64" Nullable="false" />
+          <Property Name="HangfireId" Type="Int64" Nullable="false" />
+          <Property Name="Retries" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TokenizedCreditCardsReadsPerMonth">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Property_UID" Type="Int64" Nullable="false" />
+          <Property Name="YearNr" Type="Int32" Nullable="false" />
+          <Property Name="MonthNr" Type="Int16" Nullable="false" />
+          <Property Name="NrOfCreditCardReads" Type="Int64" Nullable="false" />
+          <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="VisualState">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StateType" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="JSONData" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LookupKey_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LookupKey_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LookupKey_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_CancelReservationReason_UID">
+          <End Type="OB.DL.Model.Reservations.CancelReservationReason" Role="CancelReservationReason" Multiplicity="0..1" />
+          <End Type="OB.DL.Model.Reservations.Reservation" Role="Reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CancelReservationReason">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="Reservation">
+              <PropertyRef Name="CancelReservationReason_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationPartialPaymentDetails_Reservations">
+          <End Type="OB.DL.Model.Reservations.Reservation" Role="Reservation" Multiplicity="1" />
+          <End Type="OB.DL.Model.Reservations.ReservationPartialPaymentDetail" Role="ReservationPartialPaymentDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservation">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationPartialPaymentDetail">
+              <PropertyRef Name="Reservation_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reservation_UID">
+          <End Type="OB.DL.Model.Reservations.Reservation" Role="Reservation" Multiplicity="1" />
+          <End Type="OB.DL.Model.Reservations.ReservationPaymentDetail" Role="ReservationPaymentDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservation">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationPaymentDetail">
+              <PropertyRef Name="Reservation_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomChild_ReservationRooms">
+          <End Type="OB.DL.Model.Reservations.ReservationRoom" Role="ReservationRoom" Multiplicity="0..1" />
+          <End Type="OB.DL.Model.Reservations.ReservationRoomChild" Role="ReservationRoomChild" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRoom">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomChild">
+              <PropertyRef Name="ReservationRoom_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservati__Reser__49E4BD9F">
+          <End Type="OB.DL.Model.Reservations.ReservationRoomDetail" Role="ReservationRoomDetail" Multiplicity="1" />
+          <End Type="OB.DL.Model.Reservations.ReservationRoomDetailsAppliedPromotionalCode" Role="ReservationRoomDetailsAppliedPromotionalCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRoomDetail">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomDetailsAppliedPromotionalCode">
+              <PropertyRef Name="ReservationRoomDetail_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomDetails_ReservationRooms">
+          <End Type="OB.DL.Model.Reservations.ReservationRoom" Role="ReservationRoom" Multiplicity="1" />
+          <End Type="OB.DL.Model.Reservations.ReservationRoomDetail" Role="ReservationRoomDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRoom">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomDetail">
+              <PropertyRef Name="ReservationRoom_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomDetailsAppliedIncentive_ReservationRoomDetails">
+          <End Type="OB.DL.Model.Reservations.ReservationRoomDetail" Role="ReservationRoomDetail" Multiplicity="1" />
+          <End Type="OB.DL.Model.Reservations.ReservationRoomDetailsAppliedIncentive" Role="ReservationRoomDetailsAppliedIncentive" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRoomDetail">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomDetailsAppliedIncentive">
+              <PropertyRef Name="ReservationRoomDetails_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomExtras_ReservationRooms">
+          <End Type="OB.DL.Model.Reservations.ReservationRoom" Role="ReservationRoom" Multiplicity="1" />
+          <End Type="OB.DL.Model.Reservations.ReservationRoomExtra" Role="ReservationRoomExtra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRoom">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomExtra">
+              <PropertyRef Name="ReservationRoom_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomExtrasAvailableDates_ReservationRoomExtras">
+          <End Type="OB.DL.Model.Reservations.ReservationRoomExtra" Role="ReservationRoomExtra" Multiplicity="1" />
+          <End Type="OB.DL.Model.Reservations.ReservationRoomExtrasAvailableDate" Role="ReservationRoomExtrasAvailableDate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRoomExtra">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomExtrasAvailableDate">
+              <PropertyRef Name="ReservationRoomExtra_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRoomExtrasSchedule_ReservationRoomExtras">
+          <End Type="OB.DL.Model.Reservations.ReservationRoomExtra" Role="ReservationRoomExtra" Multiplicity="1" />
+          <End Type="OB.DL.Model.Reservations.ReservationRoomExtrasSchedule" Role="ReservationRoomExtrasSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRoomExtra">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomExtrasSchedule">
+              <PropertyRef Name="ReservationRoomExtra_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRooms">
+          <End Type="OB.DL.Model.Reservations.ReservationRoom" Role="ReservationRoom" Multiplicity="1" />
+          <End Type="OB.DL.Model.Reservations.ReservationRoomTaxPolicy" Role="ReservationRoomTaxPolicy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationRoom">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomTaxPolicy">
+              <PropertyRef Name="ReservationRoom_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationRooms_Reservations">
+          <End Type="OB.DL.Model.Reservations.Reservation" Role="Reservation" Multiplicity="1" />
+          <End Type="OB.DL.Model.Reservations.ReservationRoom" Role="ReservationRoom" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservation">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoom">
+              <PropertyRef Name="Reservation_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReservationStatusLanguage_ReservationStatuses">
+          <End Type="OB.DL.Model.Reservations.ReservationStatus" Role="ReservationStatus" Multiplicity="0..1" />
+          <End Type="OB.DL.Model.Reservations.ReservationStatusLanguage" Role="ReservationStatusLanguage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationStatus">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationStatusLanguage">
+              <PropertyRef Name="ReservationStatus_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ReservationRoomFilter">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" />
+          <Property Name="ReservationId" Type="Int64" Nullable="false" />
+          <Property Name="ReservationRoomNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CheckIn" Type="DateTime" Precision="3" />
+          <Property Name="CheckOut" Type="DateTime" Precision="3" />
+          <Property Name="ApplyDepositPolicy" Type="Boolean" />
+          <Property Name="DepositCost" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DepositNumberOfNight" Type="Int32" />
+          <Property Name="Status" Type="Int64" />
+          <Property Name="GuestName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CancellationCost" Type="Decimal" Precision="18" Scale="4" />
+          <NavigationProperty Name="ReservationFilter" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomFilter_ReservationFilter" FromRole="ReservationRoomFilter" ToRole="ReservationFilter" />
+        </EntityType>
+        <EntityType Name="CancelReservationReasonLanguage">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CancelReservationReason_UID" Type="Int32" Nullable="false" />
+          <Property Name="Language_UID" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="CancelReservationReason" Relationship="OB.DL.Model.Reservations.FK__CancelRes__Cance__05C49D7C" FromRole="CancelReservationReasonLanguage" ToRole="CancelReservationReason" />
+        </EntityType>
+        <Association Name="FK__CancelRes__Cance__05C49D7C">
+          <End Type="OB.DL.Model.Reservations.CancelReservationReason" Role="CancelReservationReason" Multiplicity="1" />
+          <End Type="OB.DL.Model.Reservations.CancelReservationReasonLanguage" Role="CancelReservationReasonLanguage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CancelReservationReason">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="CancelReservationReasonLanguage">
+              <PropertyRef Name="CancelReservationReason_UID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ReservationsAdditionalData">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Reservation_UID" Type="Int64" Nullable="false" />
+          <Property Name="ReservationAdditionalDataJSON" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsFromNewInsert" Type="Boolean" />
+          <Property Name="ChannelPartnerID" Type="Int32" />
+          <Property Name="PartnerReservationNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Revision" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="ReservationDomain" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BookingEngineTemplate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="isDirectReservation" Type="Boolean" />
+          <Property Name="BookerIsGenius" Type="Boolean" />
+          <Property Name="BigPullAuthRequestor_UID" Type="Int64" />
+          <Property Name="BigPullAuthOwner_UID" Type="Int64" />
+        </EntityType>
+        <EntityType Name="ReservationFilter">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="Int64" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PropertyUid" Type="Int64" Nullable="false" />
+          <Property Name="PropertyName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Number" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsOnRequest" Type="Boolean" Nullable="false" />
+          <Property Name="IsReaded" Type="Boolean" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="GuestName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="NumberOfNights" Type="Int32" />
+          <Property Name="NumberOfAdults" Type="Int32" />
+          <Property Name="NumberOfChildren" Type="Int32" />
+          <Property Name="NumberOfRooms" Type="Int32" />
+          <Property Name="TPI_UID" Type="Int64" />
+          <Property Name="PaymentTypeUid" Type="Int64" />
+          <Property Name="Status" Type="Int64" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ExternalTotalAmount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ExternalCommissionValue" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ExternalIsPaid" Type="Boolean" />
+          <Property Name="ChannelUid" Type="Int64" />
+          <Property Name="ChannelName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TPI_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsPaid" Type="Boolean" />
+          <Property Name="ReservationDate" Type="DateTime" Precision="3" />
+          <Property Name="ReservationBaseCurrencyExchangeRate" Type="Decimal" Precision="18" Scale="10" />
+          <Property Name="ReservationBaseCurrencySymbol" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="PropertyBaseCurrencyExchangeRate" Type="Decimal" Precision="18" Scale="10" />
+          <Property Name="PropertyBaseCurrencySymbol" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="RepresentativeCurrencyExchangeRate" Type="Decimal" Precision="18" Scale="10" />
+          <Property Name="RepresentativeCurrencySymbol" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="PartnerUid" Type="Int64" />
+          <Property Name="PartnerReservationNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="ModifiedBy" Type="Int64" />
+          <Property Name="Guest_UID" Type="Int64" />
+          <Property Name="ExternalChannelUid" Type="Int64" />
+          <Property Name="ExternalTPIUid" Type="Int64" />
+          <Property Name="ExternalName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="IsMobile" Type="Boolean" />
+          <Property Name="LoyaltyCardNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Employee_UID" Type="Int64" />
+          <Property Name="BigPullAuthRequestor_UID" Type="Int64" />
+          <Property Name="BigPullAuthOwner_UID" Type="Int64" />
+          <NavigationProperty Name="ReservationRoomFilters" Relationship="OB.DL.Model.Reservations.FK_ReservationRoomFilter_ReservationFilter" FromRole="ReservationFilter" ToRole="ReservationRoomFilter" />
+        </EntityType>
+        <Association Name="FK_ReservationRoomFilter_ReservationFilter">
+          <End Type="OB.DL.Model.Reservations.ReservationFilter" Role="ReservationFilter" Multiplicity="1" />
+          <End Type="OB.DL.Model.Reservations.ReservationRoomFilter" Role="ReservationRoomFilter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReservationFilter">
+              <PropertyRef Name="UID" />
+            </Principal>
+            <Dependent Role="ReservationRoomFilter">
+              <PropertyRef Name="ReservationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Omnibees_dev2ModelStoreContainer" CdmEntityContainer="ReservationsContext">
+          <EntitySetMapping Name="CancelReservationReasons">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.CancelReservationReason">
+              <MappingFragment StoreEntitySet="CancelReservationReason">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LostReservations">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.LostReservation">
+              <MappingFragment StoreEntitySet="LostReservations">
+                <ScalarProperty Name="TotalReservation" ColumnName="TotalReservation" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Property_UID" ColumnName="Property_UID" />
+                <ScalarProperty Name="CouchBaseId" ColumnName="CouchBaseId" />
+                <ScalarProperty Name="ReservationTotal" ColumnName="ReservationTotal" />
+                <ScalarProperty Name="NumberOfRooms" ColumnName="NumberOfRooms" />
+                <ScalarProperty Name="GuestEmail" ColumnName="GuestEmail" />
+                <ScalarProperty Name="GuestName" ColumnName="GuestName" />
+                <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+                <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationPartialPaymentDetails">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationPartialPaymentDetail">
+              <MappingFragment StoreEntitySet="ReservationPartialPaymentDetails">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+                <ScalarProperty Name="InstallmentNo" ColumnName="InstallmentNo" />
+                <ScalarProperty Name="Reservation_UID" ColumnName="Reservation_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationPaymentDetails">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationPaymentDetail">
+              <MappingFragment StoreEntitySet="ReservationPaymentDetails">
+                <ScalarProperty Name="ActivationDate" ColumnName="ActivationDate" />
+                <ScalarProperty Name="VCNToken" ColumnName="VCNToken" />
+                <ScalarProperty Name="VCNReservationId" ColumnName="VCNReservationId" />
+                <ScalarProperty Name="HashCode" ColumnName="HashCode" />
+                <ScalarProperty Name="OBTokenizationIsActive" ColumnName="OBTokenizationIsActive" />
+                <ScalarProperty Name="CreditCardToken" ColumnName="CreditCardToken" />
+                <ScalarProperty Name="PaymentGatewayTokenizationIsActive" ColumnName="PaymentGatewayTokenizationIsActive" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="CardName" ColumnName="CardName" />
+                <ScalarProperty Name="CVV" ColumnName="CVV" />
+                <ScalarProperty Name="Currency_UID" ColumnName="Currency_UID" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Reservation_UID" ColumnName="Reservation_UID" />
+                <ScalarProperty Name="PaymentMethod_UID" ColumnName="PaymentMethod_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationRoomChilds">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationRoomChild">
+              <MappingFragment StoreEntitySet="ReservationRoomChild">
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="ChildNo" ColumnName="ChildNo" />
+                <ScalarProperty Name="ReservationRoom_UID" ColumnName="ReservationRoom_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationRoomDetails">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationRoomDetail">
+              <MappingFragment StoreEntitySet="ReservationRoomDetails">
+                <ScalarProperty Name="Rate_UID" ColumnName="Rate_UID" />
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ChildPrice" ColumnName="ChildPrice" />
+                <ScalarProperty Name="AdultPrice" ColumnName="AdultPrice" />
+                <ScalarProperty Name="ReservationRoom_UID" ColumnName="ReservationRoom_UID" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="RateRoomDetails_UID" ColumnName="RateRoomDetails_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationRoomDetailsAppliedIncentives">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationRoomDetailsAppliedIncentive">
+              <MappingFragment StoreEntitySet="ReservationRoomDetailsAppliedIncentive">
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="DiscountValue" ColumnName="DiscountValue" />
+                <ScalarProperty Name="Incentive_UID" ColumnName="Incentive_UID" />
+                <ScalarProperty Name="IsFreeDaysAtBegin" ColumnName="IsFreeDaysAtBegin" />
+                <ScalarProperty Name="DiscountPercentage" ColumnName="DiscountPercentage" />
+                <ScalarProperty Name="FreeDays" ColumnName="FreeDays" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ReservationRoomDetails_UID" ColumnName="ReservationRoomDetails_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationRoomDetailsAppliedPromotionalCodes">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationRoomDetailsAppliedPromotionalCode">
+              <MappingFragment StoreEntitySet="ReservationRoomDetailsAppliedPromotionalCode">
+                <ScalarProperty Name="DiscountPercentage" ColumnName="DiscountPercentage" />
+                <ScalarProperty Name="DiscountValue" ColumnName="DiscountValue" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="PromotionalCode_UID" ColumnName="PromotionalCode_UID" />
+                <ScalarProperty Name="ReservationRoomDetail_UID" ColumnName="ReservationRoomDetail_UID" />
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationRoomExtras">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationRoomExtra">
+              <MappingFragment StoreEntitySet="ReservationRoomExtras">
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="ExtraIncluded" ColumnName="ExtraIncluded" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Total_VAT" ColumnName="Total_VAT" />
+                <ScalarProperty Name="Total_Price" ColumnName="Total_Price" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="ReservationRoom_UID" ColumnName="ReservationRoom_UID" />
+                <ScalarProperty Name="Extra_UID" ColumnName="Extra_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationRoomExtrasAvailableDates">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationRoomExtrasAvailableDate">
+              <MappingFragment StoreEntitySet="ReservationRoomExtrasAvailableDates">
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+                <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+                <ScalarProperty Name="ReservationRoomExtra_UID" ColumnName="ReservationRoomExtra_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationRoomExtrasSchedules">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationRoomExtrasSchedule">
+              <MappingFragment StoreEntitySet="ReservationRoomExtrasSchedule">
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ReservationRoomExtra_UID" ColumnName="ReservationRoomExtra_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationRooms">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationRoom">
+              <MappingFragment StoreEntitySet="ReservationRooms">
+                <ScalarProperty Name="GuestEmail" ColumnName="GuestEmail" />
+                <ScalarProperty Name="LoyaltyLevelName" ColumnName="LoyaltyLevelName" />
+                <ScalarProperty Name="LoyaltyLevel_UID" ColumnName="LoyaltyLevel_UID" />
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="CancellationDate" ColumnName="CancellationDate" />
+                <ScalarProperty Name="CommissionValue" ColumnName="CommissionValue" />
+                <ScalarProperty Name="CommissionType" ColumnName="CommissionType" />
+                <ScalarProperty Name="CancellationNrNights" ColumnName="CancellationNrNights" />
+                <ScalarProperty Name="CancellationPaymentModel" ColumnName="CancellationPaymentModel" />
+                <ScalarProperty Name="CancellationValue" ColumnName="CancellationValue" />
+                <ScalarProperty Name="CancellationCosts" ColumnName="CancellationCosts" />
+                <ScalarProperty Name="IsCancellationAllowed" ColumnName="IsCancellationAllowed" />
+                <ScalarProperty Name="TPIDiscountValue" ColumnName="TPIDiscountValue" />
+                <ScalarProperty Name="TPIDiscountIsValueDecrease" ColumnName="TPIDiscountIsValueDecrease" />
+                <ScalarProperty Name="TPIDiscountIsPercentage" ColumnName="TPIDiscountIsPercentage" />
+                <ScalarProperty Name="PmsRservationNumber" ColumnName="PmsRservationNumber" />
+                <ScalarProperty Name="ArrivalTime" ColumnName="ArrivalTime" />
+                <ScalarProperty Name="ReservationRoomsTotalAmount" ColumnName="ReservationRoomsTotalAmount" />
+                <ScalarProperty Name="ReservationRoomsExtrasSum" ColumnName="ReservationRoomsExtrasSum" />
+                <ScalarProperty Name="ReservationRoomsPriceSum" ColumnName="ReservationRoomsPriceSum" />
+                <ScalarProperty Name="IsCanceledByChannels" ColumnName="IsCanceledByChannels" />
+                <ScalarProperty Name="Rate_UID" ColumnName="Rate_UID" />
+                <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ReservationRoomNo" ColumnName="ReservationRoomNo" />
+                <ScalarProperty Name="CancellationPolicyDays" ColumnName="CancellationPolicyDays" />
+                <ScalarProperty Name="OtherPolicy" ColumnName="OtherPolicy" />
+                <ScalarProperty Name="DepositPolicy" ColumnName="DepositPolicy" />
+                <ScalarProperty Name="CancellationPolicy" ColumnName="CancellationPolicy" />
+                <ScalarProperty Name="Package_UID" ColumnName="Package_UID" />
+                <ScalarProperty Name="TotalTax" ColumnName="TotalTax" />
+                <ScalarProperty Name="ChildCount" ColumnName="ChildCount" />
+                <ScalarProperty Name="AdultCount" ColumnName="AdultCount" />
+                <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+                <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+                <ScalarProperty Name="SmokingPreferences" ColumnName="SmokingPreferences" />
+                <ScalarProperty Name="GuestName" ColumnName="GuestName" />
+                <ScalarProperty Name="RoomType_UID" ColumnName="RoomType_UID" />
+                <ScalarProperty Name="Reservation_UID" ColumnName="Reservation_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationRoomTaxPolicies">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationRoomTaxPolicy">
+              <MappingFragment StoreEntitySet="ReservationRoomTaxPolicies">
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="TaxCalculatedValue" ColumnName="TaxCalculatedValue" />
+                <ScalarProperty Name="TaxIsPercentage" ColumnName="TaxIsPercentage" />
+                <ScalarProperty Name="TaxDefaultValue" ColumnName="TaxDefaultValue" />
+                <ScalarProperty Name="TaxDescription" ColumnName="TaxDescription" />
+                <ScalarProperty Name="TaxName" ColumnName="TaxName" />
+                <ScalarProperty Name="TaxId" ColumnName="TaxId" />
+                <ScalarProperty Name="BillingType" ColumnName="BillingType" />
+                <ScalarProperty Name="ReservationRoom_UID" ColumnName="ReservationRoom_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reservations">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.Reservation">
+              <MappingFragment StoreEntitySet="Reservations">
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="ExternalSource_UID" ColumnName="ExternalSource_UID" />
+                <ScalarProperty Name="PaymentGatewayTransactionUID" ColumnName="PaymentGatewayTransactionUID" />
+                <ScalarProperty Name="Campaign_UID" ColumnName="Campaign_UID" />
+                <ScalarProperty Name="CampaignName" ColumnName="CampaignName" />
+                <ScalarProperty Name="ReferralSourceURL" ColumnName="ReferralSourceURL" />
+                <ScalarProperty Name="ReferralSourceId" ColumnName="ReferralSourceId" />
+                <ScalarProperty Name="PropertyBaseCurrencyExchangeRate" ColumnName="PropertyBaseCurrencyExchangeRate" />
+                <ScalarProperty Name="TPICompany_UID" ColumnName="TPICompany_UID" />
+                <ScalarProperty Name="Employee_UID" ColumnName="Employee_UID" />
+                <ScalarProperty Name="Company_UID" ColumnName="Company_UID" />
+                <ScalarProperty Name="InternalNotesHistory" ColumnName="InternalNotesHistory" />
+                <ScalarProperty Name="SalesmanIsCommissionPercentage" ColumnName="SalesmanIsCommissionPercentage" />
+                <ScalarProperty Name="SalesmanCommission" ColumnName="SalesmanCommission" />
+                <ScalarProperty Name="Salesman_UID" ColumnName="Salesman_UID" />
+                <ScalarProperty Name="IsPaidDecisionDate" ColumnName="IsPaidDecisionDate" />
+                <ScalarProperty Name="IsPaidDecisionUser" ColumnName="IsPaidDecisionUser" />
+                <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+                <ScalarProperty Name="IsMobile" ColumnName="IsMobile" />
+                <ScalarProperty Name="PaymentGatewayTransactionMessage" ColumnName="PaymentGatewayTransactionMessage" />
+                <ScalarProperty Name="PaymentGatewayAutoGeneratedUID" ColumnName="PaymentGatewayAutoGeneratedUID" />
+                <ScalarProperty Name="PaymentGatewayTransactionDateTime" ColumnName="PaymentGatewayTransactionDateTime" />
+                <ScalarProperty Name="PaymentGatewayOrderID" ColumnName="PaymentGatewayOrderID" />
+                <ScalarProperty Name="PaymentAmountCaptured" ColumnName="PaymentAmountCaptured" />
+                <ScalarProperty Name="PaymentGatewayTransactionID" ColumnName="PaymentGatewayTransactionID" />
+                <ScalarProperty Name="PaymentGatewayProcessorName" ColumnName="PaymentGatewayProcessorName" />
+                <ScalarProperty Name="PaymentGatewayName" ColumnName="PaymentGatewayName" />
+                <ScalarProperty Name="PaymentGatewayTransactionStatusCode" ColumnName="PaymentGatewayTransactionStatusCode" />
+                <ScalarProperty Name="BillingTaxCardNumber" ColumnName="BillingTaxCardNumber" />
+                <ScalarProperty Name="UseDifferentBillingInfo" ColumnName="UseDifferentBillingInfo" />
+                <ScalarProperty Name="GuestPostalCode" ColumnName="GuestPostalCode" />
+                <ScalarProperty Name="GuestAddress2" ColumnName="GuestAddress2" />
+                <ScalarProperty Name="GuestAddress1" ColumnName="GuestAddress1" />
+                <ScalarProperty Name="GuestCity" ColumnName="GuestCity" />
+                <ScalarProperty Name="GuestState_UID" ColumnName="GuestState_UID" />
+                <ScalarProperty Name="GuestCountry_UID" ColumnName="GuestCountry_UID" />
+                <ScalarProperty Name="GuestIDCardNumber" ColumnName="GuestIDCardNumber" />
+                <ScalarProperty Name="GuestPhone" ColumnName="GuestPhone" />
+                <ScalarProperty Name="GuestEmail" ColumnName="GuestEmail" />
+                <ScalarProperty Name="GuestLastName" ColumnName="GuestLastName" />
+                <ScalarProperty Name="GuestFirstName" ColumnName="GuestFirstName" />
+                <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+                <ScalarProperty Name="NoOfInstallment" ColumnName="NoOfInstallment" />
+                <ScalarProperty Name="InstallmentAmount" ColumnName="InstallmentAmount" />
+                <ScalarProperty Name="IsPartialPayment" ColumnName="IsPartialPayment" />
+                <ScalarProperty Name="BankDepositDescription" ColumnName="BankDepositDescription" />
+                <ScalarProperty Name="BillingEmail" ColumnName="BillingEmail" />
+                <ScalarProperty Name="BillingState_UID" ColumnName="BillingState_UID" />
+                <ScalarProperty Name="OnRequestDecisionDate" ColumnName="OnRequestDecisionDate" />
+                <ScalarProperty Name="OnRequestDecisionUser" ColumnName="OnRequestDecisionUser" />
+                <ScalarProperty Name="IsOnRequest" ColumnName="IsOnRequest" />
+                <ScalarProperty Name="PmsRservationNumber" ColumnName="PmsRservationNumber" />
+                <ScalarProperty Name="GroupCode_UID" ColumnName="GroupCode_UID" />
+                <ScalarProperty Name="RoomsTotalAmount" ColumnName="RoomsTotalAmount" />
+                <ScalarProperty Name="RoomsPriceSum" ColumnName="RoomsPriceSum" />
+                <ScalarProperty Name="RoomsExtras" ColumnName="RoomsExtras" />
+                <ScalarProperty Name="RoomsTax" ColumnName="RoomsTax" />
+                <ScalarProperty Name="NumberOfRooms" ColumnName="NumberOfRooms" />
+                <ScalarProperty Name="TotalTax" ColumnName="TotalTax" />
+                <ScalarProperty Name="ReservationLanguageUsed_UID" ColumnName="ReservationLanguageUsed_UID" />
+                <ScalarProperty Name="ReservationCurrencyExchangeRateDate" ColumnName="ReservationCurrencyExchangeRateDate" />
+                <ScalarProperty Name="ReservationCurrencyExchangeRate" ColumnName="ReservationCurrencyExchangeRate" />
+                <ScalarProperty Name="ReservationBaseCurrency_UID" ColumnName="ReservationBaseCurrency_UID" />
+                <ScalarProperty Name="ReservationCurrency_UID" ColumnName="ReservationCurrency_UID" />
+                <ScalarProperty Name="LoyaltyCardNumber" ColumnName="LoyaltyCardNumber" />
+                <ScalarProperty Name="OtherLoyaltyCardNumber" ColumnName="OtherLoyaltyCardNumber" />
+                <ScalarProperty Name="OtherLoyaltyCardType_UID" ColumnName="OtherLoyaltyCardType_UID" />
+                <ScalarProperty Name="CancelReservationComments" ColumnName="CancelReservationComments" />
+                <ScalarProperty Name="CancelReservationReason_UID" ColumnName="CancelReservationReason_UID" />
+                <ScalarProperty Name="PaymentMethodType_UID" ColumnName="PaymentMethodType_UID" />
+                <ScalarProperty Name="ChannelAffiliateName" ColumnName="ChannelAffiliateName" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="BillingPhone" ColumnName="BillingPhone" />
+                <ScalarProperty Name="BillingCountry_UID" ColumnName="BillingCountry_UID" />
+                <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
+                <ScalarProperty Name="BillingPostalCode" ColumnName="BillingPostalCode" />
+                <ScalarProperty Name="BillingContactName" ColumnName="BillingContactName" />
+                <ScalarProperty Name="BillingAddress2" ColumnName="BillingAddress2" />
+                <ScalarProperty Name="BillingAddress1" ColumnName="BillingAddress1" />
+                <ScalarProperty Name="CancellationPolicy" ColumnName="CancellationPolicy" />
+                <ScalarProperty Name="DepositPolicy" ColumnName="DepositPolicy" />
+                <ScalarProperty Name="OtherPolicy" ColumnName="OtherPolicy" />
+                <ScalarProperty Name="CancellationPolicyDays" ColumnName="CancellationPolicyDays" />
+                <ScalarProperty Name="TransferOther" ColumnName="TransferOther" />
+                <ScalarProperty Name="TransferTime" ColumnName="TransferTime" />
+                <ScalarProperty Name="TransferLocation_UID" ColumnName="TransferLocation_UID" />
+                <ScalarProperty Name="BESpecialRequests4_UID" ColumnName="BESpecialRequests4_UID" />
+                <ScalarProperty Name="BESpecialRequests3_UID" ColumnName="BESpecialRequests3_UID" />
+                <ScalarProperty Name="BESpecialRequests2_UID" ColumnName="BESpecialRequests2_UID" />
+                <ScalarProperty Name="BESpecialRequests1_UID" ColumnName="BESpecialRequests1_UID" />
+                <ScalarProperty Name="ModifyBy" ColumnName="ModifyBy" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Property_UID" ColumnName="Property_UID" />
+                <ScalarProperty Name="InvoicesDetail_UID" ColumnName="InvoicesDetail_UID" />
+                <ScalarProperty Name="ChannelProperties_IsPercentage" ColumnName="ChannelProperties_IsPercentage" />
+                <ScalarProperty Name="ChannelProperties_Value" ColumnName="ChannelProperties_Value" />
+                <ScalarProperty Name="ChannelProperties_RateModel_UID" ColumnName="ChannelProperties_RateModel_UID" />
+                <ScalarProperty Name="PromotionalCode_UID" ColumnName="PromotionalCode_UID" />
+                <ScalarProperty Name="TPI_UID" ColumnName="TPI_UID" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="InternalNotes" ColumnName="InternalNotes" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Children" ColumnName="Children" />
+                <ScalarProperty Name="Adults" ColumnName="Adults" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="GDSSource" ColumnName="GDSSource" />
+                <ScalarProperty Name="Channel_UID" ColumnName="Channel_UID" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Guest_UID" ColumnName="Guest_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationsHistories">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationsHistory">
+              <MappingFragment StoreEntitySet="ReservationsHistory">
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Retries" ColumnName="Retries" />
+                <ScalarProperty Name="HangfireId" ColumnName="HangfireId" />
+                <ScalarProperty Name="ChannelUID" ColumnName="ChannelUID" />
+                <ScalarProperty Name="TransactionState" ColumnName="TransactionState" />
+                <ScalarProperty Name="TransactionUID" ColumnName="TransactionUID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StatusUID" ColumnName="StatusUID" />
+                <ScalarProperty Name="ChangedDate" ColumnName="ChangedDate" />
+                <ScalarProperty Name="Channel" ColumnName="Channel" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserUID" ColumnName="UserUID" />
+                <ScalarProperty Name="ReservationNumber" ColumnName="ReservationNumber" />
+                <ScalarProperty Name="ReservationUID" ColumnName="ReservationUID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationStatuses">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationStatus">
+              <MappingFragment StoreEntitySet="ReservationStatuses">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationStatusLanguages">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationStatusLanguage">
+              <MappingFragment StoreEntitySet="ReservationStatusLanguage">
+                <ScalarProperty Name="Language_UID" ColumnName="Language_UID" />
+                <ScalarProperty Name="ReservationStatus_UID" ColumnName="ReservationStatus_UID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationTransactionStatus">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationTransactionStatu">
+              <MappingFragment StoreEntitySet="ReservationTransactionStatus">
+                <ScalarProperty Name="Retries" ColumnName="Retries" />
+                <ScalarProperty Name="HangfireId" ColumnName="HangfireId" />
+                <ScalarProperty Name="ChannelUID" ColumnName="ChannelUID" />
+                <ScalarProperty Name="TransactionState" ColumnName="TransactionState" />
+                <ScalarProperty Name="ReservationNumber" ColumnName="ReservationNumber" />
+                <ScalarProperty Name="ReservationUID" ColumnName="ReservationUID" />
+                <ScalarProperty Name="TransactionUID" ColumnName="TransactionUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TokenizedCreditCardsReadsPerMonths">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.TokenizedCreditCardsReadsPerMonth">
+              <MappingFragment StoreEntitySet="TokenizedCreditCardsReadsPerMonth">
+                <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+                <ScalarProperty Name="NrOfCreditCardReads" ColumnName="NrOfCreditCardReads" />
+                <ScalarProperty Name="MonthNr" ColumnName="MonthNr" />
+                <ScalarProperty Name="YearNr" ColumnName="YearNr" />
+                <ScalarProperty Name="Property_UID" ColumnName="Property_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VisualStates">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.VisualState">
+              <MappingFragment StoreEntitySet="VisualStates">
+                <ScalarProperty Name="LookupKey_3" ColumnName="LookupKey_3" />
+                <ScalarProperty Name="LookupKey_2" ColumnName="LookupKey_2" />
+                <ScalarProperty Name="LookupKey_1" ColumnName="LookupKey_1" />
+                <ScalarProperty Name="JSONData" ColumnName="JSONData" />
+                <ScalarProperty Name="StateType" ColumnName="StateType" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationRoomFilters">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationRoomFilter">
+              <MappingFragment StoreEntitySet="ReservationRoomFilter">
+                <ScalarProperty Name="CancellationCost" ColumnName="CancellationCost" />
+                <ScalarProperty Name="GuestName" ColumnName="GuestName" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DepositNumberOfNight" ColumnName="DepositNumberOfNight" />
+                <ScalarProperty Name="DepositCost" ColumnName="DepositCost" />
+                <ScalarProperty Name="ApplyDepositPolicy" ColumnName="ApplyDepositPolicy" />
+                <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+                <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+                <ScalarProperty Name="ReservationRoomNo" ColumnName="ReservationRoomNo" />
+                <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CancelReservationReasonLanguages">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.CancelReservationReasonLanguage">
+              <MappingFragment StoreEntitySet="CancelReservationReasonLanguage">
+                <ScalarProperty Name="Language_UID" ColumnName="Language_UID" />
+                <ScalarProperty Name="CancelReservationReason_UID" ColumnName="CancelReservationReason_UID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationsAdditionalDatas">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationsAdditionalData">
+              <MappingFragment StoreEntitySet="ReservationsAdditionalData">
+                <ScalarProperty Name="BigPullAuthOwner_UID" ColumnName="BigPullAuthOwner_UID" />
+                <ScalarProperty Name="BigPullAuthRequestor_UID" ColumnName="BigPullAuthRequestor_UID" />
+                <ScalarProperty Name="BookerIsGenius" ColumnName="BookerIsGenius" />
+                <ScalarProperty Name="isDirectReservation" ColumnName="isDirectReservation" />
+                <ScalarProperty Name="BookingEngineTemplate" ColumnName="BookingEngineTemplate" />
+                <ScalarProperty Name="ReservationDomain" ColumnName="ReservationDomain" />
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="PartnerReservationNumber" ColumnName="PartnerReservationNumber" />
+                <ScalarProperty Name="ChannelPartnerID" ColumnName="ChannelPartnerID" />
+                <ScalarProperty Name="IsFromNewInsert" ColumnName="IsFromNewInsert" />
+                <ScalarProperty Name="ReservationAdditionalDataJSON" ColumnName="ReservationAdditionalDataJSON" />
+                <ScalarProperty Name="Reservation_UID" ColumnName="Reservation_UID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReservationFilters">
+            <EntityTypeMapping TypeName="OB.DL.Model.Reservations.ReservationFilter">
+              <MappingFragment StoreEntitySet="ReservationFilter">
+                <ScalarProperty Name="BigPullAuthOwner_UID" ColumnName="BigPullAuthOwner_UID" />
+                <ScalarProperty Name="BigPullAuthRequestor_UID" ColumnName="BigPullAuthRequestor_UID" />
+                <ScalarProperty Name="Employee_UID" ColumnName="Employee_UID" />
+                <ScalarProperty Name="LoyaltyCardNumber" ColumnName="LoyaltyCardNumber" />
+                <ScalarProperty Name="IsMobile" ColumnName="IsMobile" />
+                <ScalarProperty Name="ExternalName" ColumnName="ExternalName" />
+                <ScalarProperty Name="ExternalTPIUid" ColumnName="ExternalTPIUid" />
+                <ScalarProperty Name="ExternalChannelUid" ColumnName="ExternalChannelUid" />
+                <ScalarProperty Name="Guest_UID" ColumnName="Guest_UID" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="PartnerReservationNumber" ColumnName="PartnerReservationNumber" />
+                <ScalarProperty Name="PartnerUid" ColumnName="PartnerUid" />
+                <ScalarProperty Name="RepresentativeCurrencySymbol" ColumnName="RepresentativeCurrencySymbol" />
+                <ScalarProperty Name="RepresentativeCurrencyExchangeRate" ColumnName="RepresentativeCurrencyExchangeRate" />
+                <ScalarProperty Name="PropertyBaseCurrencySymbol" ColumnName="PropertyBaseCurrencySymbol" />
+                <ScalarProperty Name="PropertyBaseCurrencyExchangeRate" ColumnName="PropertyBaseCurrencyExchangeRate" />
+                <ScalarProperty Name="ReservationBaseCurrencySymbol" ColumnName="ReservationBaseCurrencySymbol" />
+                <ScalarProperty Name="ReservationBaseCurrencyExchangeRate" ColumnName="ReservationBaseCurrencyExchangeRate" />
+                <ScalarProperty Name="ReservationDate" ColumnName="ReservationDate" />
+                <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+                <ScalarProperty Name="TPI_Name" ColumnName="TPI_Name" />
+                <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+                <ScalarProperty Name="ChannelUid" ColumnName="ChannelUid" />
+                <ScalarProperty Name="ExternalIsPaid" ColumnName="ExternalIsPaid" />
+                <ScalarProperty Name="ExternalCommissionValue" ColumnName="ExternalCommissionValue" />
+                <ScalarProperty Name="ExternalTotalAmount" ColumnName="ExternalTotalAmount" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PaymentTypeUid" ColumnName="PaymentTypeUid" />
+                <ScalarProperty Name="TPI_UID" ColumnName="TPI_UID" />
+                <ScalarProperty Name="NumberOfRooms" ColumnName="NumberOfRooms" />
+                <ScalarProperty Name="NumberOfChildren" ColumnName="NumberOfChildren" />
+                <ScalarProperty Name="NumberOfAdults" ColumnName="NumberOfAdults" />
+                <ScalarProperty Name="NumberOfNights" ColumnName="NumberOfNights" />
+                <ScalarProperty Name="GuestName" ColumnName="GuestName" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsReaded" ColumnName="IsReaded" />
+                <ScalarProperty Name="IsOnRequest" ColumnName="IsOnRequest" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+                <ScalarProperty Name="PropertyUid" ColumnName="PropertyUid" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

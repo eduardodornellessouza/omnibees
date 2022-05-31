@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblTo" xml:space="preserve">
+    <value>a</value>
+  </data>
+  <data name="lblAd" xml:space="preserve">
+    <value>Ad.</value>
+  </data>
+  <data name="lblAmenity" xml:space="preserve">
+    <value>Amenidades</value>
+  </data>
+  <data name="lblGuestLenLastName" xml:space="preserve">
+    <value>Apelido deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblActivity" xml:space="preserve">
+    <value>Atividades</value>
+  </data>
+  <data name="lblCalendarEvents" xml:space="preserve">
+    <value>Calendário de eventos</value>
+  </data>
+  <data name="lblChannels" xml:space="preserve">
+    <value>Canais</value>
+  </data>
+  <data name="lblTplLanCity" xml:space="preserve">
+    <value>Cidade deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblTplLanPostalcode" xml:space="preserve">
+    <value>Cod. postal deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblValidateCVV" xml:space="preserve">
+    <value>Código de segurança inválido (CVV).</value>
+  </data>
+  <data name="lblCh" xml:space="preserve">
+    <value>Cr.</value>
+  </data>
+  <data name="lblFrom" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="lblTPICategoryLanDescription" xml:space="preserve">
+    <value>Descrição da categoria TPI deve conter no máximo 250 caracteres</value>
+  </data>
+  <data name="lblCancellationPolicyLanDescription" xml:space="preserve">
+    <value>Descrição deve conter no máximo 100 caracteres</value>
+  </data>
+  <data name="lblMaxLengthDescription" xml:space="preserve">
+    <value>Descrição deve conter no máximo 250 caracteres</value>
+  </data>
+  <data name="lblValidPhoneExt" xml:space="preserve">
+    <value>Ext. de telefone inválida</value>
+  </data>
+  <data name="lblExtra" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+  <data name="lblTplLanIATA" xml:space="preserve">
+    <value>IATA deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblMaxLengthUserId" xml:space="preserve">
+    <value>ID deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblLanguagesLanName" xml:space="preserve">
+    <value>Idioma deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblClientReqAdd1" xml:space="preserve">
+    <value>Insira morada</value>
+  </data>
+  <data name="lblClientReqCompanyName" xml:space="preserve">
+    <value>Insira nome da empresa</value>
+  </data>
+  <data name="lblClientReqName" xml:space="preserve">
+    <value>Insira nome de cliente</value>
+  </data>
+  <data name="lblTplLanAdd1" xml:space="preserve">
+    <value>Morada deve conter no máximo 250 caracteres</value>
+  </data>
+  <data name="lblBookingEngine" xml:space="preserve">
+    <value>Motor de reservas</value>
+  </data>
+  <data name="lblMultiMedia" xml:space="preserve">
+    <value>Multimédia</value>
+  </data>
+  <data name="lblValidPhone" xml:space="preserve">
+    <value>N.º telefone inválido</value>
+  </data>
+  <data name="lblNumbersNotAllowed" xml:space="preserve">
+    <value>Não são permitidos números</value>
+  </data>
+  <data name="lblAmenityLenName" xml:space="preserve">
+    <value>Nome da amenidade deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblAttractionCategoryLenName" xml:space="preserve">
+    <value>Nome da categoria deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblTPICategoryLanName" xml:space="preserve">
+    <value>Nome da categoria TPI deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblTplValidateUserName" xml:space="preserve">
+    <value>Nome de utilizador inválido</value>
+  </data>
+  <data name="lblDepositePolicyLanName" xml:space="preserve">
+    <value>Nome deve conter no máximo 100 caracteres</value>
+  </data>
+  <data name="lblMaxLengthName" xml:space="preserve">
+    <value>Nome deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblGuestLanFirestName" xml:space="preserve">
+    <value>Nome prórpio deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblPackagesReqDateTo" xml:space="preserve">
+    <value>O preenchimento do campo "a" é obrigatório</value>
+  </data>
+  <data name="lblRequiredDateTo" xml:space="preserve">
+    <value>O preenchimento do campo "a" é obrigatório</value>
+  </data>
+  <data name="lblTPICategoryReqName" xml:space="preserve">
+    <value>O preenchimento do campo "Categoria de TPI" é obrigatório</value>
+  </data>
+  <data name="lblTplReqCity" xml:space="preserve">
+    <value>O preenchimento do campo "cidade" é obrigatório</value>
+  </data>
+  <data name="lblTplReqPostalcode" xml:space="preserve">
+    <value>O preenchimento do campo "cod. postal" é obrigatório</value>
+  </data>
+  <data name="lblRequiredEnddate" xml:space="preserve">
+    <value>O preenchimento do campo "Data de fim" é obrigatório</value>
+  </data>
+  <data name="lblRequiredStartdate" xml:space="preserve">
+    <value>O preenchimento do campo "data de início" é obrigatório</value>
+  </data>
+  <data name="lblRequiredDateFrom" xml:space="preserve">
+    <value>O preenchimento do campo "De" é obrigatório</value>
+  </data>
+  <data name="lblPackagesReqDateFrom" xml:space="preserve">
+    <value>O preenchimento do campo "De" é obrigatório</value>
+  </data>
+  <data name="lblRequiredDescription" xml:space="preserve">
+    <value>O preenchimento do campo "descrição" é obrigatório</value>
+  </data>
+  <data name="lblReqEmail" xml:space="preserve">
+    <value>O preenchimento do campo "email" é obrigatório</value>
+  </data>
+  <data name="lblRequierdUserId" xml:space="preserve">
+    <value>O preenchimento do campo "ID" é obrigatório</value>
+  </data>
+  <data name="lblLanguagesReqName" xml:space="preserve">
+    <value>O preenchimento do campo "idioma" é obrigatório</value>
+  </data>
+  <data name="lblReqCurrency" xml:space="preserve">
+    <value>O preenchimento do campo "moeda" é obrigatório</value>
+  </data>
+  <data name="lblTplReqAdd1" xml:space="preserve">
+    <value>O preenchimento do campo "morada" é obrigatório</value>
+  </data>
+  <data name="lblAmenityReqName" xml:space="preserve">
+    <value>O preenchimento do campo "nome da amenidade" é obrigatório</value>
+  </data>
+  <data name="lblAttractionCategoryReqName" xml:space="preserve">
+    <value>O preenchimento do campo "nome da categoria" é obrigatório</value>
+  </data>
+  <data name="lblGuestReqFirestName" xml:space="preserve">
+    <value>O preenchimento do campo "nome próprio" é obrigatório</value>
+  </data>
+  <data name="lblRequiredName" xml:space="preserve">
+    <value>O preenchimento do campo "nome" é obrigatório</value>
+  </data>
+  <data name="lblAccountManagerReqPassword" xml:space="preserve">
+    <value>O preenchimento do campo "palavra-chave" é obrigatório</value>
+  </data>
+  <data name="lblRequierdUserPassword" xml:space="preserve">
+    <value>O preenchimento do campo "palavra-chave" é obrigatório</value>
+  </data>
+  <data name="lblPercentageRequired" xml:space="preserve">
+    <value>O preenchimento do campo "percentagem" é obrigatório</value>
+  </data>
+  <data name="lblTplReqPhone" xml:space="preserve">
+    <value>O preenchimento do campo "telefone" é obrigatório</value>
+  </data>
+  <data name="lblAccountManagerReqUserName" xml:space="preserve">
+    <value>O preenchimento do campo "Utilizador" é obrigatório</value>
+  </data>
+  <data name="lblRequiredValue" xml:space="preserve">
+    <value>O preenchimento do campo "valor" é obrigatório</value>
+  </data>
+  <data name="lblGroupCodeRequired" xml:space="preserve">
+    <value>O preenchimento do campo Código de grupo" é obrigatório</value>
+  </data>
+  <data name="lblRequired" xml:space="preserve">
+    <value>Obrigatório</value>
+  </data>
+  <data name="lblPartialPayment" xml:space="preserve">
+    <value>Pagamento parcial</value>
+  </data>
+  <data name="lblAccountManagerLenPassword" xml:space="preserve">
+    <value>Palavra-chave deve conter entre 6 e 20 caracteres</value>
+  </data>
+  <data name="lblMaxLengthUserPassword" xml:space="preserve">
+    <value>Palavra-chave deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblAccountManagerLenUserName" xml:space="preserve">
+    <value>Palavra-chave deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblCancellationPolicy" xml:space="preserve">
+    <value>Políticas de cancelamento</value>
+  </data>
+  <data name="lblDepositPolicy" xml:space="preserve">
+    <value>Políticas de depósito</value>
+  </data>
+  <data name="lblTaxPolicy" xml:space="preserve">
+    <value>Políticas de taxas</value>
+  </data>
+  <data name="lblOtherPolicy" xml:space="preserve">
+    <value>Políticas gerais</value>
+  </data>
+  <data name="lblClientComments" xml:space="preserve">
+    <value>Por favor, inserir comentários</value>
+  </data>
+  <data name="lblValidateEmail" xml:space="preserve">
+    <value>Por favor, inserir endereço de email válido</value>
+  </data>
+  <data name="lblRequierdTag" xml:space="preserve">
+    <value>Por favor, inserir Tag</value>
+  </data>
+  <data name="lblPropertiesValidInvoiceEmail" xml:space="preserve">
+    <value>Por favor, inserir um email para faturação válido</value>
+  </data>
+  <data name="lblPropertiesValidResevationEmail" xml:space="preserve">
+    <value>Por favor, inserir um email para reservas válido</value>
+  </data>
+  <data name="lblAccountManegerEmail" xml:space="preserve">
+    <value>Por favor, insira um nome de utilizador válido</value>
+  </data>
+  <data name="lblAttractionValidURL" xml:space="preserve">
+    <value>Por favor, insira um URL válido</value>
+  </data>
+  <data name="lblReqCountry" xml:space="preserve">
+    <value>Por favor, selecionar pais</value>
+  </data>
+  <data name="lblRequiredRateTier" xml:space="preserve">
+    <value>Por favor, selecione grupo da tarifa</value>
+  </data>
+  <data name="lblRequiredImage" xml:space="preserve">
+    <value>Por favor, selecione imagem.</value>
+  </data>
+  <data name="lblRequiredProperty" xml:space="preserve">
+    <value>Por favor, selecione propriedade</value>
+  </data>
+  <data name="lblChannelsServicesReqRateModel" xml:space="preserve">
+    <value>Por favor, selecione um modelo de tarifa</value>
+  </data>
+  <data name="lblIncentiveReqIncentiveType" xml:space="preserve">
+    <value>Por favor, selecione um tipo de incentivo</value>
+  </data>
+  <data name="lblRate" xml:space="preserve">
+    <value>Tarifas</value>
+  </data>
+  <data name="lblInterestRates" xml:space="preserve">
+    <value>Taxas de juro</value>
+  </data>
+  <data name="lblTplLanPhone" xml:space="preserve">
+    <value>Telefone deve conter no máximo 50 caracteres</value>
+  </data>
+  <data name="lblRoomType" xml:space="preserve">
+    <value>Tipos de quarto</value>
+  </data>
+  <data name="lblAllReservation" xml:space="preserve">
+    <value>Todas as reservas</value>
+  </data>
+  <data name="lblUSD" xml:space="preserve">
+    <value>USD</value>
+  </data>
+  <data name="blRenovationYear" xml:space="preserve">
+    <value>Ano Renovação</value>
+  </data>
+  <data name="lblAccountManager" xml:space="preserve">
+    <value>Gerente de Conta</value>
+  </data>
+  <data name="lblAddress" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="lblAddress1" xml:space="preserve">
+    <value>Endereço1</value>
+  </data>
+  <data name="lblAdultMaxOccupancy" xml:space="preserve">
+    <value>Max. Adt.</value>
+  </data>
+  <data name="lblAdultMinOccupancy" xml:space="preserve">
+    <value>Min. Adt.</value>
+  </data>
+  <data name="lblAge" xml:space="preserve">
+    <value>Idade</value>
+  </data>
+  <data name="lblBaseLanguage" xml:space="preserve">
+    <value>Idioma Base</value>
+  </data>
+  <data name="lblBoardType" xml:space="preserve">
+    <value>Tipo de Placa</value>
+  </data>
+  <data name="lblBouncedEmail" xml:space="preserve">
+    <value>Saltou-Mail</value>
+  </data>
+  <data name="lblBuildYear" xml:space="preserve">
+    <value>Construir Ano</value>
+  </data>
+  <data name="lblCardHolderName" xml:space="preserve">
+    <value>Nome do titular do Cartão</value>
+  </data>
+  <data name="lblCategory" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="lblCCNumber" xml:space="preserve">
+    <value>Número CC</value>
+  </data>
+  <data name="lblCity" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="lblCode" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="lblComments" xml:space="preserve">
+    <value>Comentários</value>
+  </data>
+  <data name="lblCondition" xml:space="preserve">
+    <value>Condição</value>
+  </data>
+  <data name="lblConfirmPassword" xml:space="preserve">
+    <value>Confirmar Senha</value>
+  </data>
+  <data name="lblCorporateCategory" xml:space="preserve">
+    <value>Categoria Corporativo</value>
+  </data>
+  <data name="lblCountry" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="lblCreatedBy" xml:space="preserve">
+    <value>Criado Por</value>
+  </data>
+  <data name="lblCreatedDate" xml:space="preserve">
+    <value>Data de Criação</value>
+  </data>
+  <data name="lblCurrency" xml:space="preserve">
+    <value>Moeda</value>
+  </data>
+  <data name="lblCVV" xml:space="preserve">
+    <value>CVV</value>
+  </data>
+  <data name="lblDateFrom" xml:space="preserve">
+    <value>Data a Partir da</value>
+  </data>
+  <data name="lblDateTo" xml:space="preserve">
+    <value>Data Para</value>
+  </data>
+  <data name="lblDays" xml:space="preserve">
+    <value>Dias</value>
+  </data>
+  <data name="lblDescription" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="lblDiscount" xml:space="preserve">
+    <value>Desconto</value>
+  </data>
+  <data name="lblEmail" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="lblEndDate" xml:space="preserve">
+    <value>Data Final</value>
+  </data>
+  <data name="lblEndSale" xml:space="preserve">
+    <value>Venda Final</value>
+  </data>
+  <data name="lblEndSell" xml:space="preserve">
+    <value>Venda Acabar</value>
+  </data>
+  <data name="lblFirstName" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="lblFreeDays" xml:space="preserve">
+    <value>Dias Grátis</value>
+  </data>
+  <data name="lblFromDate" xml:space="preserve">
+    <value>A Partir da Data</value>
+  </data>
+  <data name="lblGeoLocationLat" xml:space="preserve">
+    <value>GPS N</value>
+  </data>
+  <data name="lblGeoLocationLng" xml:space="preserve">
+    <value>GPS W</value>
+  </data>
+  <data name="lblGroupCode" xml:space="preserve">
+    <value>Código de Grupo</value>
+  </data>
+  <data name="lblHyperLink" xml:space="preserve">
+    <value>HyperLink</value>
+  </data>
+  <data name="lblIATA" xml:space="preserve">
+    <value>IATA</value>
+  </data>
+  <data name="lblImage" xml:space="preserve">
+    <value>Imagem</value>
+  </data>
+  <data name="lblIsActive" xml:space="preserve">
+    <value>é Ativo</value>
+  </data>
+  <data name="lblIsPercentage" xml:space="preserve">
+    <value>é Percentagem</value>
+  </data>
+  <data name="lblLanguage" xml:space="preserve">
+    <value>Linguagem</value>
+  </data>
+  <data name="lblLastName" xml:space="preserve">
+    <value>Apelido</value>
+  </data>
+  <data name="lblMaxAge" xml:space="preserve">
+    <value>Max Idade</value>
+  </data>
+  <data name="lblMaximumDays" xml:space="preserve">
+    <value>Dias no Máximo</value>
+  </data>
+  <data name="lblMaxNumberOfDays" xml:space="preserve">
+    <value>Max. Número de dias</value>
+  </data>
+  <data name="lblMaxValue" xml:space="preserve">
+    <value>Max. Valor</value>
+  </data>
+  <data name="lblMessage" xml:space="preserve">
+    <value>Mensagem</value>
+  </data>
+  <data name="lblName" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="lblNewPassword" xml:space="preserve">
+    <value>Nova Senha</value>
+  </data>
+  <data name="lblNotificationEmail" xml:space="preserve">
+    <value>E-mail de Notificação</value>
+  </data>
+  <data name="lblNrOfRooms" xml:space="preserve">
+    <value>Nr. de Quartos</value>
+  </data>
+  <data name="lblNumberOfHotels" xml:space="preserve">
+    <value>Número de Hotéis</value>
+  </data>
+  <data name="lblOccupancyFrom" xml:space="preserve">
+    <value>Ocupação De</value>
+  </data>
+  <data name="lblOccupancyTo" xml:space="preserve">
+    <value>Para Ocupação</value>
+  </data>
+  <data name="lblParcel" xml:space="preserve">
+    <value>Parcela</value>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="lblPasswordExpiry" xml:space="preserve">
+    <value>Senha de Validade</value>
+  </data>
+  <data name="lblPaymentMethod" xml:space="preserve">
+    <value>Forma de Pagamento</value>
+  </data>
+  <data name="lblPhone" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="lblPostalCode" xml:space="preserve">
+    <value>Código Postal</value>
+  </data>
+  <data name="lblProperty" xml:space="preserve">
+    <value>Propriedade</value>
+  </data>
+  <data name="lblPropertyCategory" xml:space="preserve">
+    <value>Categoria Propriedade</value>
+  </data>
+  <data name="lblQuestion" xml:space="preserve">
+    <value>Pergunta</value>
+  </data>
+  <data name="lblRateName" xml:space="preserve">
+    <value>Taxa</value>
+  </data>
+  <data name="lblRecurrence" xml:space="preserve">
+    <value>Retorno</value>
+  </data>
+  <data name="lblReplayEmail" xml:space="preserve">
+    <value>E-mail de Replay</value>
+  </data>
+  <data name="lblRoomQuantity" xml:space="preserve">
+    <value>Quantidade de Quartos</value>
+  </data>
+  <data name="lblRoomTypeName" xml:space="preserve">
+    <value>Tipo de Quarto</value>
+  </data>
+  <data name="lblStartDate" xml:space="preserve">
+    <value>Data de Início</value>
+  </data>
+  <data name="lblState" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="lblStatus" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="lblStayThrough" xml:space="preserve">
+    <value>Fique Através</value>
+  </data>
+  <data name="lblSubject" xml:space="preserve">
+    <value>Assunto</value>
+  </data>
+  <data name="lblTag" xml:space="preserve">
+    <value>Etiqueta</value>
+  </data>
+  <data name="lblToDate" xml:space="preserve">
+    <value>Para Data </value>
+  </data>
+  <data name="lblTotalOccupancy" xml:space="preserve">
+    <value>Ocupação Total</value>
+  </data>
+  <data name="lblTotalRooms" xml:space="preserve">
+    <value>Total de Quartos</value>
+  </data>
+  <data name="lblType" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="lblURL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="lblUserID" xml:space="preserve">
+    <value>ID de Usuário</value>
+  </data>
+  <data name="lblUsername" xml:space="preserve">
+    <value>Nome de Utilizador</value>
+  </data>
+  <data name="lblUserPassword" xml:space="preserve">
+    <value>Senha de Usuário</value>
+  </data>
+  <data name="lblValidFrom" xml:space="preserve">
+    <value>Válido De</value>
+  </data>
+  <data name="lblValue" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="lblVAT" xml:space="preserve">
+    <value>IVA</value>
+  </data>
+  <data name="lblVATNumber" xml:space="preserve">
+    <value>Número de IVA</value>
+  </data>
+  <data name="lblWebsite" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="lblInvalidDays" xml:space="preserve">
+    <value>Número dias inválido.</value>
+  </data>
+  <data name="lblAuthorized" xml:space="preserve">
+    <value>Autorizado</value>
+  </data>
+  <data name="lblInvalid_UserNotFound" xml:space="preserve">
+    <value>Inválido: Utilizador não encontrado</value>
+  </data>
+  <data name="lblInvalid_ReservationNotFound" xml:space="preserve">
+    <value>Inválido: A Reserva não existe</value>
+  </data>
+  <data name="lblInvalid_ReservationAccessDenied" xml:space="preserve">
+    <value>Inválido: Não tem acesso à reserva</value>
+  </data>
+  <data name="lblInvalid_NotAllowedToPrint" xml:space="preserve">
+    <value>Não é permitido ver o cartão de crédito nos prints</value>
+  </data>
+  <data name="lblInvalid_CreditCardInfoNotFound" xml:space="preserve">
+    <value>Inválido: informação de crédito do cartão não encontrado</value>
+  </data>
+  <data name="lblInvalid_GettingCardInfoFailed" xml:space="preserve">
+    <value>A obtenção dos dados de Cartão de Crédito falhou</value>
+  </data>
+</root>

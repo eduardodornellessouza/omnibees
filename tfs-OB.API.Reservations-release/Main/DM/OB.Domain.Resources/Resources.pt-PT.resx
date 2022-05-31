@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BookingCanceledEmailSubjectEmail" xml:space="preserve">
+    <value>Reserva Cancelada</value>
+  </data>
+  <data name="lblAd" xml:space="preserve">
+    <value>Ad.</value>
+  </data>
+  <data name="lblAdded" xml:space="preserve">
+    <value>Adicionado</value>
+    <comment>Added</comment>
+  </data>
+  <data name="lblAllot" xml:space="preserve">
+    <value>Allot</value>
+  </data>
+  <data name="lblAllStay" xml:space="preserve">
+    <value>Toda a Estadia</value>
+    <comment>All Stay</comment>
+  </data>
+  <data name="lblCancelled" xml:space="preserve">
+    <value>Cancelado</value>
+  </data>
+  <data name="lblCh" xml:space="preserve">
+    <value>Ch.</value>
+  </data>
+  <data name="lblCopy" xml:space="preserve">
+    <value>copiar</value>
+    <comment>Copy</comment>
+  </data>
+  <data name="lblExtra" xml:space="preserve">
+    <value>extra</value>
+    <comment>Extra</comment>
+  </data>
+  <data name="lblExtraSchedule" xml:space="preserve">
+    <value>Datas Cronograma</value>
+    <comment>Schedule Dates</comment>
+  </data>
+  <data name="lblFrom" xml:space="preserve">
+    <value>de</value>
+    <comment>From</comment>
+  </data>
+  <data name="lblIncluded" xml:space="preserve">
+    <value>Incluído</value>
+    <comment>Included</comment>
+  </data>
+  <data name="lblInterestRate" xml:space="preserve">
+    <value>Taxas de Juro</value>
+  </data>
+  <data name="lblModified" xml:space="preserve">
+    <value>Modificado</value>
+  </data>
+  <data name="lblMove" xml:space="preserve">
+    <value>mover</value>
+    <comment>Move</comment>
+  </data>
+  <data name="lblNo" xml:space="preserve">
+    <value>não</value>
+    <comment>No</comment>
+  </data>
+  <data name="lblNotes" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="lblPartialPayment" xml:space="preserve">
+    <value>Pagamento Parcial</value>
+  </data>
+  <data name="lblPaymentType" xml:space="preserve">
+    <value>Tipo de Pagamento</value>
+  </data>
+  <data name="lblRateRestriction1" xml:space="preserve">
+    <value>Min {0} noite(s)</value>
+  </data>
+  <data name="lblRateRestriction2" xml:space="preserve">
+    <value>Estadia {0} dia(s)</value>
+  </data>
+  <data name="lblRateRestriction3" xml:space="preserve">
+    <value>Fechado na chegada</value>
+  </data>
+  <data name="lblRateRestriction4" xml:space="preserve">
+    <value>Fechado na partida</value>
+  </data>
+  <data name="lblRateRestriction5" xml:space="preserve">
+    <value>{0} dia(s) de lançamento</value>
+  </data>
+  <data name="lblRateRestriction6" xml:space="preserve">
+    <value>Alocação</value>
+  </data>
+  <data name="lblRateRestriction7" xml:space="preserve">
+    <value>Indisponível</value>
+  </data>
+  <data name="lblRateRestriction8" xml:space="preserve">
+    <value>Max {0} dia(s)</value>
+  </data>
+  <data name="lblTo" xml:space="preserve">
+    <value>para</value>
+    <comment>To</comment>
+  </data>
+  <data name="lblYes" xml:space="preserve">
+    <value>sim</value>
+    <comment>Yes</comment>
+  </data>
+  <data name="msgCanceledBookingIntroductoryText" xml:space="preserve">
+    <value>A sua reserva foi cancelada.</value>
+  </data>
+  <data name="msgChangedBookingIntroductoryText" xml:space="preserve">
+    <value>A sua reserva foi alterada. Por favor, verifique os detalhes.</value>
+  </data>
+  <data name="msgChangedBookingSubject" xml:space="preserve">
+    <value>Reserva Modificada</value>
+  </data>
+  <data name="msgDifferentCurrencies" xml:space="preserve">
+    <value>&lt;strong&gt;TOTAL ({0})&lt;br/&gt;O pagamento para esta reserva será em {0}.&lt;/strong&gt; &lt;br/&gt; (Os preços em {1} são indicativos e com base na taxa de câmbio de hoje)</value>
+  </data>
+  <data name="msgIncluded" xml:space="preserve">
+    <value>incluído</value>
+  </data>
+  <data name="msgInfoNotAvailable" xml:space="preserve">
+    <value>Aviso: esta informação não existe nesta língua! Por favor, entre em contato com o hotel.</value>
+  </data>
+  <data name="msgNewBookingGuestIntroductoryText" xml:space="preserve">
+    <value>Obrigado por escolher o nosso hotel!</value>
+  </data>
+  <data name="msgNewBookingGuestSubject" xml:space="preserve">
+    <value>Nova Reserva</value>
+  </data>
+  <data name="msgNewRequestGuestIntroductoryText" xml:space="preserve">
+    <value>Obrigado por solicitar uma reserva! Nós responderemos o mais breve possível.</value>
+  </data>
+  <data name="msgNewRequestGuestSubject" xml:space="preserve">
+    <value>Novo Pedido</value>
+  </data>
+  <data name="msgRequestCanceledEmailSubject" xml:space="preserve">
+    <value>Pedido Cancelado</value>
+  </data>
+  <data name="msgRequestCanceledIntroductoryText" xml:space="preserve">
+    <value>O seu pedido foi cancelado.</value>
+  </data>
+  <data name="msgRequestRefusedEmailSubject" xml:space="preserve">
+    <value>Pedido Recusado</value>
+  </data>
+  <data name="msgRequestRefusedIntroductoryText" xml:space="preserve">
+    <value>Desculpe, mas não conseguimos satisfazer o seu pedido. Nossas sinceras desculpas e contacte-nos se precisar de informações.</value>
+  </data>
+  <data name="lblAvailableDates" xml:space="preserve">
+    <value>Datas disponíveis</value>
+    <comment>Available Dates</comment>
+  </data>
+  <data name="lblMobile" xml:space="preserve">
+    <value>Móvel</value>
+    <comment>Mobile</comment>
+  </data>
+  <data name="lblAt" xml:space="preserve">
+    <value>em</value>
+  </data>
+  <data name="NewGuestDetailMailSubject" xml:space="preserve">
+    <value>Bem-vindo à sua Àrea de Cliente</value>
+  </data>
+  <data name="lblRestrictionAllocation" xml:space="preserve">
+    <value>Disponibilidade</value>
+  </data>
+  <data name="lblRestrictionBlocked" xml:space="preserve">
+    <value>Dia Fechado</value>
+  </data>
+  <data name="lblRestrictionClosedOnArrival" xml:space="preserve">
+    <value>Dia fechado para chegada</value>
+  </data>
+  <data name="lblRestrictionClosedOnDeparture" xml:space="preserve">
+    <value>Dia fechado para saída</value>
+  </data>
+  <data name="lblRestrictionMaxDays" xml:space="preserve">
+    <value>Máximo de Dias para reservar</value>
+  </data>
+  <data name="lblRestrictionMinDays" xml:space="preserve">
+    <value>Minimo de Dias para reservar</value>
+  </data>
+  <data name="lblRestrictionReleaseDays" xml:space="preserve">
+    <value>Dias de antecedência para poder reservar</value>
+  </data>
+  <data name="lblRestrictionStayThrough" xml:space="preserve">
+    <value>Estadia Certa para reservar</value>
+  </data>
+  <data name="lblSaleClosed" xml:space="preserve">
+    <value>Venda fechada</value>
+  </data>
+  <data name="lblMrMrs" xml:space="preserve">
+    <value>Sr./Sra.</value>
+  </data>
+  <data name="CancelationText" xml:space="preserve">
+    <value>Cancelar Reserva</value>
+  </data>
+  <data name="lblCompany" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="lblRoom" xml:space="preserve">
+    <value>Quarto</value>
+  </data>
+  <data name="lblTravelAgent" xml:space="preserve">
+    <value>Agente de Viagem</value>
+  </data>
+  <data name="lblCloseSales" xml:space="preserve">
+    <value>Fechar Vendas</value>
+  </data>
+  <data name="lblOpenSales" xml:space="preserve">
+    <value>Abrir Vendas</value>
+  </data>
+  <data name="ChannelMappingTypeAll" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="ChannelMappingTypeReservationsOnly" xml:space="preserve">
+    <value>Só Reservas</value>
+  </data>
+  <data name="lblCountry" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="lblUnspecified" xml:space="preserve">
+    <value>Indeterminado</value>
+  </data>
+  <data name="lblARQ" xml:space="preserve">
+    <value>Preço / Disponibilidade</value>
+  </data>
+  <data name="lblBRQ" xml:space="preserve">
+    <value>Reservas</value>
+  </data>
+  <data name="lblGRRQ" xml:space="preserve">
+    <value>Tarifas</value>
+  </data>
+  <data name="lblPRQ" xml:space="preserve">
+    <value>Criar Propriedades </value>
+  </data>
+  <data name="lblRARQ" xml:space="preserve">
+    <value>Preço / Disponibilidade</value>
+  </data>
+  <data name="lblRDRQ" xml:space="preserve">
+    <value>Criar Quartos</value>
+  </data>
+  <data name="lblRRQ" xml:space="preserve">
+    <value>Criar Tarifas</value>
+  </data>
+  <data name="lblRTRQ" xml:space="preserve">
+    <value>Quartos / Tarifas </value>
+  </data>
+  <data name="lblPublic" xml:space="preserve">
+    <value>Público</value>
+  </data>
+  <data name="lblPropertyAssignment" xml:space="preserve">
+    <value>Atribuição de Propriedade</value>
+  </data>
+  <data name="lblRemoved" xml:space="preserve">
+    <value>Removido</value>
+  </data>
+  <data name="lblBouncedEmail" xml:space="preserve">
+    <value>Devolver para</value>
+  </data>
+  <data name="lblFromEmail" xml:space="preserve">
+    <value>Do email</value>
+  </data>
+  <data name="lblFromName" xml:space="preserve">
+    <value>Em nome de</value>
+  </data>
+  <data name="lblReplyEmail" xml:space="preserve">
+    <value>Responder para</value>
+  </data>
+  <data name="lblName" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="atthebeginning" xml:space="preserve">
+    <value>no início</value>
+  </data>
+  <data name="attheend" xml:space="preserve">
+    <value>no fim</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>desconto</value>
+  </data>
+  <data name="FreeNight" xml:space="preserve">
+    <value>Noite Grátis</value>
+  </data>
+  <data name="CreditLimitMsg" xml:space="preserve">
+    <value>A {0} atingiu o limite de crédito de {1}</value>
+  </data>
+  <data name="lblOperator" xml:space="preserve">
+    <value>Operador</value>
+  </data>
+  <data name="OccAllRulesApplied" xml:space="preserve">
+    <value>Regras aplicadas</value>
+  </data>
+  <data name="OccCorrelation" xml:space="preserve">
+    <value>Correlation</value>
+  </data>
+  <data name="OccError" xml:space="preserve">
+    <value>Erro ao aplicar regras</value>
+  </data>
+  <data name="OccException" xml:space="preserve">
+    <value>Excepção</value>
+  </data>
+  <data name="OccLevel" xml:space="preserve">
+    <value>Ocupação</value>
+  </data>
+  <data name="OccReservationNumber" xml:space="preserve">
+    <value>Reserva</value>
+  </data>
+  <data name="OccRoom" xml:space="preserve">
+    <value>Quarto</value>
+  </data>
+  <data name="OccCloseSales" xml:space="preserve">
+    <value>Fecho de vendas</value>
+  </data>
+  <data name="OccUpdateRates" xml:space="preserve">
+    <value>Update de preços</value>
+  </data>
+  <data name="lblPackages" xml:space="preserve">
+    <value>Pacotes</value>
+  </data>
+  <data name="lblRates" xml:space="preserve">
+    <value>Tarifas</value>
+  </data>
+  <data name="lblCreditLimitReached" xml:space="preserve">
+    <value>{0} atingiu o limite de crédito de {1}</value>
+  </data>
+  <data name="lblCheckIn" xml:space="preserve">
+    <value>Check-in</value>
+    <comment>Check-in</comment>
+  </data>
+  <data name="lblCheckOut" xml:space="preserve">
+    <value>Check-out</value>
+    <comment>Check-out</comment>
+  </data>
+</root>

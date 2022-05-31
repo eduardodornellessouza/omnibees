@@ -1,0 +1,54 @@
+@using System.Web.Http
+@using System.Web.Http.Controllers
+@using System.Web.Http.Description
+@using OB.REST.Services.Areas.HelpPage
+@using OB.REST.Services.Areas.HelpPage.Models
+@model IGrouping<HttpControllerDescriptor, ApiDescription>
+
+@{
+    var controllerDocumentation = ViewBag.DocumentationProvider != null ?
+        ViewBag.DocumentationProvider.GetDocumentation(Model.Key) :
+        null;
+}
+
+    <div id="__heading_@Model.Key.ControllerName">    
+        <div class="label-success" style="padding: 1px;cursor:pointer;"
+            data-toggle="collapse" data-target="#__@Model.Key.ControllerName" aria-expanded="false" aria-controls="__@Model.Key.ControllerName">            
+                <h2 style="margin:2px" id="@Model.Key.ControllerName">@Model.Key.ControllerName</h2>                
+        </div>    
+    </div>
+  <div id="__@Model.Key.ControllerName" class="collapse">  
+  @if (!String.IsNullOrEmpty(controllerDocumentation))
+    {
+        <pre>@controllerDocumentation</pre>
+        <p>The @Model.Key.ControllerName operations can be accessed through going to the following url: <a href="@string.Format("{0}://{1}{2}/api/", Request.Url.Scheme, Request.Url.Authority, Request.ApplicationPath)@Model.Key.ControllerName">@string.Format("{0}://{1}{2}/api/", Request.Url.Scheme, Request.Url.Authority, Request.ApplicationPath)@Model.Key.ControllerName</a></p>
+    }
+  </div>
+        <table class="help-page-table">
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var api in Model)
+            {
+                <tr>
+                    <td class="api-name"><a href="@Url.Action("Api", "Help", new { apiId = api.GetFriendlyId() })"><span class="label label-primary">@api.HttpMethod.Method</span> @api.RelativePath</a></td>
+                    <td class="api-documentation">
+                        @if (api.Documentation != null)
+                        {
+                            <p>@api.Documentation</p>
+                        }
+                        else
+                        {
+                            <p>No documentation available.</p>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+

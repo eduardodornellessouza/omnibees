@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetHtmlTemplateByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="templatecode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="culture" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHtmlTemplateByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHtmlTemplateByCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHtmlTemplateByCodeWithArgs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="templatecode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="culture" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arg1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHtmlTemplateByCodeWithArgsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHtmlTemplateByCodeWithArgsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHtml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="templateName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="culture" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="optionalArg1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHtmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHtmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetHtmlTemplateByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHtmlTemplateByCode" />
+  </wsdl:message>
+  <wsdl:message name="GetHtmlTemplateByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHtmlTemplateByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHtmlTemplateByCodeWithArgsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHtmlTemplateByCodeWithArgs" />
+  </wsdl:message>
+  <wsdl:message name="GetHtmlTemplateByCodeWithArgsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHtmlTemplateByCodeWithArgsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHtmlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHtml" />
+  </wsdl:message>
+  <wsdl:message name="GetHtmlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHtmlResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HtmlTemplateServiceSoap">
+    <wsdl:operation name="GetHtmlTemplateByCode">
+      <wsdl:input message="tns:GetHtmlTemplateByCodeSoapIn" />
+      <wsdl:output message="tns:GetHtmlTemplateByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHtmlTemplateByCodeWithArgs">
+      <wsdl:input message="tns:GetHtmlTemplateByCodeWithArgsSoapIn" />
+      <wsdl:output message="tns:GetHtmlTemplateByCodeWithArgsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHtml">
+      <wsdl:input message="tns:GetHtmlSoapIn" />
+      <wsdl:output message="tns:GetHtmlSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HtmlTemplateServiceSoap" type="tns:HtmlTemplateServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHtmlTemplateByCode">
+      <soap:operation soapAction="http://tempuri.org/GetHtmlTemplateByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHtmlTemplateByCodeWithArgs">
+      <soap:operation soapAction="http://tempuri.org/GetHtmlTemplateByCodeWithArgs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHtml">
+      <soap:operation soapAction="http://tempuri.org/GetHtml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HtmlTemplateServiceSoap12" type="tns:HtmlTemplateServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHtmlTemplateByCode">
+      <soap12:operation soapAction="http://tempuri.org/GetHtmlTemplateByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHtmlTemplateByCodeWithArgs">
+      <soap12:operation soapAction="http://tempuri.org/GetHtmlTemplateByCodeWithArgs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHtml">
+      <soap12:operation soapAction="http://tempuri.org/GetHtml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HtmlTemplateService">
+    <wsdl:port name="HtmlTemplateServiceSoap" binding="tns:HtmlTemplateServiceSoap">
+      <soap:address location="http://localhost:56130/HtmlTemplateService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HtmlTemplateServiceSoap12" binding="tns:HtmlTemplateServiceSoap12">
+      <soap12:address location="http://localhost:56130/HtmlTemplateService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

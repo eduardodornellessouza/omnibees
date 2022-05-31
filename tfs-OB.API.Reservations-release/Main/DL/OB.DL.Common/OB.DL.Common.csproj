@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20F728D1-8773-4F73-8A74-C9790B4A1234}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OB.DL.Common</RootNamespace>
+    <AssemblyName>OB.DL.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA|AnyCPU'">
+    <OutputPath>bin\QA\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <OutputPath>bin\Staging\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Couchbase.Linq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Linq2Couchbase.1.2.0\lib\net45\Couchbase.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Couchbase.NetClient, Version=2.5.2.0, Culture=neutral, PublicKeyToken=05e9c6b5a9ec94c2, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CouchbaseNetClient.2.5.2\lib\net45\Couchbase.NetClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ES.API.Contracts, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ES.API.Contracts.1.0.0.70-main\lib\netstandard2.0\ES.API.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Gelf4NLog.Target, Version=1.0.0.50, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OB.Log.1.0.0.50\lib\net45\Gelf4NLog.Target.dll</HintPath>
+    </Reference>
+    <Reference Include="IQToolkit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\IQToolkit.1.0.0.0\lib\net40\IQToolkit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IQToolkit.Data">
+      <HintPath>..\..\packages\IQToolkit.Data.1.0.0.0\lib\net40\IQToolkit.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="IQToolkit.Data.SqlClient">
+      <HintPath>..\..\packages\IQToolkit.Data.SqlClient.1.0.0.0\lib\net40\IQToolkit.Data.SqlClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Kendo.DynamicLinq, Version=1.0.0.20, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Kendo.DynamicLinq.1.0.0.20\lib\net45\Kendo.DynamicLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="LogentriesCore, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\logentries.nlog.2.6.0\lib\net40\LogentriesCore.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LogentriesNLog, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\logentries.nlog.2.6.0\lib\net40\LogentriesNLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="maxiPago, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OB.PaymentGateways.1.1.0.34\lib\net45\maxiPago.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.Interception.4.0.1\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.Interception.4.0.1\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.1.0\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NLog.4.5.9\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="OB.Api.Core, Version=1.1.1.12, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OB.Api.Core.1.1.1.12-stable\lib\net47\OB.Api.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="OB.BL.Contracts, Version=1.2.0.116, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OB.BL.Contracts.1.2.0.116\lib\net45\OB.BL.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="OB.Events.Contracts, Version=1.3.1.135, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OB.Events.Contracts.1.3.1.135\lib\net45\OB.Events.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="OB.Log, Version=1.0.0.50, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OB.Log.1.0.0.50\lib\net45\OB.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="PaymentGatewaysLibrary, Version=1.1.0.34, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OB.PaymentGateways.1.1.0.34\lib\net45\PaymentGatewaysLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPalCoreSDK, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PayPalCoreSDK.1.4.1\lib\net45\PayPalCoreSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPalMerchantSDK, Version=2.7.109.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PayPalMerchantSDK.2.7.109\lib\PayPalMerchantSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="PO.BL.Contracts, Version=2.9.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PO.BL.Contracts.2.9.0.3-stable\lib\net45\PO.BL.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.0.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Remotion.Linq.2.0.1\lib\net45\Remotion.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\ServiceStack.3.9.71\lib\net35\ServiceStack.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite, Version=3.9.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.OrmLite.SqlServer.3.9.14\lib\ServiceStack.OrmLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite.SqlServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.OrmLite.SqlServer.3.9.14\lib\ServiceStack.OrmLite.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\ServiceStack.Redis.3.9.71\lib\net35\ServiceStack.Redis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ServiceStack.ServiceInterface, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\ServiceStack.3.9.71\lib\net35\ServiceStack.ServiceInterface.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=3.9.71.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\ChannelPropertyVSPaymentMethodType.cs" />
+    <Compile Include="BusinessObjects\RoomInventoryDataTable.cs" />
+    <Compile Include="Cache\CacheEntry.cs" />
+    <Compile Include="Cache\ServiceStackCacheProvider.cs" />
+    <Compile Include="Cache\DefaultCacheProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Criteria\GetGroupRuleCriteria.cs" />
+    <Compile Include="Criteria\ListLostReservationCriteria.cs" />
+    <Compile Include="Criteria\ListPaymentGatewayTransactionsCriteria.cs" />
+    <Compile Include="Criteria\ListReservationFilterCriteria.cs" />
+    <Compile Include="Criteria\ListReservationStatusCriteria.cs" />
+    <Compile Include="Criteria\UpdateReservationVcnCriteria.cs" />
+    <Compile Include="Criteria\ValidateReservationCriteria.cs" />
+    <Compile Include="Criteria\UpdateCreditCriteria.cs" />
+    <Compile Include="Exceptions\CouchbaseAuthenticationException.cs" />
+    <Compile Include="Exceptions\CouchbaseClientException.cs" />
+    <Compile Include="Exceptions\CouchbaseDataException.cs" />
+    <Compile Include="Exceptions\CouchbaseServerException.cs" />
+    <Compile Include="Exceptions\DataLayerException.cs" />
+    <Compile Include="Exceptions\DocumentExistsException.cs" />
+    <Compile Include="Exceptions\DocumentNotFoundException.cs" />
+    <Compile Include="Exceptions\QueryRequestException.cs" />
+    <Compile Include="Exceptions\ViewRequestException.cs" />
+    <Compile Include="Extensions\DocumentResultExtensions.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\EntityExtensions.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\ObjectExtension.cs" />
+    <Compile Include="Extensions\QueryableExtensions.cs" />
+    <Compile Include="Filter\FilterByInfo.cs" />
+    <Compile Include="Filter\FilterOperator.cs" />
+    <Compile Include="Filter\FilterLogicalOp.cs" />
+    <Compile Include="Filter\SortByInfo.cs" />
+    <Compile Include="Filter\SortDirection.cs" />
+    <Compile Include="Infrastructure\Impl\CachedRepository.cs" />
+    <Compile Include="Infrastructure\Impl\CouchbaseRepository.cs" />
+    <Compile Include="Infrastructure\Impl\Interceptors\LoggingInterceptionBehavior.cs" />
+    <Compile Include="Infrastructure\Impl\RestRepository.cs" />
+    <Compile Include="Infrastructure\Impl\SqlRepository.cs" />
+    <Compile Include="Infrastructure\Interfaces\ICachedRepository.cs" />
+    <Compile Include="Infrastructure\Interfaces\ISqlRepository.cs" />
+    <Compile Include="Infrastructure\Interfaces\IRepository.cs" />
+    <Compile Include="Criteria\ListReservationCriteria.cs" />
+    <Compile Include="Filter\PageSettings.cs" />
+    <Compile Include="Infrastructure\RESTServicesFacade.cs" />
+    <Compile Include="QueryResultObjects\AppliedPromotionalCodeQR1.cs" />
+    <Compile Include="QueryResultObjects\BESpecialRequestQR1.cs" />
+    <Compile Include="QueryResultObjects\BESpecialRequestsLanguageQR1.cs" />
+    <Compile Include="QueryResultObjects\CancellationPolicyQR1.cs" />
+    <Compile Include="QueryResultObjects\DepositPolicyQR1.cs" />
+    <Compile Include="QueryResultObjects\ExtrasBillingTypeQR1.cs" />
+    <Compile Include="QueryResultObjects\GuestActivitiesQR1.cs" />
+    <Compile Include="QueryResultObjects\GuestActivityQR1.cs" />
+    <Compile Include="QueryResultObjects\GuestLoyaltyReservationQR1.cs" />
+    <Compile Include="QueryResultObjects\IncentiveQR1.cs" />
+    <Compile Include="QueryResultObjects\OtherPolicyQR1.cs" />
+    <Compile Include="QueryResultObjects\PEOccupancyAlertQR1.cs" />
+    <Compile Include="QueryResultObjects\PropertyWithReservationsForChannelOrTPIQR1.cs" />
+    <Compile Include="QueryResultObjects\RateBuyerGroupQR1.cs" />
+    <Compile Include="QueryResultObjects\RateRoomDetailQR1.cs" />
+    <Compile Include="QueryResultObjects\ReservationBasicInfoForTransactionIdQR1.cs" />
+    <Compile Include="QueryResultObjects\ReservationBEOverviewQR1.cs" />
+    <Compile Include="QueryResultObjects\ReservationTransactionStatusBasicInfoForReservationUidQR1.cs" />
+    <Compile Include="QueryResultObjects\PortalMarkupRules.cs" />
+    <Compile Include="QueryResultObjects\ReservationLookups.cs" />
+    <Compile Include="QueryResultObjects\Item.cs" />
+    <Compile Include="Infrastructure\Impl\EntityKeyHelper.cs" />
+    <Compile Include="Extensions\MultithreadExtensions.cs" />
+    <Compile Include="Infrastructure\Impl\OpenConnectionLifetime.cs" />
+    <Compile Include="Infrastructure\Interfaces\ICacheProvider.cs" />
+    <Compile Include="Infrastructure\Interfaces\ICouchBaseEntity.cs" />
+    <Compile Include="QueryResultObjects\PropertyExternalSourceQR1.cs" />
+    <Compile Include="QueryResultObjects\ReservationDetailQR1.cs" />
+    <Compile Include="QueryResultObjects\ReservationRoomQR1.cs" />
+    <Compile Include="QueryResultObjects\ReservationRoomDetailQR1.cs" />
+    <Compile Include="QueryResultObjects\ReservationRoomExtraQR1.cs" />
+    <Compile Include="QueryResultObjects\ReservationRoomIncentiveQR1.cs" />
+    <Compile Include="QueryResultObjects\ReservationRoomTaxPolicyQR1.cs" />
+    <Compile Include="QueryResultObjects\PaymentGatewayQR1.cs" />
+    <Compile Include="QueryResultObjects\QueryResult.cs" />
+    <Compile Include="QueryResultObjects\ReservationDetailSearchQR1.cs" />
+    <Compile Include="QueryResultObjects\ReservationHistoryQR1.cs" />
+    <Compile Include="QueryResultObjects\TaxPolicyQR1.cs" />
+    <Compile Include="QueryResultObjects\TPIs\UpdateTpiPropertyCreditQR1.cs" />
+    <Compile Include="QueryResultObjects\TransferLocationQR1.cs" />
+    <Compile Include="QueryResultObjects\TransferLocationsLanguageQR1.cs" />
+    <Compile Include="Repositories\Impl\Cached\CancelReservationReasonRepository.cs" />
+    <Compile Include="Repositories\Impl\Cached\GroupRulesRepository.cs" />
+    <Compile Include="Repositories\Impl\Couchbase\ReservationLogRepository.cs" />
+    <Compile Include="Repositories\Impl\Couchbase\LostReservationDetailRepository.cs" />
+    <Compile Include="Repositories\Impl\Couchbase\NotificationBaseRepository.cs" />
+    <Compile Include="Repositories\Impl\Entity\LostReservationsRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\ExternalSystemsRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBAppSettingRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBBePartialPaymentCcMethodRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBBeSettingsRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBCancellationPolicyRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBChannelRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBCRMRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBCurrencyRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBDepositPolicyRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBExtrasRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBIncentiveRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBOtherPolicyRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBPaymentMethodTypeRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBPMSRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBPromotionalCodeRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBChildTermsRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBPropertyEventsRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBPropertyRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBRateBuyerGroupRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBRateRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBRateRoomDetailsForReservationRoomRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBReservationLookupsRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBSecurityRepository.cs" />
+    <Compile Include="Repositories\Impl\Rest\OBUserRepository.cs" />
+    <Compile Include="Repositories\Impl\Entity\PaymentGatewayTransactionRepository.cs" />
+    <Compile Include="Repositories\Impl\Entity\ReservationRoomFilterRepository.cs" />
+    <Compile Include="Repositories\Impl\Entity\TokenizedCreditCardsReadsPerMonthRepository.cs" />
+    <Compile Include="Repositories\Impl\Entity\PortalRepository.cs" />
+    <Compile Include="Repositories\Impl\Entity\ReservationsFilterRepository.cs" />
+    <Compile Include="Repositories\Impl\Entity\ReservationRoomDetailRepository.cs" />
+    <Compile Include="Repositories\Impl\Entity\ReservationRoomRepository.cs" />
+    <Compile Include="Repositories\Impl\Entity\ReservationHistoryRepository.cs" />
+    <Compile Include="Repositories\Impl\Cached\ReservationStatusesRepository.cs" />
+    <Compile Include="Repositories\Impl\Entity\VisualStateRepository.cs" />
+    <Compile Include="Repositories\Impl\SqlServer\OperatorSqlRepository.cs" />
+    <Compile Include="Repositories\Impl\SqlServer\ThirdPartyIntermediarySqlRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Cached\ICancelReservationReasonRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Couchbase\ILostReservationDetailRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Entity\ILostReservationsRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IExternalSystemsRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBAppSettingRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBBePartialPaymentCcMethodRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBBeSettingsRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBCancellationPolicyRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBChannelRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBCRMRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBCurrencyRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBDepositPolicyRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBExtrasRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBIncentiveRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBOtherPolicyRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBPaymentMethodTypeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBPMSRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBPromotionalCodeRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBChildTermsRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBPropertyEventsRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBPropertyRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBRateBuyerGroupRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBRateRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBRateRoomDetailsForReservationRoomRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBReservationLookupsRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBSecurityRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IOBUserRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Entity\IPaymentGatewayTransactionRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Entity\IReservationRoomFilterRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Rest\IRestRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Entity\ITokenizedCreditCardsReadsPerMonthRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Entity\IPortalRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Couchbase\IReservationLogRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Couchbase\INotificationBaseRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Entity\IReservationsFilterRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Cached\IGroupRulesRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Entity\IReservationRoomDetailRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Entity\IReservationRoomRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Entity\IReservationHistoryRepository.cs" />
+    <Compile Include="Repositories\Interfaces\Cached\IReservationStatusRepository.cs" />
+    <Compile Include="Infrastructure\Impl\Repository.cs" />
+    <Compile Include="Infrastructure\Impl\RepositoryFactory.cs" />
+    <Compile Include="Repositories\Impl\Entity\ReservationsRepository.cs" />
+    <Compile Include="Infrastructure\Impl\SqlManager.cs" />
+    <Compile Include="Infrastructure\Interfaces\IContextProvider.cs" />
+    <Compile Include="Repositories\Interfaces\IRepository.cs" />
+    <Compile Include="Infrastructure\Interfaces\IRepositoryFactory.cs" />
+    <Compile Include="Repositories\Interfaces\Entity\IReservationsRepository.cs" />
+    <Compile Include="Infrastructure\Interfaces\ISqlManager.cs" />
+    <Compile Include="DataAccessLayerModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryResultObjects\PropertyEventQR1.cs" />
+    <Compile Include="QueryResultObjects\ReservationDataContext.cs" />
+    <Compile Include="Repositories\Interfaces\Entity\IVisualStateRepository.cs" />
+    <Compile Include="Repositories\Interfaces\SqlServer\IOperatorSqlRepository.cs" />
+    <Compile Include="Repositories\Interfaces\SqlServer\IThirdPartyIntermediarySqlRepository.cs" />
+    <Compile Include="SortOrder.cs" />
+    <Compile Include="TransactionManagerMock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BL\OB.BL.Contracts\OB.Reservation.BL.Contracts.csproj">
+      <Project>{7A64289F-5871-4A40-AA40-82F9C2F61759}</Project>
+      <Name>OB.Reservation.BL.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DM\OB.Domain\OB.Domain.csproj">
+      <Project>{3a97266f-4dff-4561-b890-df8a05b2f2e2}</Project>
+      <Name>OB.Domain</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\OB.DL.Model.Payments\OB.DL.Model.Payments.csproj">
+      <Project>{0d537c92-21d0-4380-a8de-4d948f164134}</Project>
+      <Name>OB.DL.Model.Payments</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OB.DL.Model.Reservations\OB.DL.Model.Reservations.csproj">
+      <Project>{487a94ee-2324-4518-aebd-62fd787e5b8e}</Project>
+      <Name>OB.DL.Model.Reservations</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <!--<Target Name="BeforeBuild">
+    <Exec Command="&quot;$(SolutionDir).nuget\NuGet&quot; update-package OB.Events.Contracts" />
+  </Target>-->
+</Project>

@@ -1,0 +1,1922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OB.Domain.BE.BEAvailableCurrency" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIECAAAAAAAAAAAAEAAFAgAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>BE\Generated\BEAvailableCurrency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEAvailableLanguage" Collapsed="true">
+    <Position X="38.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAAAEAAEAgACAAAAAAAAAAEAAAAAEAA=</HashCode>
+      <FileName>BE\Generated\BEAvailableLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEAvailableModule" Collapsed="true">
+    <Position X="77" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIICAAAAAAAAAAAAEAAEAAAAAAAAAAAAAAAAAAAgEAA=</HashCode>
+      <FileName>BE\Generated\BEAvailableModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEAvailablePaymentMethod" Collapsed="true">
+    <Position X="113" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAAAEAAEAAAAAAAAAACAAABAAAAAEAA=</HashCode>
+      <FileName>BE\Generated\BEAvailablePaymentMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEAvailablePaymentMethodType" Collapsed="true">
+    <Position X="146.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAAAEAAEAAAAAAAAAAAAAAAAAAAAkAE=</HashCode>
+      <FileName>BE\Generated\BEAvailablePaymentMethodType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEImage" Collapsed="true">
+    <Position X="182.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAIAAAAIAAIBAEAAEAAQEAEAQABAAAAEaAAAAEAA=</HashCode>
+      <FileName>BE\Generated\BEImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEMandatoryField" Collapsed="true">
+    <Position X="218.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAAAAAAAAAEAAgAAAABACAAAAIAAAAAAAAEAA=</HashCode>
+      <FileName>BE\Generated\BEMandatoryField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEMandatoryFieldsPropertiesLanguage" Collapsed="true">
+    <Position X="254.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAAAAAAAAAACAAEAAAAAAAAACEAAAIIAAAAAAAAAA=</HashCode>
+      <FileName>BE\Generated\BEMandatoryFieldsPropertiesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEMandatoryFieldsProperty" Collapsed="true">
+    <Position X="290.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAAAEAAMAgAAAIIAAAAAAAAAAAAEEAA=</HashCode>
+      <FileName>BE\Generated\BEMandatoryFieldsProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEModule" Collapsed="true">
+    <Position X="324.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAAgAAQABAAQAAAEQAAAAAAAEAA=</HashCode>
+      <FileName>BE\Generated\BEModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEModuleLanguage" Collapsed="true">
+    <Position X="358.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gKIAAAAAAAAAAAAAEAAAAAQAAAAQAAAAIAAAAAAgEAA=</HashCode>
+      <FileName>BE\Generated\BEModuleLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEPartialPaymentCCMethod" Collapsed="true">
+    <Position X="394.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIACAAAAAAAEAAAAEIAEAAAACBEAAACAAABAAAAAEAA=</HashCode>
+      <FileName>BE\Generated\BEPartialPaymentCCMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BESpecialRequest" Collapsed="true">
+    <Position X="430.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAACAAAAAAAEIAEAAQAAAAQAAAAAAAAAQAAEAA=</HashCode>
+      <FileName>BE\Generated\BESpecialRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BESpecialRequestsLanguage" Collapsed="true">
+    <Position X="466.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAAACAEAAAAAQAAAAQAAAAIAAAAAAAEIA=</HashCode>
+      <FileName>BE\Generated\BESpecialRequestsLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEStyle" Collapsed="true">
+    <Position X="500" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAIAAAQAAAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>BE\Generated\BEStyle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEStyleDetail" Collapsed="true">
+    <Position X="533.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YKALBY4NUBsgy5gXGoxECi1Ql2CQAhICXcyQgiVDcCA=</HashCode>
+      <FileName>BE\Generated\BEStyleDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEStyleDetailLanguage" Collapsed="true">
+    <Position X="567.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAgAAAAAAAAAEQUCAAAAAAAAAAAAIAAAAAAQEAA=</HashCode>
+      <FileName>BE\Generated\BEStyleDetailLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BETemplateType" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEIIiAAQABAAQAAAAAAAAAQAAEAA=</HashCode>
+      <FileName>BE\Generated\BETemplateType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BETheme" Collapsed="true">
+    <Position X="41" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAAAYAQAAAAUAIAAAAACAgAQEAA=</HashCode>
+      <FileName>BE\Generated\BETheme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.BE.BEThemeLanguage" Collapsed="true">
+    <Position X="79.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QKAAAAAAAAAAAAAAGAAAAAQAAAAQABAAIAAAAAAAEAA=</HashCode>
+      <FileName>BE\Generated\BEThemeLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelMetadata" Collapsed="true">
+    <Position X="601.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAABAEAgBgAIAAAAAAAAQAAAAAAAAAgQAAAAAAEAA=</HashCode>
+      <FileName>Channels\ChannelMetadata.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.Channel" Collapsed="true">
+    <Position X="149" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FYABBJgEAhBgAKGAEAAEUsQwIkMQAAAAgRAgAACQEAA=</HashCode>
+      <FileName>Channels\Generated\Channel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelCommissionCategory" Collapsed="true">
+    <Position X="185" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIAAAAAAAAAAAAAAEAAAAAQAAAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Channels\Generated\ChannelCommissionCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelConfiguration" Collapsed="true">
+    <Position X="221" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAACAAAAAAEAA=</HashCode>
+      <FileName>Channels\Generated\ChannelConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelContract" Collapsed="true">
+    <Position X="257" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIASCAAgAAAwCAiIEIgEAAAAAhIAAAAAAgABAQEAEgE=</HashCode>
+      <FileName>Channels\Generated\ChannelContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelCountry" Collapsed="true">
+    <Position X="293" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAgAAAAEAAAAAAAAAIAgAAAAAAAAAAAEIA=</HashCode>
+      <FileName>Channels\Generated\ChannelCountry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelLanguage" Collapsed="true">
+    <Position X="326.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAgAAAgAAAAEAgAAAQAAAIQAAAAIAAAAAAAEAA=</HashCode>
+      <FileName>Channels\Generated\ChannelLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelMappingExtendedField" Collapsed="true">
+    <Position X="360.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AOAIIAAEAIAgBAAAEIgAABQAAgBQAAAQAQABARCgEAA=</HashCode>
+      <FileName>Channels\Generated\ChannelMappingExtendedField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelMappingExtendedFieldDefaultValue" Collapsed="true">
+    <Position X="396.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIIAAAIAAAAAAQEIgAAAgAAgBAAAAQAAAhARAgEAA=</HashCode>
+      <FileName>Channels\Generated\ChannelMappingExtendedFieldDefaultValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelMappingType" Collapsed="true">
+    <Position X="432.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAAAAAQAAAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Channels\Generated\ChannelMappingType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelOperator" Collapsed="true">
+    <Position X="468.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICAQCgAhAAAgAIgIMIgEAAAAAgAIgAAAAkARIAAAAIE=</HashCode>
+      <FileName>Channels\Generated\ChannelOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelOperatorsDocument" Collapsed="true">
+    <Position X="502.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAAgKAAAAEAAEAAAAAAAAAAEQAAAAAAAAABAEAA=</HashCode>
+      <FileName>Channels\Generated\ChannelOperatorsDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelOperatorsDocumentsName" Collapsed="true">
+    <Position X="536" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAASAAAABAEAAAgAAAAAAAAAAAQAAAAABAEgA=</HashCode>
+      <FileName>Channels\Generated\ChannelOperatorsDocumentsName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelOperatorsWorkingCountry" Collapsed="true">
+    <Position X="569.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAgAAAAAEAAEAAAAAAAAAAAQAAAABAAQAAAEAA=</HashCode>
+      <FileName>Channels\Generated\ChannelOperatorsWorkingCountry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelRateCode" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACCAIgAAAgAAgIEIwkAAQABgAQAAAAAgABAQAAEAE=</HashCode>
+      <FileName>Channels\Generated\ChannelRateCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelRoomCode" Collapsed="true">
+    <Position X="43.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACCAAgAAAgAAgIEIgkAAQABgAQAAAAAgABAQAAEAE=</HashCode>
+      <FileName>Channels\Generated\ChannelRoomCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelRoomTypeCode" Collapsed="true">
+    <Position X="81.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACCAAgAAAggAgIEIgkAAQABgAQAAAAggABAQAAEAE=</HashCode>
+      <FileName>Channels\Generated\ChannelRoomTypeCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelsPropertiesExtendedField" Collapsed="true">
+    <Position X="115.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIIAAQIAAAAABQEIgAAAgAIgBAAAAAAAAhAQAgEAA=</HashCode>
+      <FileName>Channels\Generated\ChannelsPropertiesExtendedField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelsProperty" Collapsed="true">
+    <Position X="151.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>4MJSAYMkIgCwCAIkUIq1gAQBBEAAAASBAQQoYQOgEgA=</HashCode>
+      <FileName>Channels\Generated\ChannelsProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ChannelsVAT" Collapsed="true">
+    <Position X="187.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIACAgBAAAAAAAAAEAAEAAAAAAAAAAAAACAAAAAAEAA=</HashCode>
+      <FileName>Channels\Generated\ChannelsVAT.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ConnectorEventQueue" Collapsed="true">
+    <Position X="223.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCABgAACAABIAAEAQBQAQAUAAAAQABAAEAAYAAAAA=</HashCode>
+      <FileName>Channels\Generated\ConnectorEventQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ConnectorMessage" Collapsed="true">
+    <Position X="259.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UKAKAAC0GYAEGAAAEAIABIJIAEkgABAEgBCAAQhEGBA=</HashCode>
+      <FileName>Channels\Generated\ConnectorMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ConnectorMessage_OB" Collapsed="true">
+    <Position X="295.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UKAKAAC0GYAEGAAAEAIABIJIAEggABAEgBCAAQhEGBA=</HashCode>
+      <FileName>Channels\Generated\ConnectorMessage_OB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ConnectorMessageErrorCode" Collapsed="true">
+    <Position X="329" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAQgAAAAEAAgAAAABAIAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Channels\Generated\ConnectorMessageErrorCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ConnectorMessageErrorEmailDate" Collapsed="true">
+    <Position X="362.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAAAAAAIAAAAAAAAAAAAAAgAEAA=</HashCode>
+      <FileName>Channels\Generated\ConnectorMessageErrorEmailDate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ConnectorMessageStatus" Collapsed="true">
+    <Position X="398.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAQgAAAAEAAAAAAAAAIAABAAABAAAAAAEAA=</HashCode>
+      <FileName>Channels\Generated\ConnectorMessageStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ConnectorMessageStatusLanguage" Collapsed="true">
+    <Position X="434.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAQAACAAAEAAQAAQAAAAQAAAAIAAAAAAAEAA=</HashCode>
+      <FileName>Channels\Generated\ConnectorMessageStatusLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.ConnectorServiceUpdate" Collapsed="true">
+    <Position X="470.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIAAABAAAAAAIAEAAAAAAQAAAAAQAAAAQAAAAAEBA=</HashCode>
+      <FileName>Channels\Generated\ConnectorServiceUpdate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.GDSTPICodeMapping" Collapsed="true">
+    <Position X="504.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIIIAgAAAgAAAAEIgkAgAghkBAAAAAAAABAQAgUAA=</HashCode>
+      <FileName>Channels\Generated\GDSTPICodeMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Channels.GDSTPIRateCodeMapping" Collapsed="true">
+    <Position X="538.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAKIIIgAAAgAAAAEIwkAAAghkBAAAAAAAABAQAgUAA=</HashCode>
+      <FileName>Channels\Generated\GDSTPIRateCodeMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.Campaign" Collapsed="true">
+    <Position X="572" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAGgIsIIFCABBwlkcgcwgQ1FgQQEMoJIgINTVkAcAQ=</HashCode>
+      <FileName>CRM\Generated\Campaign.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.CampaignLastReadMail" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAAAEAAEIAIAAAAAAIAAAAAAgAAAEAA=</HashCode>
+      <FileName>CRM\Generated\CampaignLastReadMail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.CampaignsMarketingList" Collapsed="true">
+    <Position X="45.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAAAAAAAAAAEAAAAAAAECEAAAQAAAAAAAAAEAA=</HashCode>
+      <FileName>CRM\Generated\CampaignsMarketingList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.Employee" Collapsed="true">
+    <Position X="83.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>seDYA0JAgCgAAAAIuIgFggQoQACYkEAAIZAHJQIAUKk=</HashCode>
+      <FileName>CRM\Generated\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.Guest" Collapsed="true">
+    <Position X="117.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>seZaWkDIkWwQkomJuI0FpqRiQBII0UBCLxKFJYsHmo0=</HashCode>
+      <FileName>CRM\Generated\Guest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.GuestActivity" Collapsed="true">
+    <Position X="153.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAACAAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAEAo=</HashCode>
+      <FileName>CRM\Generated\GuestActivity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.GuestCategory" Collapsed="true">
+    <Position X="189.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAAAEAAEAAQAIAAQAAAAAAAAAQAAEAg=</HashCode>
+      <FileName>CRM\Generated\GuestCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.GuestFavoriteExtra" Collapsed="true">
+    <Position X="225.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAACAAAEAABAAAEAAAAgAAAAAAAAAAAAAAAAAAEAg=</HashCode>
+      <FileName>CRM\Generated\GuestFavoriteExtra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.GuestFavoriteSpecialRequest" Collapsed="true">
+    <Position X="261.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAACAEAAAAAAAAEEAAAgAAAAAAAAAAAAAAAAAAEAg=</HashCode>
+      <FileName>CRM\Generated\GuestFavoriteSpecialRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.GuestsExternalSource" Collapsed="true">
+    <Position X="297.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAACAAEAAAAAgAEIABAgAAAgAAAEAAAgABAQAAEAg=</HashCode>
+      <FileName>CRM\Generated\GuestsExternalSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.SalesDocument" Collapsed="true">
+    <Position X="331.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QKQCAgCkQAFAAAIgEEAEAAAAEAgCQAABAgggAAgAEAE=</HashCode>
+      <FileName>CRM\Generated\SalesDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.SalesDocumentsDetail" Collapsed="true">
+    <Position X="365" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIAAkBAIAAAAAAAEAAAAIQAAAIUAAAAAAhghAAAEAI=</HashCode>
+      <FileName>CRM\Generated\SalesDocumentsDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.SalesDocumentsSery" Collapsed="true">
+    <Position X="401" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAQAgQAAAAAAAEAAQAAQkIAAQAAAAAAABAUAAEAA=</HashCode>
+      <FileName>CRM\Generated\SalesDocumentsSery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.SalesDocumentStatu" Collapsed="true">
+    <Position X="437" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAAIAAQAAAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>CRM\Generated\SalesDocumentStatu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.SalesDocumentStatusLanguage" Collapsed="true">
+    <Position X="473" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAEAAAAAAACQAAAEAAAAAQAAAAQAAAAIAAAAAAAEAA=</HashCode>
+      <FileName>CRM\Generated\SalesDocumentStatusLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.SalesDocumentsType" Collapsed="true">
+    <Position X="506.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACAAAAAAAAAEAAwAAQABAAQAIAAAAAAAAAAEAA=</HashCode>
+      <FileName>CRM\Generated\SalesDocumentsType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.SalesDocumentsTypesLanguage" Collapsed="true">
+    <Position X="540.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAQAAAAAAAEAAAAAQAAAAQAAAAICBAAAAAEAA=</HashCode>
+      <FileName>CRM\Generated\SalesDocumentsTypesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.Salesman" Collapsed="true">
+    <Position X="574.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oKCSCkIFgCgAAIgIMIAEAgAAAgAIgAAACgABIQAAEIk=</HashCode>
+      <FileName>CRM\Generated\Salesman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.SalesmanThirdPartyIntermediariesComission" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJBACABAAAgACBgIEIAAAAAAAgAAAABAAgADAIAAEAE=</HashCode>
+      <FileName>CRM\Generated\SalesmanThirdPartyIntermediariesComission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.TechnologicalPartner" Collapsed="true">
+    <Position X="47.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IKBQCAABAAAAAIgIMIAlAAQABhAQgAAAAwABIQIDEIE=</HashCode>
+      <FileName>CRM\Generated\TechnologicalPartner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.TechnologicalPartnerTourOperator" Collapsed="true">
+    <Position X="86" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAAAAAAAABAAAEIAAAAAAAAAAAAAAAAAAAAoAEAA=</HashCode>
+      <FileName>CRM\Generated\TechnologicalPartnerTourOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.TechnologicalPartnerTPI" Collapsed="true">
+    <Position X="119.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAACAAoAUAA=</HashCode>
+      <FileName>CRM\Generated\TechnologicalPartnerTPI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.ThirdPartyIntermediary" Collapsed="true">
+    <Position X="155.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>seBKAeBgkaikBAIIvM4FggSIScCQlEAAq5IVpyIJMrA=</HashCode>
+      <FileName>CRM\Generated\ThirdPartyIntermediary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.ThirdPartyIntermediaryPaymentMethodType" Collapsed="true">
+    <Position X="191.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAEAGAAEAAAAAAAAAAAAAAACAAAAkAE=</HashCode>
+      <FileName>CRM\Generated\ThirdPartyIntermediaryPaymentMethodType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.ThirdPartyIntermediaryPromotionalCode" Collapsed="true">
+    <Position X="227.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAABAEAGAAAAAAAAAAAAAAAAAACAAAAMAA=</HashCode>
+      <FileName>CRM\Generated\ThirdPartyIntermediaryPromotionalCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.TPICategoriesLanguage" Collapsed="true">
+    <Position X="263.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAIAkAAAAEAIAAAQCAAIQAAAAAAEAAAAAEAA=</HashCode>
+      <FileName>CRM\Generated\TPICategoriesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.TPICategory" Collapsed="true">
+    <Position X="299.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACACAAAAAgAAAAEIAEAAQAAAIQAAAAAAEBAQAIEAA=</HashCode>
+      <FileName>CRM\Generated\TPICategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.TPICommission" Collapsed="true">
+    <Position X="333.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAABACGIAAQAAAgGEAAAAAgAAAAAAABAAQCBAQAUAA=</HashCode>
+      <FileName>CRM\Generated\TPICommission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.TPICommissionDetail" Collapsed="true">
+    <Position X="367.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAQAAEAEAAEAAAAAAAAAAgAAAAAAgAAEAA=</HashCode>
+      <FileName>CRM\Generated\TPICommissionDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.TPICompany" Collapsed="true">
+    <Position X="403.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBCBMAAAAAAAAAAEIgEAEAgAEAAAAAAAAACAQQAUAA=</HashCode>
+      <FileName>CRM\Generated\TPICompany.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.CRM.TPIProperty" Collapsed="true">
+    <Position X="439.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACBYAAAAIABACAFAAEAAAgAEAACAABAEASAAQFUgA=</HashCode>
+      <FileName>CRM\Generated\TPIProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.DomainObject" Collapsed="true">
+    <Position X="299.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DomainObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Functionality" Collapsed="true">
+    <Position X="601.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DomainScope.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.DomainScope" Collapsed="true">
+    <Position X="603.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEgAAABAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DomainScope.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.DomainScopes" Collapsed="true">
+    <Position X="605" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAADAAAAAEAAQICAAAAiAAAAAAgAAAAACEAA=</HashCode>
+      <FileName>DomainScopes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.AppSetting" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAIAAAAAAAEAgAAAQAAAAQAAAAAAAgAAAAGAA=</HashCode>
+      <FileName>General\Generated\AppSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.AsyncTask" Collapsed="true">
+    <Position X="50" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAIAAABAAAgAQACEAACAAAAAIACAAAAAAGAAAgAEAA=</HashCode>
+      <FileName>General\Generated\AsyncTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.ChangeLogDetail" Collapsed="true">
+    <Position X="88.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAIgCAARkAAAABCCAhIAAAAgAAABAiAhEAE=</HashCode>
+      <FileName>General\Generated\ChangeLogDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.ChangeLogDetailsGeneratedByType" Collapsed="true">
+    <Position X="122" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAEAEAAgAAQABAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>General\Generated\ChangeLogDetailsGeneratedByType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.ChangeLogDetailsGeneratedByTypesLanguage" Collapsed="true">
+    <Position X="158" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAAAAACQAAAAAAEAAIgAQAAAAQAAAQAAAAAAAAEAA=</HashCode>
+      <FileName>General\Generated\ChangeLogDetailsGeneratedByTypesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.ChangeLogDetailsType" Collapsed="true">
+    <Position X="194" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAAgAAQABAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>General\Generated\ChangeLogDetailsType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.CitiesDataAlternateName" Collapsed="true">
+    <Position X="230" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAGQAAAAAAAAEAAAIgBAAAAABAAAAIAAACACAhA=</HashCode>
+      <FileName>General\Generated\CitiesDataAlternateName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.Country" Collapsed="true">
+    <Position X="266" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACAAAAAAAAAEAAAAAQAAAAQBAAAACACEAQAEAA=</HashCode>
+      <FileName>General\Generated\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.Currency" Collapsed="true">
+    <Position X="302" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAEAAAAAAAAIEAAAgAQAAEAQAAAIAAAAAAQQGAA=</HashCode>
+      <FileName>General\Generated\Currency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.Language" Collapsed="true">
+    <Position X="335.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAACAAUAAAAAEAEAQgAAQABAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>General\Generated\Language.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.Prefix" Collapsed="true">
+    <Position X="369.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAQAAAQAAAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>General\Generated\Prefix.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.PrefixLanguage" Collapsed="true">
+    <Position X="405.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKCAAAIACAAAAAAAEAAAAAQCAAAQAAAAIAAAAAAAEAA=</HashCode>
+      <FileName>General\Generated\PrefixLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.TripAdvisorConfiguration" Collapsed="true">
+    <Position X="441.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgBCQAAAAAAEBgIMIAAAAgIAgAAAAEAAgQBAAAAEAE=</HashCode>
+      <FileName>General\Generated\TripAdvisorConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.TripAdvisorReviewRequest" Collapsed="true">
+    <Position X="475.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ALAIgEAuLgCghQAAkBIAAACBBAAAAAAASIEAEABAAII=</HashCode>
+      <FileName>General\Generated\TripAdvisorReviewRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.User" Collapsed="true">
+    <Position X="509" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wKrID1KIyC0CEAgA8IgFogwAAAAIkAJAK4QFIQMAEgg=</HashCode>
+      <FileName>General\Generated\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.UserCategory" Collapsed="true">
+    <Position X="542.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAACAAEAAAAAAAEAAAAAQAAAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>General\Generated\UserCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.UserCategoryLanguage" Collapsed="true">
+    <Position X="576.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAICAAAAAAAEAAAAAQAAAAQAAAAKAAEAAAAEAA=</HashCode>
+      <FileName>General\Generated\UserCategoryLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.UserPreference" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKABABAADEAAAAAAEAAAAAAEAAAAAAlAIBAAAAAAEAA=</HashCode>
+      <FileName>General\Generated\UserPreference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.UserPreferredTask" Collapsed="true">
+    <Position X="52.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABAAAAAAAAAAAAEAAgAAQABEAUgABAABASAAAIEAg=</HashCode>
+      <FileName>General\Generated\UserPreferredTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.UserProperty" Collapsed="true">
+    <Position X="90.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIADAAAAAAAAAAAAEAAEAAAAAAAAAABAABAAAAAAEAA=</HashCode>
+      <FileName>General\Generated\UserProperty.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.UsersDashboardModule" Collapsed="true">
+    <Position X="124.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYABAEAAAAAAAAAgEAAAAAAAAAAAAABAABAAAAAAkAA=</HashCode>
+      <FileName>General\Generated\UsersDashboardModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.UsersRole" Collapsed="true">
+    <Position X="160.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIBAAAAAAAAAAAAEAAAAAAAAQAAAABAABAAAAAAEAA=</HashCode>
+      <FileName>General\Generated\UsersRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.UserTasksOrder" Collapsed="true">
+    <Position X="196.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAABAABAAgAAAAEAAAAAAAAEAAAABAABACAAAAEAA=</HashCode>
+      <FileName>General\Generated\UserTasksOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.UtcOffset" Collapsed="true">
+    <Position X="232.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAAAAAUAAQAAAgAAAAAAAAAAABAECAkAA=</HashCode>
+      <FileName>General\Generated\UtcOffset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.General.VAT" Collapsed="true">
+    <Position X="268.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEIAQAAQAAAAQBAAAAAAAAUAAEAI=</HashCode>
+      <FileName>General\Generated\VAT.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.BEPartialPaymentCCMethod" Collapsed="true">
+    <Position X="304.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIADAAAAAAAEAAAAEIAEAAAACBEAAACAAABAAAAAEAA=</HashCode>
+      <FileName>Payments\Generated\BEPartialPaymentCCMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.InstallmentPaymentPlan" Collapsed="true">
+    <Position X="338" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAAAAAAAAAAEAAgAAQABAQQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Payments\Generated\InstallmentPaymentPlan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.InstallmentPaymentPlansLaguage" Collapsed="true">
+    <Position X="371.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAAAAAAAAgAEAAACAQAAgAQAABAAAAAAAAAEAA=</HashCode>
+      <FileName>Payments\Generated\InstallmentPaymentPlansLaguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.PaymentAuthorizationType" Collapsed="true">
+    <Position X="407.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEgAAAAAAAAAAAAEAAgAAQABAAQAAAAAAAAAgAAEAA=</HashCode>
+      <FileName>Payments\Generated\PaymentAuthorizationType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.PaymentAuthorizationTypesLanguage" Collapsed="true">
+    <Position X="443.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAAAAAAAAAAAAAAEAAAAAQAAgAQAABBAAAAAAAAUAA=</HashCode>
+      <FileName>Payments\Generated\PaymentAuthorizationTypesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.PaymentGateway" Collapsed="true">
+    <Position X="477.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIEAAAAAAAAQAAAAEAAgAAQABAAQAAAAAAAAAgAAEAA=</HashCode>
+      <FileName>Payments\Generated\PaymentGateway.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.PaymentGatewayAuthorizationType" Collapsed="true">
+    <Position X="511.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAAAAAAAAgQAACAEAEAAAIAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Payments\Generated\PaymentGatewayAuthorizationType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.PaymentGatewayConfiguration" Collapsed="true">
+    <Position X="545" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CZkECIAgACgAAAjIUYEBiAgDAgAIAwAAghARBAgIEgE=</HashCode>
+      <FileName>Payments\Generated\PaymentGatewayConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.PaymentGatewayTransaction" Collapsed="true">
+    <Position X="578.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoIAgIAJhFBFAgAAkhKCAAQgIBAjUAEAQIGAAQAKEAQ=</HashCode>
+      <FileName>Payments\Generated\PaymentGatewayTransaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.PaymentGatewayTransactionsDetail" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAgABAAAAAAAAAsAIAABQAAAAAAEAAAQAAgAQAEAI=</HashCode>
+      <FileName>Payments\Generated\PaymentGatewayTransactionsDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.PaymentGatewayTransactionStatu" Collapsed="true">
+    <Position X="54.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAgAAAAAgAAAgAkAAAAAAAAABAAEAAAAAAAAIAEAA=</HashCode>
+      <FileName>Payments\Generated\PaymentGatewayTransactionStatu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.PaymentMethod" Collapsed="true">
+    <Position X="92.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAEAAQUAAAAAQAAAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Payments\Generated\PaymentMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.PaymentMethodType" Collapsed="true">
+    <Position X="126.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgAAAAEIAAAAAAIEAAwAAQQBAAQAAAAABAAAAIAEAA=</HashCode>
+      <FileName>Payments\Generated\PaymentMethodType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.PaymentMethodTypesLanguage" Collapsed="true">
+    <Position X="162.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAAAAAEAAAAAQIAAgQAAAAIAAAgAAAEAA=</HashCode>
+      <FileName>Payments\Generated\PaymentMethodTypesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Payments.PaymentProcessor" Collapsed="true">
+    <Position X="198.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAgAAAAAEQAgAAwABABQAAAAAAAAAAIAEAA=</HashCode>
+      <FileName>Payments\Generated\PaymentProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.PMS.ConnectorCommHistory" Collapsed="true">
+    <Position X="234.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCCAAAAUEIABgIgAEDIAjIAGwkwgEBAAAhABBQTkGFA=</HashCode>
+      <FileName>PMS\Generated\ConnectorCommHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.PMS.PMS" Collapsed="true">
+    <Position X="270.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAEAAgAAAAECAAAAQAAgIQAAAAAgMAAAQAECA=</HashCode>
+      <FileName>PMS\Generated\PMS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.PMS.PMSConfiguration" Collapsed="true">
+    <Position X="306.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIAKAAIAAACAAAAAEAAEIAAAAIAAAAAAAAAAAAAAEEA=</HashCode>
+      <FileName>PMS\Generated\PMSConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.PMS.PMSContract" Collapsed="true">
+    <Position X="340.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAAAAAQAAAAQAAAAAAAAAAQAEAA=</HashCode>
+      <FileName>PMS\Generated\PMSContract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.PMS.PMSMapping" Collapsed="true">
+    <Position X="374" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABAABAACAAAAgAECCAAAQAgAAQACAAAAAABBIQEAA=</HashCode>
+      <FileName>PMS\Generated\PMSMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.PMS.PMSMappingValue" Collapsed="true">
+    <Position X="410" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABAAAgAIAAAAAAEAAGAAIBAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>PMS\Generated\PMSMappingValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.PMS.PMSMessage" Collapsed="true">
+    <Position X="446" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAACUAQAAgIAAEAAAIIQIAEggAQAAABAACQjAEhA=</HashCode>
+      <FileName>PMS\Generated\PMSMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.PMS.PMSRateCode" Collapsed="true">
+    <Position X="479.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACCAIAAACAAAgIEIAkIAQABgAQAAAAAgABAQQAEAE=</HashCode>
+      <FileName>PMS\Generated\PMSRateCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.PMS.PMSRateRoomMapping" Collapsed="true">
+    <Position X="513.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIAADAIAAECAAAgIWKAAIAAAIgAAAAIACgABAYAAEAE=</HashCode>
+      <FileName>PMS\Generated\PMSRateRoomMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.PMS.PMSRoomCode" Collapsed="true">
+    <Position X="547.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACCAIAAACAAAgIEIAkIAQABgAQAAAAAgABAQQAEAE=</HashCode>
+      <FileName>PMS\Generated\PMSRoomCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.PMS.PMSService" Collapsed="true">
+    <Position X="581" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIAEAAIgAACgAAAAEAABIAAACCIAACAIAAAAAAAAFAA=</HashCode>
+      <FileName>PMS\Generated\PMSService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.PMS.PMSServicesPropertyMapping" Collapsed="true">
+    <Position X="18.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIBGCAAAAAAAAAgIEIFFAAAAjgAIAIACAwQhAQAAEAE=</HashCode>
+      <FileName>PMS\Generated\PMSServicesPropertyMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.PropertyEvent" Collapsed="true">
+    <Position X="56.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IMAKAAAAAWIEgAAAEMKkQAAAIABgAACogQBR4QCAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\PropertyEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.PropertyEventActivity" Collapsed="true">
+    <Position X="95" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAAAAAAAAAEAAAAAAAAAQAAAAAAAAAIAAAEAI=</HashCode>
+      <FileName>ProactiveActions\Generated\PropertyEventActivity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.PropertyEventAttraction" Collapsed="true">
+    <Position X="128.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAYAAAAAAAAAAEAAAAAAAAAQACAAAAAAAIAAAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\PropertyEventAttraction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.PropertyEventCondition" Collapsed="true">
+    <Position X="164.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAIASAAAAAEAAAAAAAAAQAAAAAAAAgIAAAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\PropertyEventCondition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.PropertyEventOccupancyAlert" Collapsed="true">
+    <Position X="200.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIASAMAEAAAAgAAIEACEAAAAAAQAAAAAoAAAIAACMAA=</HashCode>
+      <FileName>ProactiveActions\Generated\PropertyEventOccupancyAlert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.PropertyEventSetting" Collapsed="true">
+    <Position X="236.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IoAAAIAAEQAEAABAEUARQASEFAYAQAAgICAAoAQAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\PropertyEventSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.PropertyEventSettingLanguage" Collapsed="true">
+    <Position X="272.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAgAAAEIAQQAAABAAAAAAAIAAAAAAAEIQ=</HashCode>
+      <FileName>ProactiveActions\Generated\PropertyEventSettingLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.PropertyQueue" Collapsed="true">
+    <Position X="308.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQCCIAAIFoAEQJgEIAEBAAGAAQIiFAJSABYIAJAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\PropertyQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.SystemAction" Collapsed="true">
+    <Position X="342.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAgAAAAAQEAAgAAQABAAQAAAAAAAAQAAAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\SystemAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.SystemActionsLanguage" Collapsed="true">
+    <Position X="376.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAIAAAAAAAAAAAAEAAgAAQAAAAQAAAAIAAAAACAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\SystemActionsLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.SystemDefaultEvent" Collapsed="true">
+    <Position X="412.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIAAAAIAIAAAAAEAAgAAAAAAAAAAAIAABJAACAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\SystemDefaultEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.SystemEvent" Collapsed="true">
+    <Position X="448.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAAAAAAAgAAAAAQFACgAAQABAASAEAAAAAAAAAAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\SystemEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.SystemEventsLanguage" Collapsed="true">
+    <Position X="482" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAIAAAAAEAAAAAQAAAAQAAAAIABBAAAAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\SystemEventsLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.SystemTemplate" Collapsed="true">
+    <Position X="515.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAgAAAAgAAAAAQEMAgAAQABEAQAAAAAAAACQAAEAI=</HashCode>
+      <FileName>ProactiveActions\Generated\SystemTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.SystemTemplatesCategory" Collapsed="true">
+    <Position X="549.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAIAAAAMAAAAAQAIQAQAAAAAAAAAQAAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\SystemTemplatesCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.SystemTemplatesCategoryLanguage" Collapsed="true">
+    <Position X="583.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAAAAAEAEAAAQAAEAQAAAAIAAAAAAAEAI=</HashCode>
+      <FileName>ProactiveActions\Generated\SystemTemplatesCategoryLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.SystemTemplatesLanguage" Collapsed="true">
+    <Position X="20.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAEgAAAIAAAAAAAEAAAAAAQAAAAAAAIIAAICAAAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\SystemTemplatesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.ProactiveActions.SystemTemplatesMapping" Collapsed="true">
+    <Position X="59" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAQIAAAAAAAEAAAAAAAAAAAAACAAAAIAAAAEAA=</HashCode>
+      <FileName>ProactiveActions\Generated\SystemTemplatesMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.Activity" Collapsed="true">
+    <Position X="97.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAgAkAgEgAQAIAAQEAAAAkAEARAAEAA=</HashCode>
+      <FileName>Properties_\Generated\Activity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.BESpecialRequest" Collapsed="true">
+    <Position X="131" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAAAAAEIAEAAQAAAAQAAAAAAAAAQAAEAA=</HashCode>
+      <FileName>Properties_\Generated\BESpecialRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.Client" Collapsed="true">
+    <Position X="167" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>dOBcYKgBADlgwIgIuQIloiYJR0ASgEUAAsgBJDFCMrk=</HashCode>
+      <FileName>Properties_\Generated\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.ExternalSource" Collapsed="true">
+    <Position X="203" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAQAAAAAAAEAAEQAgAAQABAAQAABAABAAAAAAEAA=</HashCode>
+      <FileName>Properties_\Generated\ExternalSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.ExternalSourceType" Collapsed="true">
+    <Position X="239" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BKAAAAAABAAAAAAAEAAgAIQABAAQAASAAAAAAAAAUAA=</HashCode>
+      <FileName>Properties_\Generated\ExternalSourceType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.Incentive" Collapsed="true">
+    <Position X="275" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAIAAAIAAAAgAUYAEAAQAAmAQBAAEQgABARAiEAA=</HashCode>
+      <FileName>Properties_\Generated\Incentive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.IncentiveLanguage" Collapsed="true">
+    <Position X="311" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAAAACEAAAAAQAAAAQAAAAogAAAAAAEAA=</HashCode>
+      <FileName>Properties_\Generated\IncentiveLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.IncentiveType" Collapsed="true">
+    <Position X="344.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAABAAAAAAAEAAAAAQAAAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Properties_\Generated\IncentiveType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.Inventory" Collapsed="true">
+    <Position X="378.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAIAAAAAAgAAgEAAAAAAAAMQAAAABgAAAAAAAEAA=</HashCode>
+      <FileName>Properties_\Generated\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.OccupancyLevel" Collapsed="true">
+    <Position X="414.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIIGCAAAAAAAgAgYEIAAAAAAEgEAAICAgwBBAQAAEAE=</HashCode>
+      <FileName>Properties_\Generated\OccupancyLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.OccupancyLevelAppliedRule" Collapsed="true">
+    <Position X="450.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAAAAABAAAAAAggEIAAAAAAECAAAAABAgBAAQCAEAE=</HashCode>
+      <FileName>Properties_\Generated\OccupancyLevelAppliedRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.OccupancyLevelPeriod" Collapsed="true">
+    <Position X="484.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIACCAAAAAAAAAgIEIAEAAQAEgAQAEAAAgABAQAAEAE=</HashCode>
+      <FileName>Properties_\Generated\OccupancyLevelPeriod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.OccupancyLevelPeriodDate" Collapsed="true">
+    <Position X="518" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAACAAAAAAAAAgYEIAQAAAgEgAAAIAAAgBBAUAAEAE=</HashCode>
+      <FileName>Properties_\Generated\OccupancyLevelPeriodDate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.OccupancyLevelRule" Collapsed="true">
+    <Position X="551.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IJACiQAAAEAAAAgIGKACAAIAEgAYRAAAAgABAQAAEIE=</HashCode>
+      <FileName>Properties_\Generated\OccupancyLevelRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertiesExternalSource" Collapsed="true">
+    <Position X="585.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAEAAAAAAAEEAFAIAAAAAAAAAAAgAAAQAAEAA=</HashCode>
+      <FileName>Properties_\Generated\PropertiesExternalSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertiesExternalSourcesPermission" Collapsed="true">
+    <Position X="23" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAEAgAAAAGAgCAEAAAACAAAAAAAAAAAAAEAQ=</HashCode>
+      <FileName>Properties_\Generated\PropertiesExternalSourcesPermission.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.Property" Collapsed="true">
+    <Position X="61.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>P+be6//37P64yv5t9Xt/5iwhz/fW9F3DBq2x/pqDs/c=</HashCode>
+      <FileName>Properties_\Generated\Property.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyAccountManager" Collapsed="true">
+    <Position X="99.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAAACgAEIAEAAAAAAAAAAAAAgAAAQAAEQE=</HashCode>
+      <FileName>Properties_\Generated\PropertyAccountManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyAmenity" Collapsed="true">
+    <Position X="133.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACEIAAAAAAAAgAEoAEAAAAAkAAAAAAAgABAQAAEAA=</HashCode>
+      <FileName>Properties_\Generated\PropertyAmenity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyCampaignAccount" Collapsed="true">
+    <Position X="169.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBCAAAAACAAAAAAEYAEAgAAAAAAAAACAAAgAQAAEAA=</HashCode>
+      <FileName>Properties_\Generated\PropertyCampaignAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyCategory" Collapsed="true">
+    <Position X="205.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAAAAAQAAAAQAAAAAAAAAAACEAA=</HashCode>
+      <FileName>Properties_\Generated\PropertyCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyChannelMapping" Collapsed="true">
+    <Position X="241.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAiCIIQEAAohAgIEIwEAAAgAkAEABAAghGjAQAEEwE=</HashCode>
+      <FileName>Properties_\Generated\PropertyChannelMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyChannelMappingsExtendedField" Collapsed="true">
+    <Position X="277.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIIAAAIAAAAAAAEIgBAAgAAgBAAAAAAAAhAQEgEQA=</HashCode>
+      <FileName>Properties_\Generated\PropertyChannelMappingsExtendedField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyComment" Collapsed="true">
+    <Position X="313.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAKAAAEAAAAAAgAEAAEAAAAAAAAAAAAAgAAAQAAMAA=</HashCode>
+      <FileName>Properties_\Generated\PropertyComment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyCurrency" Collapsed="true">
+    <Position X="347" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAMAAAAAAAAIAMCAFAAAAgEAAAAACAAAAAQAAEAA=</HashCode>
+      <FileName>Properties_\Generated\PropertyCurrency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyExternalInterface" Collapsed="true">
+    <Position X="380.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAQAAAAEAAEAAwAAAAQAAAAAAAAIQKAEAA=</HashCode>
+      <FileName>Properties_\Generated\PropertyExternalInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyFolder" Collapsed="true">
+    <Position X="416.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAQAAAAEIAEAgQAAEAQSAAAACAAAwEAEBQ=</HashCode>
+      <FileName>Properties_\Generated\PropertyFolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyFoldersLanguage" Collapsed="true">
+    <Position X="452.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAAAAAEAAAAAQAAEAQAAAAIAAAAAEAEBA=</HashCode>
+      <FileName>Properties_\Generated\PropertyFoldersLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyFoldersMapping" Collapsed="true">
+    <Position X="486.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAEAAAAAEAAEAAAAAEAAAAAAAAAAAwEAEBA=</HashCode>
+      <FileName>Properties_\Generated\PropertyFoldersMapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyLanguage" Collapsed="true">
+    <Position X="520.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKICAIAAAAAgAggAEAAEQAAAAkIAAAAAIoABAQAAEAA=</HashCode>
+      <FileName>Properties_\Generated\PropertyLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyPaymentDetail" Collapsed="true">
+    <Position X="554" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oIBCAAAAAAAAAAAAEAAEAAAgQAAAAAAAIAAAAAAAMAQ=</HashCode>
+      <FileName>Properties_\Generated\PropertyPaymentDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyTemplate" Collapsed="true">
+    <Position X="587.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACgAAAIAAAAAAAEAAEAAQAAEAQABAAAAAICQAAEAI=</HashCode>
+      <FileName>Properties_\Generated\PropertyTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.PropertyTemplatesLanguage" Collapsed="true">
+    <Position X="25.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAgAAAAAABAAAAEAAAAAAAAAAAAAAAoQAACAAAEAA=</HashCode>
+      <FileName>Properties_\Generated\PropertyTemplatesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.RoomType" Collapsed="true">
+    <Position X="63.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DJYiEYWAIAwgAAgEEIAUBKYEhkYSAAQBAhAhCwAAGAg=</HashCode>
+      <FileName>Properties_\Generated\RoomType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.RoomTypeAmenity" Collapsed="true">
+    <Position X="101.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACEIAAAAAAgAgAEoAAAAAAAkAAAAAAggABAQAAEAA=</HashCode>
+      <FileName>Properties_\Generated\RoomTypeAmenity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.RoomTypeChannel" Collapsed="true">
+    <Position X="135.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAggAAAEAgAAgAAAAAAAAAAgAAIAAAAEAA=</HashCode>
+      <FileName>Properties_\Generated\RoomTypeChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.RoomTypeDependency" Collapsed="true">
+    <Position X="171.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAEAAIAgAgAAEMIIEAAAABAAAAAAAgAAgAQAAEAA=</HashCode>
+      <FileName>Properties_\Generated\RoomTypeDependency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.RoomTypeLanguage" Collapsed="true">
+    <Position X="207.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKACAIAAAAgggAgAEAAAAAQAAkIQAAAAogABAgAAEAA=</HashCode>
+      <FileName>Properties_\Generated\RoomTypeLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.TransferLocation" Collapsed="true">
+    <Position X="243.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KIACAAAAAQAAAAAIEIAEAAQAQAAQAAACAQAAAQAAEAA=</HashCode>
+      <FileName>Properties_\Generated\TransferLocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.TransferLocationsLanguage" Collapsed="true">
+    <Position X="279.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAACAAAAAAAAABEAAAAIQCAAAQAAAAAAEAAAAAEAA=</HashCode>
+      <FileName>Properties_\Generated\TransferLocationsLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.MasterTimeZone" Collapsed="true">
+    <Position X="603.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAiAACAAAgAAAAAAAAgAAAAEAA=</HashCode>
+      <FileName>Properties_\MasterTimeZone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Properties.MasterTimeZones" Collapsed="true">
+    <Position X="605" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABKKTEZRIIatVxABB6wxBEyIIMQWWfIVCBApBCgBi4=</HashCode>
+      <FileName>Properties_\MasterTimeZone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.BoardType" Collapsed="true">
+    <Position X="383" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAFAAAAAQAAAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Rates\Generated\BoardType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.CancellationPoliciesCurrency" Collapsed="true">
+    <Position X="419" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAMAAIAAAAAAAMAAAAAAAAEAAAAABAAAhAAAAkAA=</HashCode>
+      <FileName>Rates\Generated\CancellationPoliciesCurrency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.CancellationPoliciesLanguage" Collapsed="true">
+    <Position X="455" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAIAAAAAgAAgAEAQAAAQAAkIQAAABIgABBAAAEAA=</HashCode>
+      <FileName>Rates\Generated\CancellationPoliciesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.CancellationPolicy" Collapsed="true">
+    <Position X="488.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYACAIgAIAAgAigAMIIEEBFAAkgBAAAAQgQhARAoEAA=</HashCode>
+      <FileName>Rates\Generated\CancellationPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.DepositPoliciesLanguage" Collapsed="true">
+    <Position X="522.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAIAAAAAgAAgAkAAAAAYAAkIQAAAAIgABAAAAEAA=</HashCode>
+      <FileName>Rates\Generated\DepositPoliciesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.DepositPolicy" Collapsed="true">
+    <Position X="556.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYQCAIACACAgAAgAEIAEAAQAAkoQAAAAAgABAQAAEAA=</HashCode>
+      <FileName>Rates\Generated\DepositPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.Extra" Collapsed="true">
+    <Position X="590" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACgoLAIAAkAFgAEIBlAAQAEkIQQIAAIgghASAiEAA=</HashCode>
+      <FileName>Rates\Generated\Extra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.ExtrasBillingType" Collapsed="true">
+    <Position X="27.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAEAABAgAFAAAAAAAAgAAABAACgABAAAAEAA=</HashCode>
+      <FileName>Rates\Generated\ExtrasBillingType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.ExtrasCurrency" Collapsed="true">
+    <Position X="65.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAMAAIAAAAAAANAABAAAAAEAAAAAAAAAgAAACEAA=</HashCode>
+      <FileName>Rates\Generated\ExtrasCurrency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.ExtrasLanguage" Collapsed="true">
+    <Position X="104" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAIAAAAAgAAgAFAABAAQAAkIQAAAAIgABAAACEAA=</HashCode>
+      <FileName>Rates\Generated\ExtrasLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.GroupCode" Collapsed="true">
+    <Position X="137.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIACAIIYEAAgAACAEIQFAEQABkIQAVAAAAABAQAEEAA=</HashCode>
+      <FileName>Rates\Generated\GroupCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.GroupCodeLanguage" Collapsed="true">
+    <Position X="173.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAgAgAAAAEAAAAAQAAAIQAAAAIAQAAAAAEAA=</HashCode>
+      <FileName>Rates\Generated\GroupCodeLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.OTA_Codes" Collapsed="true">
+    <Position X="209.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAAAAgAAACBAAAEAAAEAACAAQAAAAAgAAAACAAEAA=</HashCode>
+      <FileName>Rates\Generated\OTA_Codes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.OtherPoliciesLanguage" Collapsed="true">
+    <Position X="245.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAIAAAAAgAAgAEAAAAAQAAkIQAAAAIgADAAAAEIA=</HashCode>
+      <FileName>Rates\Generated\OtherPoliciesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.OtherPolicy" Collapsed="true">
+    <Position X="281.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACQIAAAAgAAAgAEIAEAAAQAmgBAAAAAgAJAQAAEEA=</HashCode>
+      <FileName>Rates\Generated\OtherPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.PackagesExtra" Collapsed="true">
+    <Position X="315.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAEAABAAAFAAAAAAAAAAAAAAAAAEAEAAAEAA=</HashCode>
+      <FileName>Rates\Generated\PackagesExtra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.PackagesPeriod" Collapsed="true">
+    <Position X="349.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAQEAAAAAAAEAAAAAAAAAAAABAAAAEAEAAEEAA=</HashCode>
+      <FileName>Rates\Generated\PackagesPeriod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.PackagesRate" Collapsed="true">
+    <Position X="385.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAIAAAAAAAAAEAQAAAAAAAAAAAAAAAEAEAAAEAA=</HashCode>
+      <FileName>Rates\Generated\PackagesRate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.PromotionalCode" Collapsed="true">
+    <Position X="421.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kIAGAIAQAAAABAJEEIokBAQCZmASAiIAAqADBQAAOAA=</HashCode>
+      <FileName>Rates\Generated\PromotionalCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.PromotionalCodeRate" Collapsed="true">
+    <Position X="457.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAAIAAAAABAAAUAQAAAAAAAAAAAAAAAAAAAAAMAA=</HashCode>
+      <FileName>Rates\Generated\PromotionalCodeRate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.PromotionalCodesCurrency" Collapsed="true">
+    <Position X="491" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAMAAIAAABAAAcAAAAAAAAEAAAAAAAAAgAAAAMAA=</HashCode>
+      <FileName>Rates\Generated\PromotionalCodesCurrency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.PromotionalCodesGuest" Collapsed="true">
+    <Position X="524.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAACAAAAAABAAEUIAAAgAABAAAAAAAAAAABAAAMAA=</HashCode>
+      <FileName>Rates\Generated\PromotionalCodesGuest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.PromotionalCodesPackage" Collapsed="true">
+    <Position X="558.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAACAAAAAAABAgIUAAAAAAAAgAAAAAQAgEFEAAAMAA=</HashCode>
+      <FileName>Rates\Generated\PromotionalCodesPackage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.Rate" Collapsed="true">
+    <Position X="592.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RoQifO4EsIjiDEgN8IctYAYABtsZAAQDAgRjC2IsmAE=</HashCode>
+      <FileName>Rates\Generated\Rate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateBuyerGroup" Collapsed="true">
+    <Position X="29.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIEBAIIAIAgAEgAEEIQABAAghkAAAAAAAAAgAIAA1AA=</HashCode>
+      <FileName>Rates\Generated\RateBuyerGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateCancellationPoliciesPeriod" Collapsed="true">
+    <Position X="68" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAASEAAAAIAAEAAAAAAAAAAQABAAAAAAAAAEEAA=</HashCode>
+      <FileName>Rates\Generated\RateCancellationPoliciesPeriod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateCancellationPolicy" Collapsed="true">
+    <Position X="106.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAAIAAAAAAAgAEIQAAAAAAgAAAAABAgABAQAAkAA=</HashCode>
+      <FileName>Rates\Generated\RateCancellationPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateCategoriesLanguage" Collapsed="true">
+    <Position X="140" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAAAAAEAAAAAQAAAIQAAAAIAAAAAAoEAA=</HashCode>
+      <FileName>Rates\Generated\RateCategoriesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateCategory" Collapsed="true">
+    <Position X="176" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAEAAAAAAAAACAEAEAgAQAAAgQAAAAAAAAAAAAMAA=</HashCode>
+      <FileName>Rates\Generated\RateCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateChannelsRoomType" Collapsed="true">
+    <Position X="212" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAABgACAEAAAAAAgCAAAAACAgAAAAAAAEAA=</HashCode>
+      <FileName>Rates\Generated\RateChannelsRoomType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateChannelsUpdatesHistory" Collapsed="true">
+    <Position X="248" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKEAAAQEGQAgAAAgEAgAAAAIAAAAAAABAQACAAgIEAA=</HashCode>
+      <FileName>Rates\Generated\RateChannelsUpdatesHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateChannelUpdate" Collapsed="true">
+    <Position X="284" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>0acDAiZFHSAgmAqgEA1kIAAciGBpnQiL5X9CIhyLMH8=</HashCode>
+      <FileName>Rates\Generated\RateChannelUpdate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateChannelUpdatesCompacted" Collapsed="true">
+    <Position X="317.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKICAAYUmQCggAgAEAwEEAAAAgAADBACgwABACEMEAA=</HashCode>
+      <FileName>Rates\Generated\RateChannelUpdatesCompacted.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateDepositPoliciesPeriod" Collapsed="true">
+    <Position X="351.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAQEAAAAAAAEAAAAAAAAAAAABAAAABIAAAEEIA=</HashCode>
+      <FileName>Rates\Generated\RateDepositPoliciesPeriod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateDepositPolicy" Collapsed="true">
+    <Position X="387.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAAIAAAAgAAgAkIQAAAIAAgBAAAAAAgABAQAAEAA=</HashCode>
+      <FileName>Rates\Generated\RateDepositPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateFolder" Collapsed="true">
+    <Position X="423.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACIAgAAAAQAAAAEIAEAAQAAAoQAAAAAAAAAQEoEAA=</HashCode>
+      <FileName>Rates\Generated\RateFolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateHistory" Collapsed="true">
+    <Position X="459.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RIACAAIAKIhiBAgEkISFAAYABAEQAAQCAgAhAwAokAE=</HashCode>
+      <FileName>Rates\Generated\RateHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateLanguage" Collapsed="true">
+    <Position X="493.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QKAAAIIEAAAAAIgAEAQIAAAAAkAAAAAAIgABAIAAEAA=</HashCode>
+      <FileName>Rates\Generated\RateLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateLevel" Collapsed="true">
+    <Position X="527" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAACAAAAAkIIFAAQAAAAQAAAACAAAAQAAEgA=</HashCode>
+      <FileName>Rates\Generated\RateLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateLevelDetail" Collapsed="true">
+    <Position X="560.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAQAAIAAAABAUEAAACAAABAAAAIAAAAAgAAABUAA=</HashCode>
+      <FileName>Rates\Generated\RateLevelDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateModel" Collapsed="true">
+    <Position X="594.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAAAAAQAAAAEAABAAQAAEAQAgAAACAgBAAAEEA=</HashCode>
+      <FileName>Rates\Generated\RateModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateRestriction" Collapsed="true">
+    <Position X="32" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAgAAAAEAAIAAQAAIIQAAAAAAAAAAABEAA=</HashCode>
+      <FileName>Rates\Generated\RateRestriction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateRestrictionsLanguage" Collapsed="true">
+    <Position X="70.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAgAAAAAgAAgAEAAAAAYAAAIQAAAAIAAAAAAAEAA=</HashCode>
+      <FileName>Rates\Generated\RateRestrictionsLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateRoom" Collapsed="true">
+    <Position X="108.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QYAAAIIAGQAAgAgAEIQAAAAAAkAAAAAAgwABAQAAEAA=</HashCode>
+      <FileName>Rates\Generated\RateRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateRoomDetail" Collapsed="true">
+    <Position X="142.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>0IUBAqRAHWAgOAio2glgpIIciHBrFAiL539FAjSbsH8=</HashCode>
+      <FileName>Rates\Generated\RateRoomDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RatesChannel" Collapsed="true">
+    <Position X="178.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cIAQCcMAMAAwGggMcIwQAAABBkEABAQBAxQhAwEhFgA=</HashCode>
+      <FileName>Rates\Generated\RatesChannel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RatesChannelsPaymentMethod" Collapsed="true">
+    <Position X="214.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAAAAAAAAAAACAEAAAAAAgAAAAAACAAAABAAAAEAA=</HashCode>
+      <FileName>Rates\Generated\RatesChannelsPaymentMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RatesExtra" Collapsed="true">
+    <Position X="250.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UIAAAIIQAAAAAAgAFIQBgQAAAkAAACAAAiABAUAiEAA=</HashCode>
+      <FileName>Rates\Generated\RatesExtra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RatesExtrasPeriod" Collapsed="true">
+    <Position X="286.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAQEADAAAAAMAAAAAAAAAAAABAAAAAAAAAEEAA=</HashCode>
+      <FileName>Rates\Generated\RatesExtrasPeriod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RatesIncentive" Collapsed="true">
+    <Position X="320" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAIIQEAEAAAgCEEQAAAAQAkAAARAAgiABAAAEEAA=</HashCode>
+      <FileName>Rates\Generated\RatesIncentive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RatesIncentivePeriod" Collapsed="true">
+    <Position X="353.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIEAQEAAAAAAAEAAAAAAgAAAAABAAAAAAAAAEEAA=</HashCode>
+      <FileName>Rates\Generated\RatesIncentivePeriod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RatesPerAdult" Collapsed="true">
+    <Position X="389.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAAIAAQAAgAAAEAQAAAQAABAAAAAAoQACAAAAEAA=</HashCode>
+      <FileName>Rates\Generated\RatesPerAdult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RatesPerChild" Collapsed="true">
+    <Position X="425.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAAIAAQAAkAAAEAQAAAAAACAAAAAAgQAAAAAAEAA=</HashCode>
+      <FileName>Rates\Generated\RatesPerChild.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RatesRateRestriction" Collapsed="true">
+    <Position X="461.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAgMQMAAAAAgAEAQAAAIAAgAAABAAAgAhAAAEEAA=</HashCode>
+      <FileName>Rates\Generated\RatesRateRestriction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RatesRateRestrictionsHistory" Collapsed="true">
+    <Position X="495.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAgMQMAAAAAgAEAQAAAIAAAAAABAAAgAgAAAEEAA=</HashCode>
+      <FileName>Rates\Generated\RatesRateRestrictionsHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RatesTaxPolicy" Collapsed="true">
+    <Position X="529.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UIAAQIIAAAAAAAgAEAQAAAAAA0AAAAAAAgABAAAAEAA=</HashCode>
+      <FileName>Rates\Generated\RatesTaxPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateTier" Collapsed="true">
+    <Position X="563" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAACAAAAAEIAEAAQAAAgQAAAAAAAAAQAAEAA=</HashCode>
+      <FileName>Rates\Generated\RateTier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.RateTiersDateRange" Collapsed="true">
+    <Position X="596.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UIACQiIQECACAAAQEAQAAEAAEBAAABACAAAAAoAGEAA=</HashCode>
+      <FileName>Rates\Generated\RateTiersDateRange.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.TaxPoliciesCurrency" Collapsed="true">
+    <Position X="34.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAQMAAIAAAAAAAMAAAAAAAAUAAAAAAAAAgAAAAEAA=</HashCode>
+      <FileName>Rates\Generated\TaxPoliciesCurrency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.TaxPoliciesLanguage" Collapsed="true">
+    <Position X="72.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAIAAIAAgAAgAEAAAAAQAB0IQAAAAIgABAAAAEAA=</HashCode>
+      <FileName>Rates\Generated\TaxPoliciesLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Rates.TaxPolicy" Collapsed="true">
+    <Position X="110.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAIAAIAAiAAgEEIAEQAQABkIUAAAAAgAhAQAAEAA=</HashCode>
+      <FileName>Rates\Generated\TaxPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.Reservation" Collapsed="true">
+    <Position X="144.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Q+f/p3zv21Ezta2rmdxOtpZg2BtbmcYBf2eXv4hK+sM=</HashCode>
+      <FileName>Reservations\Generated\Reservation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationPartialPaymentDetail" Collapsed="true">
+    <Position X="180.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAIAAAAAAkAEAEEAACAAhEAEQAAAgABAgAAEAA=</HashCode>
+      <FileName>Reservations\Generated\ReservationPartialPaymentDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationPaymentDetail" Collapsed="true">
+    <Position X="216.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>sIBAAEAIAAAAAAgAMAAEAACgQgAAAAAAIgABAgAAMAQ=</HashCode>
+      <FileName>Reservations\Generated\ReservationPaymentDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationRoom" Collapsed="true">
+    <Position X="252.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>mKAAGGo0EAQ4kAkQEixEEwMoAkOFARAhgiUDspgGEAs=</HashCode>
+      <FileName>Reservations\Generated\ReservationRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationRoomChild" Collapsed="true">
+    <Position X="288.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAIAAAAAAAEEBAAAAAAAAAQgBAAAAAAAAAFAA=</HashCode>
+      <FileName>Reservations\Generated\ReservationRoomChild.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationRoomDetail" Collapsed="true">
+    <Position X="322.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAABAAQAAAAggEABAAAAFAgAAAgBBAwAjAAAAEAA=</HashCode>
+      <FileName>Reservations\Generated\ReservationRoomDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationRoomDetailsAppliedIncentive" Collapsed="true">
+    <Position X="356" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAIAAAAACUYAAAAYAAAAQAAAEwCAABBACEAA=</HashCode>
+      <FileName>Reservations\Generated\ReservationRoomDetailsAppliedIncentive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationRoomExtra" Collapsed="true">
+    <Position X="392" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAARAAAAgAgAEABBRAAAggAAAgFAAgIBAAADUAA=</HashCode>
+      <FileName>Reservations\Generated\ReservationRoomExtra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationRoomExtrasAvailableDate" Collapsed="true">
+    <Position X="428" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAQEAQQAAAAEAAAAAAAAAAAABAAAAAAAAAEEAA=</HashCode>
+      <FileName>Reservations\Generated\ReservationRoomExtrasAvailableDate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationRoomExtrasSchedule" Collapsed="true">
+    <Position X="464" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAQQAAggEAAAAAAAAgAAAAABAgABAAAAEAA=</HashCode>
+      <FileName>Reservations\Generated\ReservationRoomExtrasSchedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationRoomTaxPolicy" Collapsed="true">
+    <Position X="497.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAQAABCAAEEABBQCAAAAAiAoBgAAAQAAAAGAE=</HashCode>
+      <FileName>Reservations\Generated\ReservationRoomTaxPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationsAdditionalData" Collapsed="true">
+    <Position X="531.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAAEAAAQAAAAAAAQCAAAAgAAGAA=</HashCode>
+      <FileName>Reservations\Generated\ReservationsAdditionalData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationsHistory" Collapsed="true">
+    <Position X="565.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKDIAAAkIAAAAAAAEAAggAAAAAAhCAABAYAAIAAAEAA=</HashCode>
+      <FileName>Reservations\Generated\ReservationsHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationStack" Collapsed="true">
+    <Position X="599" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKCAAAAEZAGAAEAgEAQIwAIgAABAQAAjAAAAAAAAEAA=</HashCode>
+      <FileName>Reservations\Generated\ReservationStack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationStatus" Collapsed="true">
+    <Position X="36.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAEAAAAAQEAAAQAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Reservations\Generated\ReservationStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OB.Domain.Reservations.ReservationStatusLanguage" Collapsed="true">
+    <Position X="74.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAAAAAEAAIAAQAAAISAAAAIAAAAAAAEAA=</HashCode>
+      <FileName>Reservations\Generated\ReservationStatusLanguage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

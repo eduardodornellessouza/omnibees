@@ -1,0 +1,21 @@
+pool:
+  name: DockerPool
+steps:
+- script: |
+   cd /opt
+   sudo wget https://dlcdn.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz
+   sudo tar xzvf apache-maven-3.8.5-bin.tar.gz
+   export PATH=/opt/apache-maven-3.8.5/bin:$PATH 
+   source /etc/profile
+   sudo chown -R devops:devops /opt/apache-maven-3.8.5/bin
+   cd  $(Build.SourcesDirectory)/Framework
+   mvn clean install
+   zip -r html-reports.zip $(Build.SourcesDirectory)/Framework/target/reports/cucumber-html-reports
+   ls -la
+  displayName: 'Command Line Script'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: html-reports.zip'
+  inputs:
+    PathtoPublish: '$(Build.SourcesDirectory)/Framework/target/reports'
+    ArtifactName: 'html-reports.zip'

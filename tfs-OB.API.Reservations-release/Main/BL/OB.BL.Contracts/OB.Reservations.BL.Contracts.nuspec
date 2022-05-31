@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata minClientVersion="2.8.0">
+    <id>OB.Reservation.BL.Contracts</id>
+    <version>1.0.0.0</version>
+    <title>OB.Reservation.BL.Contracts - DTOs library for the OB.REST.Services</title>
+    <authors>Omnibees Team</authors>
+    <owners>Omnibees Team</owners>
+    <projectUrl>http://192.168.100.105/OB.REST.Reservations.Services/Help</projectUrl>
+    <iconUrl>http://192.168.100.105/OB.REST.Reservations.Services/Areas/HelpPage/Content/Images/OmnibeesIcon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An API that contains all the contracts/DTOs used to call the OB.REST.Services operations. It includes Request and Response classes and Data classes (inside Data namespace).</description>
+    <releaseNotes>ongoing</releaseNotes>
+  </metadata>
+  <files>
+    <file src="bin\$configuration$\OB.Reservation.BL.Contracts.dll" target="lib\portable-net45+wp8+win8\OB.Reservation.BL.Contracts.dll" />
+    <file src="bin\$configuration$\OB.Reservation.BL.Contracts.pdb" target="lib\portable-net45+wp8+win8\OB.Reservation.BL.Contracts.pdb" />
+    <file src="bin\$configuration$\OB.Reservation.BL.Contracts.dll" target="lib\net45\OB.Reservation.BL.Contracts.dll" />
+    <file src="bin\$configuration$\OB.Reservation.BL.Contracts.pdb" target="lib\net45\OB.Reservation.BL.Contracts.pdb" />
+    <file src="bin\$configuration$\OB.Reservation.BL.Contracts.pdb" target="lib\win8\OB.Reservation.BL.Contracts.pdb" />
+  </files>
+</package>

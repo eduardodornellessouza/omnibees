@@ -1,0 +1,11 @@
+{
+  "ServerUri": "http://srv-protur7:9000/",
+  "Organization": null,
+  "ProjectKey": "OB.API.Reservations.code",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "cs-sonar-way-18832",
+      "ProfileTimestamp": "2017-06-16T12:51:14+01:00"
+    }
+  }
+}

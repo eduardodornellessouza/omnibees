@@ -1,0 +1,2 @@
+C:\Omnibees\OB.API\Code\Main\TL\OB.BL.Operations.Test\Fakes\maxiPago.fakes : warning : Cannot generate stub for MaxiPago.Gateway.Utils: type is not visible to exported or assembly(maxiPago.1.0.0.0.Fakes).
+C:\Omnibees\OB.API\Code\Main\TL\OB.BL.Operations.Test\Fakes\maxiPago.fakes : warning : Cannot generate shim for MaxiPago.Gateway.Utils: type is not visible to exported or assembly(maxiPago.1.0.0.0.Fakes).

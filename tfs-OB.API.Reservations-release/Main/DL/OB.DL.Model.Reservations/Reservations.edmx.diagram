@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="30c2ba64d10b4c448ab5a0e47a17cf51" Name="Diagram1" ZoomLevel="38">
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.CancelReservationReason" Width="1.5" PointX="0.75" PointY="15.25" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.LostReservation" Width="1.5" PointX="13.75" PointY="0.75" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationPartialPaymentDetail" Width="1.5" PointX="5.25" PointY="27.125" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationPaymentDetail" Width="1.5" PointX="5.25" PointY="2.25" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationRoomChild" Width="1.5" PointX="7.5" PointY="24.125" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationRoomDetail" Width="1.5" PointX="7.5" PointY="12.25" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationRoomDetailsAppliedIncentive" Width="1.5" PointX="9.75" PointY="10.875" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationRoomDetailsAppliedPromotionalCode" Width="1.5" PointX="9.75" PointY="14.875" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationRoomExtra" Width="1.5" PointX="7.5" PointY="19" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationRoomExtrasAvailableDate" Width="1.5" PointX="9.75" PointY="18.125" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationRoomExtrasSchedule" Width="1.5" PointX="9.75" PointY="21" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationRoom" Width="1.5" PointX="5.25" PointY="11.625" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationRoomTaxPolicy" Width="1.5" PointX="7.5" PointY="7" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.Reservation" Width="1.5" PointX="3" PointY="4.125" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationsHistory" Width="1.5" PointX="13.75" PointY="11.75" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationStatus" Width="1.5" PointX="7.75" PointY="1.125" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationStatusLanguage" Width="1.5" PointX="10" PointY="0.875" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationTransactionStatu" Width="1.5" PointX="15.75" PointY="15.75" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.TokenizedCreditCardsReadsPerMonth" Width="1.5" PointX="16.75" PointY="6.75" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.VisualState" Width="1.5" PointX="11.75" PointY="16.75" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_CancelReservationReason_UID" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_ReservationPartialPaymentDetails_Reservations" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_Reservation_UID" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_ReservationRoomChild_ReservationRooms" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK__Reservati__Reser__49E4BD9F" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_ReservationRoomDetails_ReservationRooms" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_ReservationRoomDetailsAppliedIncentive_ReservationRoomDetails" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_ReservationRoomExtras_ReservationRooms" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_ReservationRoomExtrasAvailableDates_ReservationRoomExtras" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_ReservationRoomExtrasSchedule_ReservationRoomExtras" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_ReservationRooms" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_ReservationRooms_Reservations" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_ReservationStatusLanguage_ReservationStatuses" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationRoomFilter" Width="1.5" PointX="14" PointY="7" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.CancelReservationReasonLanguage" Width="1.5" PointX="3" PointY="29.125" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK__CancelRes__Cance__05C49D7C" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationsAdditionalData" Width="1.5" PointX="10.375" PointY="3.75" />
+        <EntityTypeShape EntityType="OB.DL.Model.Reservations.ReservationFilter" Width="1.5" PointX="11.75" PointY="24.875" />
+        <AssociationConnector Association="OB.DL.Model.Reservations.FK_ReservationRoomFilter_ReservationFilter" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

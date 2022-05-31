@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="SonarQube - OB.API.Reservations(main) Sonar way" ToolsVersion="15.0">
+  <Include Path="..\..\sonarqube\ob.api.reservations.codecsharp.ruleset" Action="Default" />
+</RuleSet>

@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <section name="nlog" type="NLog.Config.ConfigSectionHandler, NLog" />
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    <!-- CouchBase -->
+    <sectionGroup name="couchbaseClients">
+      <section name="couchbase" type="Couchbase.Configuration.Client.Providers.CouchbaseClientSection, Couchbase.NetClient" />
+    </sectionGroup>
+    <!-- Connector's MSMQ Settings -->
+    <section name="UnicastBusConfig" type="NServiceBus.Config.UnicastBusConfig, NServiceBus.Core" />
+    <section name="AuditConfig" type="NServiceBus.Config.AuditConfig, NServiceBus.Core" />
+    <section name="TransportConfig" type="NServiceBus.Config.TransportConfig, NServiceBus.Core" />
+    <section name="MessageForwardingInCaseOfFaultConfig" type="NServiceBus.Config.MessageForwardingInCaseOfFaultConfig, NServiceBus.Core" />
+  </configSections>
+  <couchbaseClients>
+    <couchbase useSsl="false">
+      <servers>
+        <add uri="http://172.25.50.152:8091/pools" />
+      </servers>
+      <buckets>
+        <add name="PMSActivity" password="PMSActivity" />
+        <add name="ExternalSystemsActivity" password="ExternalSystemsActivity" />
+        <add name="LostReservations" />
+        <add name="EventLog" />
+        <add name="OmnibeesEvents" />
+        <add name="PortalEvents" />
+      </buckets>
+    </couchbase>
+  </couchbaseClients>
+  <!-- Connector's MSMQ Settings -->
+  <UnicastBusConfig>
+    <MessageEndpointMappings>
+      <add Messages="ODS.Messages" Endpoint="coordinator@SRV-PP-EVENTS" />
+      <add Messages="OB.Events.Contracts" Endpoint="events.coordinator@SRV-PP-EVENTS" />
+    </MessageEndpointMappings>
+  </UnicastBusConfig>
+  <MessageForwardingInCaseOfFaultConfig ErrorQueue="error@SRV-PP-EVENTS" />
+  <TransportConfig MaximumConcurrencyLevel="1" MaxRetries="10" />
+  <AuditConfig QueueName="audit@SRV-PP-EVENTS" />
+  <connectionStrings>
+    <add name="OmnibeesConnectionString" providerName="System.Data.SqlClient" connectionString="Data Source=172.25.30.110,30001;Initial Catalog=omnibees;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.SQL-stable-OmnibeesConnectionString;" />
+    <add name="OmnibeesConnectionStringReadOnly" providerName="System.Data.SqlClient" connectionString="Data Source=172.25.30.110,30001;Initial Catalog=omnibees;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.SQL-stable-OmnibeesConnectionStringReadOnly;applicationintent=readonly;" />
+    <add name="ReservationsConnectionString" providerName="System.Data.SqlClient" connectionString="Data Source=172.25.30.110,30001;Initial Catalog=Reservations;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.SQL-stable-ReservationsConnectionString;" />
+    <add name="OmnibeesJobs" connectionString="Server=172.25.30.110,30001; Database=omnibeesJobs; Persist Security Info=True;User ID=pedro;Password=pedro;application name=OB.REST.Reservations.SQL-stable-OmnibeesJobs;" />
+    <add name="PortalOperadoras" providerName="System.Data.SqlClient" connectionString="Data Source=172.25.30.110,30001;Initial Catalog=PortalOperadoras;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.SQL-stable-PortalOperadoras;" />
+    <add name="PaymentsContext" connectionString="metadata=res://*/Payments.csdl|res://*/Payments.ssdl|res://*/Payments.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=172.25.30.110,30001;Initial Catalog=Reservations;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.Entity-stable-PaymentsContext&quot;" providerName="System.Data.EntityClient" />
+    <add name="ReservationsContext" connectionString="metadata=res://*/Reservations.csdl|res://*/Reservations.ssdl|res://*/Reservations.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=172.25.30.110,30001;Initial Catalog=Reservations;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.Entity-stable-ReservationsContext&quot;" providerName="System.Data.EntityClient" />
+    <add name="PaymentsContextReadOnly" connectionString="metadata=res://*/Payments.csdl|res://*/Payments.ssdl|res://*/Payments.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=172.25.30.110,30001;Initial Catalog=Reservations;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.Entity.ReadOnly-stable-PaymentsContextReadOnly;applicationintent=readonly&quot;" providerName="System.Data.EntityClient" />
+    <add name="ReservationsContextReadOnly" connectionString="metadata=res://*/Reservations.csdl|res://*/Reservations.ssdl|res://*/Reservations.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=172.25.30.110,30001;Initial Catalog=Reservations;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.Entity.ReadOnly-stable-ReservationsContextReadOnly;applicationintent=readonly&quot;" providerName="System.Data.EntityClient" />
+    <add name="OmnibeesHistoryContext" connectionString="metadata=res://*/OmnibeesHistory.csdl|res://*/OmnibeesHistory.ssdl|res://*/OmnibeesHistory.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=172.25.30.110,30001;initial catalog=omnibeesHistory;persist security info=True;user id=pedro;password=pedro;MultipleActiveResultSets=True;application name=OB.REST.Reservations.Entity-stable-OmnibeesHistoryContext&quot;" providerName="System.Data.EntityClient" />
+    <add name="OmnibeesHistoryContextReadOnly" connectionString="metadata=res://*/OmnibeesHistory.csdl|res://*/OmnibeesHistory.ssdl|res://*/OmnibeesHistory.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=172.25.30.110,30001;initial catalog=omnibeesHistory;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.Entity.ReadOnly-stable-OmnibeesHistoryContextReadOnly;applicationintent=readonly&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+  <!--
+  <add name="OmnibeesConnectionString" providerName="System.Data.SqlClient" connectionString="Data Source=172.25.30.110,30001;Initial Catalog=omnibees;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.SQL;" />
+    <add name="OmnibeesConnectionStringReadOnly" providerName="System.Data.SqlClient" connectionString="Data Source=172.25.30.110,30001;Initial Catalog=omnibees;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.SQL;applicationintent=readonly;" />
+    <add name="ReservationsConnectionString" providerName="System.Data.SqlClient" connectionString="Data Source=172.25.30.110,30001;Initial Catalog=Reservations;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.SQL;" />
+    <add name="OmnibeesJobs" connectionString="Server=172.25.30.110,30001; Database=omnibeesJobs; Persist Security Info=True;User ID=pedro;Password=pedro;application name=OB.REST.Reservations.SQL;" />
+    <add name="PortalOperadoras" providerName="System.Data.SqlClient" connectionString="Data Source=172.25.30.110,30001;Initial Catalog=PortalOperadoras;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.SQL;" />
+    <add name="PaymentsContext" connectionString="metadata=res://*/Payments.csdl|res://*/Payments.ssdl|res://*/Payments.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=172.25.30.110,30001;Initial Catalog=Reservations;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.Entity&quot;" providerName="System.Data.EntityClient" />
+    <add name="ReservationsContext" connectionString="metadata=res://*/Reservations.csdl|res://*/Reservations.ssdl|res://*/Reservations.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=172.25.30.110,30001;Initial Catalog=Reservations;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.Entity.ReadOnly&quot;" providerName="System.Data.EntityClient" />
+    <add name="PaymentsContextReadOnly" connectionString="metadata=res://*/Payments.csdl|res://*/Payments.ssdl|res://*/Payments.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=172.25.30.110,30001;Initial Catalog=Reservations;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.Entity.ReadOnly;applicationintent=readonly&quot;" providerName="System.Data.EntityClient" />
+    <add name="ReservationsContextReadOnly" connectionString="metadata=res://*/Reservations.csdl|res://*/Reservations.ssdl|res://*/Reservations.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=172.25.30.110,30001;Initial Catalog=Reservations;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.Entity.ReadOnly;applicationintent=readonly&quot;" providerName="System.Data.EntityClient" />
+    <add name="OmnibeesHistoryContext" connectionString="metadata=res://*/OmnibeesHistory.csdl|res://*/OmnibeesHistory.ssdl|res://*/OmnibeesHistory.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=172.25.30.110,30001;initial catalog=omnibeesHistory;persist security info=True;user id=pedro;password=pedro;MultipleActiveResultSets=True;application name=OB.REST.Reservations.Entity&quot;" providerName="System.Data.EntityClient" />
+    <add name="OmnibeesHistoryContextReadOnly" connectionString="metadata=res://*/OmnibeesHistory.csdl|res://*/OmnibeesHistory.ssdl|res://*/OmnibeesHistory.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=172.25.30.110,30001;initial catalog=omnibeesHistory;Persist Security Info=True;User ID=pedro;Password=pedro;Min Pool Size=5;Asynchronous Processing=True;MultipleActiveResultSets=True;application name=OB.REST.Reservations.Entity.ReadOnly;applicationintent=readonly&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings> -->
+  <appSettings>
+    <!-- ENDPOINTS -->
+    <add key="OB.REST.Services.Endpoint" value="http://obapi-stable" />
+    <add key="OB.Reservation.REST.Services.Endpoint" value="http://obapi-reservations-stable" />
+    <add key="PO.REST.Services.Endpoint" value="http://poapi-stable" />
+    <add key="OB.PAR.REST.Services.Endpoint" value="http://obapi-par-stable" />
+    <!-- BPag BellNofitication Config (Anti-Fraud) -->
+    <add key="BPagBellNotificationURL" value="https://srv-protur3:9090/BPagBellNotificationService.ashx" />
+    <add key="ProtectedCardMerchantKey" value="42D1746D-3D76-4E07-BABC-459106587160" />
+    <add key="loyaltyProgramFilesPath" value="http://media.omnibees.com/LoyaltyPrograms/" />
+    <add key="EventSystem_AuditQueue" value="audit.events@172.25.50.103" />
+    <add key="EventSystem_ErrorQueue" value="error.events@172.25.50.103" />
+    <add key="AllowedSubnets" value="192.168.1.0,192.168.200.0,192.168.150.11,81.90.48.122,127.0.0.1,172.25.10.0,172.25.50.0" />
+    <add key="AllowedSubnetMasks" value="255.255.255.0,255.255.255.0,255.255.255.255,255.255.255.255,255.255.255.255,255.255.255.0,255.255.255.0" />
+    <!-- TripAdvisor -->
+    <!-- TripAdvisor Partner Key -->
+    <add key="TripAdvisorPartnerKey" value="001F000000ulUFD" />
+    <!-- true for test endpoint / false for real endpoint -->
+    <add key="TripAdvisorTestEnable" value="true" />
+    <add key="TripAdvisorApiKey" value="6d9d25d3a30d750dad7ce2fe1e0a0b45" />
+    <!-- Perot FTP Settings -->
+    <add key="perotHost" value="sftp.tacsnet.com" />
+    <add key="perotUsername" value="OMNIBEES" />
+    <add key="perotPassword" value="kg$84j&amp;amp;" />
+    <add key="perotPort" value="22" />
+    <!--<add key="perotGroupId" value="H095417" />-->
+    <!--<add key="OB.DL.Common.Cache.ServiceStackCacheProvider.ReadWriteHosts" value="127.0.0.1:6379"/>
+    <add key="OB.DL.Common.Cache.ServiceStackCacheProvider.FailoverReadWriteHosts" value="127.0.0.1:6380,127.0.0.1:6381"/>
+    <add key="OB.DL.Common.Cache.ServiceStackCacheProvider.ReadHosts" value="127.0.0.1:6380"/>
+    <add key="OB.DL.Common.Cache.ServiceStackCacheProvider.FailoverReadHosts" value="127.0.0.1:6381"/>
+    <add key="OB.DL.Common.CacheProvider" value="OB.DL.Common.Cache.ServiceStackCacheProvider"/>-->
+    <add key="OccupancyLevelsEnabled" value="true" />
+    <add key="ImagePatha" value="" />
+    <add key="EmailsErrorDistributionList" value="" />
+    <add key="IntegrationTeamDistributionList" value="" />
+    <add key="FromAddress" value="admin@proturweb.com" />
+    <add key="RouteDebugger:Enabled" value="false" />
+    <add key="ClientId" value="1" />
+    <add key="ClientSecret" value="omnibeessecret" />
+    <add key="AuthorizationServer:BaseAddress" value="http://localhost:50286" />
+    <add key="AuthorizationServer:AuthorizePath" value="/OAuth/Authorize" />
+    <!--<add key="AuthorizationServer:AuthorizePath" value="/Account/Authorize"/>-->
+    <add key="AuthorizationServer:TokenPath" value="/OAuth/Token" />
+    <add key="ApplicationScopes" value="Omnibees" />
+    <!-- Adyen -->
+    <add key="IsAdyenInTestMode" value="true" />
+    <!-- Paypal Config -->
+    <add key="PaypalIsInTestMode" value="true" />
+    <add key="PaypalLiveRedirect" value="https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&amp;amp;token=" />
+    <add key="PaypalTestRedirect" value="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&amp;amp;token=" />
+    <!-- BrasPag -->
+    <add key="IsBrasPagInTestMode" value="true" />
+    <!-- REAL TIME SETTINGS -->
+    <add key="RealAllotmentEnabled" value="True" />
+    <add key="RealTimeEnabled" value="True" />
+    <add key="DB_Name" value="Omnibees" />
+    <add key="AppName" value="OB.API.Reservations" />
+    <add key="Environment" value="PP" />
+    <add key="Logentries.Token" value="2f7ca109-76fc-47ea-822d-16fb3bdad6b8" />
+  </appSettings>
+  <system.web>
+    <!--<authentication mode="None" />-->
+    <compilation targetFramework="4.5.1" debug="true" />
+    <httpRuntime targetFramework="4.5" />
+    <machineKey decryptionKey="B7EFF1C5839A624E3F97D0268917EDE82F408D2ECBFAC817" validation="SHA1" validationKey="C2B8DF31AB9624D69428066DFDA1A479542825F3B48865C4E47AF6A026F22D853DEC2B3248DF268599BF89EF78B9E86CA05AC73577E0D5A14C45E0267588850B" />
+  </system.web>
+  <system.webServer>
+    <applicationInitialization doAppInitAfterRestart="true">
+      <add initializationPage="/api/Admin" />
+    </applicationInitialization>
+    <httpRedirect enabled="true" exactDestination="false" childOnly="true" httpResponseStatus="Found">
+      <add wildcard="/" destination="Help" />
+    </httpRedirect>
+    <handlers>
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="TRACEVerbHandler" />
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    </handlers>
+  </system.webServer>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="v11.0" />
+      </parameters>
+    </defaultConnectionFactory>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+      <!--<provider invariantName="MySql.Data.MySqlClient" type="MySql.Data.MySqlClient.MySqlProviderServices, MySql.Data.Entity.EF6, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />-->
+    </providers>
+  </entityFramework>
+  <system.net>
+    <mailSettings>
+      <smtp from="notifications@protur.pt">
+        <network host="SRV-OP-MAIL" userName="notifications@protur.pt" port="25" password="password" />
+      </smtp>
+    </mailSettings>
+  </system.net>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="CartaoProtegidoSoap">
+          <security mode="Transport" />
+        </binding>
+        <binding name="BasicHttpBinding_LanguageService" closeTimeout="00:10:00" openTimeout="00:10:00" receiveTimeout="00:10:00" sendTimeout="00:10:00" allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard" maxBufferSize="65536" maxBufferPoolSize="524288" maxReceivedMessageSize="65536" messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered" useDefaultWebProxy="false">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <security mode="None">
+            <transport clientCredentialType="None" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+        <binding name="svcUserAdminSoap" closeTimeout="00:10:00" openTimeout="00:10:00" receiveTimeout="00:10:00" sendTimeout="00:10:00" allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard" maxBufferSize="65536" maxBufferPoolSize="524288" maxReceivedMessageSize="65536" messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered" useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <security mode="None">
+            <transport clientCredentialType="None" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+        <binding name="HtmlTemplateServiceSoap" closeTimeout="00:01:00" openTimeout="00:10:00" receiveTimeout="00:10:00" sendTimeout="00:10:00" allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard" maxBufferSize="6553600" maxBufferPoolSize="52428800" maxReceivedMessageSize="6553600" messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered" useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="819200" maxArrayLength="1638400" maxBytesPerRead="409600" maxNameTableCharCount="1638400" />
+          <security mode="None">
+            <transport clientCredentialType="None" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+        <binding name="ImageServiceSoap" closeTimeout="00:01:00" openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00" allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard" maxBufferSize="6553600" maxBufferPoolSize="52428800" maxReceivedMessageSize="6553600" messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered" useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="819200" maxArrayLength="1638400" maxBytesPerRead="409600" maxNameTableCharCount="1638400" />
+          <security mode="None">
+            <transport clientCredentialType="None" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+        <!-- Adyen Gateway -->
+        <binding name="PaymentHttpBinding">
+          <security mode="Transport">
+            <message clientCredentialType="UserName" />
+            <transport clientCredentialType="Basic" realm="Adyen PAL Service Authentication">
+              <!--Adyen PAL Service Authentication-->
+              <extendedProtectionPolicy policyEnforcement="Never" />
+            </transport>
+          </security>
+        </binding>
+        <binding name="AntiFraudSoap">
+          <security mode="Transport" />
+        </binding>
+        <!-- BPAG -->
+        <binding name="BPagWSSoapBinding">
+          <security mode="Transport" />
+        </binding>
+      </basicHttpBinding>
+      <customBinding>
+        <binding name="PagadorTransactionSoap12">
+          <textMessageEncoding messageVersion="Soap12" />
+          <httpsTransport />
+        </binding>
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint address="https://cartaoprotegido.braspag.com.br/Services/v2/CartaoProtegido.asmx" binding="basicHttpBinding" bindingConfiguration="CartaoProtegidoSoap" contract="BraspagProtectedCreditCardService.CartaoProtegidoSoap" name="CartaoProtegidoSoap" />
+      <!-- BPAG -->
+      <!-- <endpoint address="https://certificacao.bpag.uol.com.br/bpag2/services/BPagWS"-->
+      <endpoint address="https://bpag.uol.com.br/bpag2/services/BPagWS" binding="basicHttpBinding" bindingConfiguration="BPagWSSoapBinding" contract="BPagService.BPagWS" name="BPagWS" />
+      <!--Braspag-->
+      <endpoint address="https://homologacao.braspag.com.br/AntiFraudews/antifraud.asmx" binding="basicHttpBinding" bindingConfiguration="AntiFraudSoap" contract="BraspagAntiFraudService.AntiFraudSoap" name="AntiFraudSoap" />
+      <endpoint address="https://homologacao.pagador.com.br/webservice/pagadorTransaction.asmx" binding="customBinding" bindingConfiguration="PagadorTransactionSoap12" contract="BraspagService.PagadorTransactionSoap" name="PagadorTransactionSoap12" />
+      <endpoint address="http://proturtemplates-stable/HtmlTemplateService.asmx" binding="basicHttpBinding" bindingConfiguration="HtmlTemplateServiceSoap" contract="HtmlTemplateService.HtmlTemplateServiceSoap" name="HtmlTemplateServiceSoap" />
+      <!-- Adyen -->
+      <endpoint address="https://pal-test.adyen.com/pal/servlet/Payment/v12" binding="basicHttpBinding" bindingConfiguration="PaymentHttpBinding" contract="AdyenService.PaymentPortType" name="PaymentHttpPort" />
+    </client>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true" minFreeMemoryPercentageToActivateService="1" />
+  </system.serviceModel>
+  <nlog autoReload="true" xmlns="http://www.nlog-project.org/schemas/NLog.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <include file="${basedir}/nlog.config" />
+  </nlog>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Practices.Unity" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-3.5.0.0" newVersion="3.5.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Helpers" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.WebPages" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-5.2.0.0" newVersion="5.2.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.IdentityModel.Tokens.Jwt" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-4.0.20511.1437" newVersion="4.0.20511.1437" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-8.0.0.0" newVersion="8.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Owin" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-3.0.1.0" newVersion="3.0.1.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Http" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.2.0.0" newVersion="5.2.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Net.Http.Formatting" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="NServiceBus.Core" publicKeyToken="9fc386479f8a226c" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.0.0.0" newVersion="5.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Common.Logging.Core" publicKeyToken="af08829b84f0328e" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-3.3.0.0" newVersion="3.3.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Common.Logging" publicKeyToken="af08829b84f0328e" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-3.3.0.0" newVersion="3.3.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Couchbase.NetClient" publicKeyToken="05e9c6b5a9ec94c2" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-2.3.7.0" newVersion="2.3.7.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="NLog" publicKeyToken="5120e14c03d0593c" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-4.0.0.0" newVersion="4.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>
